@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Reusable accordion card component styles */
+  .card .card-body {
+    display: none;
+    padding: 0 20px 20px;
+  }
+  .card.open .card-body {
+    display: block;
+  }
+  .card.open .toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Reusable fade-in animation */
+  .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .fade-in-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的書庫 | BFBM166</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 antialiased">
+    <div class="container mx-auto px-4 py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900">我的書庫</h1>
+            <p class="mt-4 text-lg text-gray-600">一個整合所有讀書筆記的知識中心</p>
+        </header>
+
+        <main>
+            <div id="book-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card for "如何培養孩子的社會能力" -->
+                <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900">如何培養孩子的社會能力</h2>
+                        <p class="text-gray-600 font-medium mb-4">Myrna B. Shure</p>
+                        <p class="text-gray-700 mb-6">
+                            本書介紹 ICPS (我能解決問題) 的系統性方法，培養孩子自主解決衝突的能力。
+                        </p>
+                        <a href="book-how-to-raise-social-child.html" class="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">閱讀筆記 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Future book cards will be added here -->
+                <div class="book-card-placeholder flex items-center justify-center bg-white border-2 border-dashed border-gray-300 rounded-lg">
+                    <p class="text-gray-500">下一本好書...</p>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="text-center mt-16 text-gray-500">
+            <p>&copy; 2025 BFBM166's Knowledge Base</p>
+        </footer>
+    </div>
+    <script type="module" src="./src/ts/main.ts"></script>
+</body>
+</html>
