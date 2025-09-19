@@ -28,35 +28,50 @@
 
             <section class="foundations">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">基礎準備：三大遊戲化練習</h2>
-                <div class="flex flex-col gap-4">
-                    <div class="fade-in-on-scroll card bg-card-bg rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <div class="card-header flex justify-between items-center p-5">
-                            <h3 class="m-0 text-lg font-medium">1. 字詞遊戲：擴展思維空間</h3>
-                            <span class="toggle-icon text-2xl font-light text-primary transition-transform duration-300 ease">+</span>
-                        </div>
-                        <div class="card-body">
-                            <p class="mb-4 text-secondary-text"><strong>目的：</strong>讓孩子理解世界不是非黑即白，凡事皆有多種可能性。</p>
-                            <p class="mb-4 text-secondary-text"><strong>方法：</strong>在日常對話中有意識地使用並練習「是/不是」、「和/或者」、「一些/所有」、「之前/之後」、「相同/不同」等詞彙。</p>
-                        </div>
-                    </div>
-                    <div class="fade-in-on-scroll card bg-card-bg rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <div class="card-header flex justify-between items-center p-5">
-                            <h3 class="m-0 text-lg font-medium">2. 理解感受：培養同理心</h3>
-                            <span class="toggle-icon text-2xl font-light text-primary transition-transform duration-300 ease">+</span>
-                        </div>
-                        <div class="card-body">
-                            <p class="mb-4 text-secondary-text"><strong>目的：</strong>讓孩子能識別自己與他人的情緒，這是解決人際問題的基礎。</p>
-                            <p class="mb-4 text-secondary-text"><strong>方法：</strong>透過看圖說故事、生活觀察、討論感受等方式，引導孩子思考「你覺得他現在是什麼感覺？」</p>
+                <div data-accordion="collapse" class="flex flex-col gap-4">
+                    <!-- Item 1 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-1">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
+                                <span class="text-lg font-medium text-text">1. 字詞遊戲：擴展思維空間</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>目的：</strong>讓孩子理解世界不是非黑即白，凡事皆有多種可能性。</p>
+                                <p><strong>方法：</strong>在日常對話中有意識地使用並練習「是/不是」、「和/或者」、「一些/所有」、「之前/之後」、「相同/不同」等詞彙。</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="fade-in-on-scroll card bg-card-bg rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <div class="card-header flex justify-between items-center p-5">
-                            <h3 class="m-0 text-lg font-medium">3. 進階詞彙：學習邏輯與因果</h3>
-                            <span class="toggle-icon text-2xl font-light text-primary transition-transform duration-300 ease">+</span>
+                    <!-- Item 2 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-2">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
+                                <span class="text-lg font-medium text-text">2. 理解感受：培養同理心</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>目的：</strong>讓孩子能識別自己與他人的情緒，這是解決人際問題的基礎。</p>
+                                <p><strong>方法：</strong>透過看圖說故事、生活觀察、討論感受等方式，引導孩子思考「你覺得他現在是什麼感覺？」</p>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p class="mb-4 text-secondary-text"><strong>目的：</strong>幫助孩子建立更複雜的因果關係思考。</p>
-                            <p class="mb-4 text-secondary-text"><strong>方法：</strong>玩「為什麼」遊戲，交換角色，讓孩子練習解釋原因，重點是思考過程。</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-3">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
+                                <span class="text-lg font-medium text-text">3. 進階詞彙：學習邏輯與因果</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>目的：</strong>幫助孩子建立更複雜的因果關係思考。</p>
+                                <p><strong>方法：</strong>玩「為什麼」遊戲，交換角色，讓孩子練習解釋原因，重點是思考過程。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,48 +79,55 @@
 
             <section class="steps">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">解決問題的四步驟</h2>
-                <div class="flex flex-col gap-5">
-                    <div class="fade-in-on-scroll step flex items-start gap-5">
+                <ul class="flex flex-col gap-5">
+                    <li class="fade-in-on-scroll step flex items-start gap-5">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">1</div>
                         <div class="step-content">
                             <h4 class="mt-1 mb-1 text-lg font-medium">發生什麼事了？</h4>
                             <p class="m-0 text-secondary-text">釐清問題，並讓每個孩子都有表述自己觀點的機會。</p>
                         </div>
-                    </div>
-                    <div class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 100ms;">
+                    </li>
+                    <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 100ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">2</div>
                         <div class="step-content">
                             <h4 class="mt-1 mb-1 text-lg font-medium">你們的感受如何？</h4>
                             <p class="m-0 text-secondary-text">引導孩子識別並表達自己的情緒，同時也聽見對方的情緒。</p>
                         </div>
-                    </div>
-                    <div class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 200ms;">
+                    </li>
+                    <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 200ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">3</div>
                         <div class="step-content">
                             <h4 class="mt-1 mb-1 text-lg font-medium">有什麼辦法讓大家開心？</h4>
                             <p class="m-0 text-secondary-text">將焦點從「誰對誰錯」轉移到「如何解決問題」，鼓勵腦力激盪。拿出紙筆記錄能讓孩子感到被尊重。</p>
                         </div>
-                    </div>
-                    <div class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 300ms;">
+                    </li>
+                    <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 300ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">4</div>
                         <div class="step-content">
                             <h4 class="mt-1 mb-1 text-lg font-medium">為成功的方法命名</h4>
                             <p class="m-0 text-secondary-text">強化正向行為。當問題解決後，明確地告訴他們：「你們剛剛的行為就叫做『分享』。」</p>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </section>
 
             <section class="techniques">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">方法與技巧</h2>
-                <div class="fade-in-on-scroll tabs">
-                    <div class="flex gap-2.5 border-b border-border mb-5">
-                        <button class="tab-link bg-none border-0 py-2.5 px-5 text-base cursor-pointer text-primary border-b-2 border-primary font-medium transition-colors" data-tab="practice">日常練習</button>
-                        <button class="tab-link bg-none border-0 py-2.5 px-5 text-base cursor-pointer text-secondary-text border-b-2 border-transparent transition-colors" data-tab="advanced">進階技巧</button>
-                    </div>
-                    <div class="tab-content" id="practice">
+                
+                <div class="mb-4 border-b border-border">
+                    <ul class="flex flex-wrap -mb-px text-base font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                        <li class="me-2" role="presentation">
+                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="practice-tab" data-tabs-target="#practice-content" type="button" role="tab" aria-controls="practice-content" aria-selected="true">日常練習</button>
+                        </li>
+                        <li class="me-2" role="presentation">
+                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="advanced-tab" data-tabs-target="#advanced-content" type="button" role="tab" aria-controls="advanced-content" aria-selected="false">進階技巧</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="myTabContent">
+                    <div class="hidden" id="practice-content" role="tabpanel" aria-labelledby="practice-tab">
                         <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5">
-                            <div class="border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                           <div class="border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                                 <h4 class="m-0 mb-2.5 text-lg font-medium">角色扮演遊戲</h4>
                                 <p class="m-0 text-secondary-text">將白天的衝突，在晚上用輕鬆的戲劇方式重新演練。</p>
                             </div>
@@ -119,7 +141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-content hidden" id="advanced">
+                    <div class="hidden" id="advanced-content" role="tabpanel" aria-labelledby="advanced-tab">
                         <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5">
                             <div class="border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                                 <h4 class="m-0 mb-2.5 text-lg font-medium">教會孩子考慮後果</h4>
@@ -128,6 +150,7 @@
                         </div>
                     </div>
                 </div>
+
             </section>
             
             <section class="principles">

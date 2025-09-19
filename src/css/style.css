@@ -3,18 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  /* Reusable accordion card component styles */
-  .card .card-body {
-    display: none;
-    padding: 0 20px 20px;
-  }
-  .card.open .card-body {
-    display: block;
-  }
-  .card.open .toggle-icon {
-    transform: rotate(45deg);
-  }
-
   /* Reusable fade-in animation */
   .fade-in-on-scroll {
     opacity: 0;
@@ -24,5 +12,14 @@
   .fade-in-on-scroll.is-visible {
       opacity: 1;
       transform: translateY(0);
+  }
+
+  /* 
+    Override Flowbite's default accordion button styles to match the desired Apple minimalist aesthetic.
+    This ensures that when the accordion is expanded, the button's background remains transparent,
+    inheriting the card's background color instead of Flowbite's default dark color.
+  */
+  [data-accordion="collapse"] button[aria-expanded="true"] {
+    background-color: transparent !important;
   }
 }

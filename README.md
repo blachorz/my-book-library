@@ -12,7 +12,7 @@
 *   **模板化**: 所有筆記頁面共用統一的樣式與互動腳本，確保視覺一致性。
 *   **響應式設計**: 使用 Tailwind CSS 打造，在桌面與行動裝置上都有良好的閱讀體驗。
 *   **自動化部署**: 每次 `git push` 到 `main` 分支後，GitHub Actions 都會自動建置與部署網站。
-*   **UI 元件庫**: 整合 [Flowbite](https://flowbite.com/)，可快速應用 tooltip, modal, dropdown 等多種互動元件。
+*   **UI 元件庫**: 整合 [Flowbite](https://flowbite.com/)，並**客製化**其樣式以符合網站整體的蘋果簡約風格。
 
 ## 🛠️ 技術棧
 
