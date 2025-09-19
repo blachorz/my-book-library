@@ -32,175 +32,205 @@
             </section>
 
             <section class="mindmap">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[600px]">
+                  <svg id="markmap-container" class="w-full h-full"></svg>
+                </div>
+            </section>
+            
+            <section class="lectures">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">取勝法則十二講</h2>
-                 <div data-accordion="collapse" class="flex flex-col gap-4">
-                    <!-- Lecture 1: 五事 -->
+                 <div data-accordion="collapse" class="grid grid-cols-1 md:grid-cols-2 md:items-start gap-4">
+                    <!-- Lecture 1: 五事七計 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-1">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="true" aria-controls="accordion-body-1">
-                                <span class="text-lg font-medium text-text">第一講：五事 - 奠定根基</span>
+                                <span class="text-lg font-medium text-text">法則一：五事七計 - 勝利的根基</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>取勝的關鍵不在謀略，而在於根基。孫子提出決定戰爭勝負的五個基本要素：道（使命願景）、天（大勢）、地（市場）、將（領導力）、法（組織管理）。</p>
+                                <p class="mb-4"><strong>五事：</strong>道（使命願景）、天（大勢）、地（市場）、將（領導力）、法（組織管理）。</p>
+                                <p><strong>七計：</strong>在五事的基礎上，從七個維度與對手比較，包含主孰有道、將孰有能、天地孰得、法令孰行、兵眾孰強、士卒孰練、賞罰孰明。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 2: 七計 -->
+                    <!-- Lecture 2: 全勝 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-2">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
-                                <span class="text-lg font-medium text-text">第二講：七計 - 比較優勢</span>
+                                <span class="text-lg font-medium text-text">法則二：全勝 - 不戰而屈人之兵</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>在競爭環境中，自身的優勢需與對手比較才有價值。從「主孰有道」、「將孰有能」等七個維度進行比較，是進行企業競爭態勢分析的核心。</p>
+                                <p>最完美的勝利是不用打就能贏。取勝的層次分為：上兵伐謀（戰略）、其次伐交（外交）、其次伐兵（巧打）、其下攻城（消耗）。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 3: 全勝 -->
+                    <!-- Lecture 3: 先勝 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-3">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
-                                <span class="text-lg font-medium text-text">第三講：全勝 - 完美的勝利</span>
+                                <span class="text-lg font-medium text-text">法則三：先勝 - 先立於不敗之地</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>最完美的勝利是「不戰而屈人之兵」。競爭的最終目的不是打敗對手，而是為自己創造更有利的長遠發展環境。核心策略是：上兵伐謀，其次伐交，其次伐兵，其下攻城。</p>
+                                <p>先求不敗，再求戰勝，不打無把握之仗。善戰者「無智名，無勇功」，在問題發生前就已化解。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 4: 先勝 -->
+                    <!-- Lecture 4: 任勢 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-4">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-4" aria-expanded="false" aria-controls="accordion-body-4">
-                                <span class="text-lg font-medium text-text">第四講：先勝 - 立於不敗</span>
+                                <span class="text-lg font-medium text-text">法則四：任勢 - 放大資源效能</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-4" class="hidden" aria-labelledby="accordion-heading-4">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>先保證自己不輸，再尋求戰勝對手。不打無把握之仗，出手時必須有必勝的機會。真正的高手是在無形之中解決問題，而非挽救危機。</p>
+                                <p>藉助大勢（取勢、借勢、造勢）來放大有限資源的效能。造勢的原則為「其勢險」（集中資源）與「其節短」（瞬間爆發）。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 5: 任勢 -->
+                    <!-- Lecture 5: 擊虛 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-5">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-5" aria-expanded="false" aria-controls="accordion-body-5">
-                                <span class="text-lg font-medium text-text">第五講：任勢 - 放大資源效能</span>
+                                <span class="text-lg font-medium text-text">法則五：擊虛 - 選擇對手的薄弱環節</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-5" class="hidden" aria-labelledby="accordion-heading-5">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>「任勢」即取勢、借勢、造勢。將有限的資源投入到大勢中，才能極大化其效能。真正有戰略遠見的人能洞察先機，順勢而為。</p>
+                                <p>避實擊虛，選擇正確的突破口。最高明的策略是攻擊對手「強點中的弱點」，使其無法改變，最為致命。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 6: 擊虛 -->
+                    <!-- Lecture 6: 詭道 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-6">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-6" aria-expanded="false" aria-controls="accordion-body-6">
-                                <span class="text-lg font-medium text-text">第六講：擊虛 - 選擇破局點</span>
+                                <span class="text-lg font-medium text-text">法則六：詭道 - 策略的靈活應用</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-6" class="hidden" aria-labelledby="accordion-heading-6">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>「避實而擊虛」，從對手的薄弱環節下手。最高明的策略是攻擊對手「強點中的弱點」，即其優勢背後無法輕易改變的致命缺陷。</p>
+                                <p>「兵者詭道也」不僅是欺騙，更是策略的應用，用以掩蓋真實意圖，調動對手，為自己創造有利條件。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 7: 詭道 -->
+                    <!-- Lecture 7: 並力 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-7">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-7" aria-expanded="false" aria-controls="accordion-body-7">
-                                <span class="text-lg font-medium text-text">第七講：詭道 - 策略的應用</span>
+                                <span class="text-lg font-medium text-text">法則七：並力 - 集中優勢資源</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-7" class="hidden" aria-labelledby="accordion-heading-7">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>「兵者，詭道也。」這不僅僅是欺騙，而是策略的靈活應用，如同球場上的假動作。目的是掩蓋真實意圖，調動對手資源，從而在關鍵點上取得優勢。</p>
+                                <p>選擇突破點後，必須集中關鍵資源於此，形成擊穿的力量。策略意味著選擇與放棄，避免「添油戰術」。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 8: 並力 -->
+                    <!-- Lecture 8: 主動 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-8">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-8" aria-expanded="false" aria-controls="accordion-body-8">
-                                <span class="text-lg font-medium text-text">第八講：並力 - 集中資源</span>
+                                <span class="text-lg font-medium text-text">法則八：主動 - 掌握局面主導權</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-8" class="hidden" aria-labelledby="accordion-heading-8">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>選擇突破點後，必須將關鍵資源高度集中於此，形成擊穿的力量。如華為所言：「不在非策略性機會點上消耗力量」。策略意味著選擇，選擇意味著放棄。</p>
+                                <p>「致人而不致於人」，調動對手，而非被對手調動。戰爭與競爭的藝術，核心在於爭奪主動權。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 9: 主動 -->
+                    <!-- Lecture 9: 機變 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-9">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-9" aria-expanded="false" aria-controls="accordion-body-9">
-                                <span class="text-lg font-medium text-text">第九講：主動 - 掌握局面</span>
+                                <span class="text-lg font-medium text-text">法則九：機變 - 打造水一樣的組織</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-9" class="hidden" aria-labelledby="accordion-heading-9">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>「致人而不致於人」，即調動對手，而非被對手調動。戰爭的本質就是主動權的爭奪。即使全局被動，也要透過集中資源，在關鍵局部形成主動優勢。</p>
+                                <p>「兵形像水」，組織應如水一般靈活調整。戰略是應對不確定環境而動態調整出來的，需保持組織的活力與彈性。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 10: 機變 -->
+                    <!-- Lecture 10: 先知 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-10">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-10" aria-expanded="false" aria-controls="accordion-body-10">
-                                <span class="text-lg font-medium text-text">第十講：機變 - 打造水一樣的組織</span>
+                                <span class="text-lg font-medium text-text">法則十：先知 - 資訊是最大優勢</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-10" class="hidden" aria-labelledby="accordion-heading-10">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>「兵形象水」，戰略應根據不確定的環境靈活調整。組織應具備柔性與彈性，避免官僚化與剛性化，保持活力與極強的適應力，如華為的「方向大致正確，組織充滿活力」。</p>
+                                <p>事先掌握準確、及時的資訊是決策的基礎。孫子強調「知彼」在先，因為了解對手比了解自己更難，且更為關鍵。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 11: 先知 -->
+                    <!-- Lecture 11: 將道 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-11">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-11" aria-expanded="false" aria-controls="accordion-body-11">
-                                <span class="text-lg font-medium text-text">第十一講：先知 - 資訊的優勢</span>
+                                <span class="text-lg font-medium text-text">法則十一：將道 - 動態環境的領導力</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-11" class="hidden" aria-labelledby="accordion-heading-11">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>資訊優勢是最大的競爭優勢。孫子強調「知彼知己」，而非「知己知彼」，因為了解對手比了解自己更難，且更為關鍵。決策必須建立在準確、及時的資訊基礎上。</p>
+                                <p>所有戰略都需要領導力來落地。領導者需具備「進不求名，退不避罪」的擔當、「上下同欲」的凝聚力，以及「靜以幽，正以治」的沉穩公正。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Lecture 12: 將道 -->
+                    <!-- Lecture 12: 終章 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-12">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-12" aria-expanded="false" aria-controls="accordion-body-12">
-                                <span class="text-lg font-medium text-text">第十二講：將道 - 動態環境的領導力</span>
+                                <span class="text-lg font-medium text-text">終章：學會策略性思考</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-12" class="hidden" aria-labelledby="accordion-heading-12">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>所有戰略最終都需要領導力來落地。真正的領導者具備「進不求名，退不避罪」的擔當，能做到「上下同欲」，並在關鍵時刻「靜以幽，正以治」。領導力是在殘酷的實戰環境中錘鍊出來的。</p>
+                                <p>讀兵法是為學會從根本、全局思考問題。取勝公式為：實力 x 戰略。戰略思維能放大實力效能，拉開與對手的差距。</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scenarios">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">觀點實戰</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h3 class="m-0 mb-2.5 text-lg font-medium">企業經營</h3>
+                        <p class="m-0 text-secondary-text">將「道、天、地、將、法」應用於企業體質評估，檢查使命願景、產業趨勢、市場定位、團隊能力與組織管理是否健全。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
+                        <h3 class="m-0 mb-2.5 text-lg font-medium">市場競爭</h3>
+                        <p class="m-0 text-secondary-text">運用「七計」分析與競爭對手的優劣勢，找出可攻擊的「虛」與自身需鞏固的「實」。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
+                        <h3 class="m-0 mb-2.5 text-lg font-medium">資源配置</h3>
+                        <p class="m-0 text-secondary-text">效法華為「不在非策略性機會點上消耗力量」的原則，將資源高度集中於主攻方向，避免多線作戰。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 300ms;">
+                        <h3 class="m-0 mb-2.5 text-lg font-medium">個人發展</h3>
+                        <p class="m-0 text-secondary-text">在職涯規劃中，先求「不敗」（穩固核心技能），再抓住「大勢」（產業趨勢），找到能發揮自身優勢的「地」（市場/領域）。</p>
                     </div>
                 </div>
             </section>
@@ -237,27 +267,36 @@
         const transformer = new Transformer();
 
         const markdown = `
-# 善戰者說
-- 基礎：五事七計
-  - 道：使命願景
-  - 天：大勢
-  - 地：市場
-  - 將：領導力
-  - 法：組織
-  - 七計：比較優勢
-- 核心理念
-  - 全勝：不戰而屈人之兵
-  - 先勝：先立於不敗
-  - 任勢：放大資源效能
-- 實戰策略
-  - 擊虛：打強點中的弱點
-  - 詭道：策略應用
-  - 並力：集中資源
-  - 主動：致人而不致於人
-- 組織能力
-  - 機變：水一樣的組織
-  - 先知：資訊優勢
-  - 將道：動態領導力
+# 善戰者說：取勝法則十二講
+- **勝利根基**
+  - **法則一：五事七計**
+    - 五事：道、天、地、將、法
+    - 七計：比較優勢
+- **核心理念**
+  - **法則二：全勝**
+    - 不戰而屈人之兵
+  - **法則三：先勝**
+    - 先立於不敗之地
+  - **法則四：任勢**
+    - 放大資源效能
+- **實戰策略**
+  - **法則五：擊虛**
+    - 打強點中的弱點
+  - **法則六：詭道**
+    - 策略的靈活應用
+  - **法則七：並力**
+    - 集中優勢資源
+  - **法則八：主動**
+    - 掌握局面主導權
+- **組織與領導**
+  - **法則九：機變**
+    - 打造水一樣的組織
+  - **法則十：先知**
+    - 資訊是最大優勢
+  - **法則十一：將道**
+    - 動態環境的領導力
+- **終章**
+  - 學會策略性思考
         `;
 
         const { root, features } = transformer.transform(markdown);
