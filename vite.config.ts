@@ -8,7 +8,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        book1: resolve(__dirname, 'book-how-to-raise-social-child.html')
+        book1: resolve(__dirname, 'book-how-to-raise-social-child.html'),
+        book2: resolve(__dirname, 'book-unconscious-obedience-and-awareness.html')
       }
     }
   }
