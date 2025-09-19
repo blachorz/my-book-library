@@ -31,6 +31,13 @@
                 </div>
             </section>
 
+            <section class="mindmap">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[500px]">
+                  <svg id="markmap-container" class="w-full h-full"></svg>
+                </div>
+            </section>
+
             <section class="foundations">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">基礎準備：三大遊戲化練習</h2>
                 <div data-accordion="collapse" class="flex flex-col gap-4">
@@ -209,5 +216,48 @@
         </footer>
     </div>
     <script type="module" src="./src/ts/main.ts"></script>
+
+    <!-- Markmap Libraries for Manual Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+
+    <!-- Custom Rendering Script -->
+    <script>
+      (async () => {
+        const { Transformer, Markmap } = window.markmap;
+        const transformer = new Transformer();
+
+        const markdown = `
+# 如何培養孩子的社會能力 (ICPS)
+- 核心理念：引導式對話
+  - 家長從「命令者」→「引導者」
+- 基礎準備 (遊戲化)
+  - 字詞遊戲 (擴展思維)
+  - 理解感受 (培養同理心)
+  - 進階詞彙 (學習因果)
+- 解決問題的四步驟
+  - 1. 釐清問題
+  - 2. 理解感受
+  - 3. 腦力激盪
+  - 4. 為方法命名
+- 方法與技巧
+  - 日常練習
+    - 角色扮演
+    - 玩偶遊戲
+    - 「找辦法」遊戲
+  - 進階技巧
+    - 考慮後果
+- 家長三大核心原則
+  - 多了解，少評判
+  - 讓孩子解決
+  - 過程重於結果
+        `;
+
+        const { root, features } = transformer.transform(markdown);
+        
+        Markmap.create('#markmap-container', { autoFit: true }, root);
+      })();
+    </script>
 </body>
 </html>
