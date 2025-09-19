@@ -13,6 +13,7 @@ export default defineConfig({
         'book-you-are-your-childs-best-toy': resolve(__dirname, 'book-you-are-your-childs-best-toy.html'),
         'book-brain-science-of-studying': resolve(__dirname, 'book-brain-science-of-studying.html'),
         'book-high-performance-coaching': resolve(__dirname, 'book-high-performance-coaching.html'),
+        'book-art-of-war-gong': resolve(__dirname, 'book-art-of-war-gong.html'),
       }
     }
   }
