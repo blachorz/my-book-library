@@ -31,6 +31,15 @@
                 </div>
             </section>
 
+            <section class="mindmap">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <!-- This div is for styling only. It has a fixed height. -->
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[500px]">
+                  <!-- This SVG is the clean rendering target. -->
+                  <svg id="markmap-container" class="w-full h-full"></svg>
+                </div>
+            </section>
+            
             <section class="strategies">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">欺騙海馬體的四大策略</h2>
                 <div data-accordion="collapse" class="flex flex-col gap-4">
@@ -142,6 +151,53 @@
             <p>&copy; 2025 FengMi Knowledge Base</p>
         </footer>
     </div>
+    
     <script type="module" src="./src/ts/main.ts"></script>
+
+    <!-- Markmap Libraries for Manual Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+
+    <!-- Custom Rendering Script -->
+    <script>
+      (async () => {
+        const { Transformer, Markmap } = window.markmap;
+        const transformer = new Transformer();
+
+        const markdown = `
+# 考試腦科學
+- 核心理念：學習的本質是「欺騙」大腦
+  - 讓海馬體誤以為知識攸關生死
+  - 從而形成長期記憶
+- 記憶的機制
+  - 複習的黃金定律
+    - 第一次：學習後 1-2 天
+    - 第二次：一週後
+    - 第三次：一個月後
+  - LTM (長期記憶) vs STM (短期記憶)
+    - 關鍵在於「重複」與「情感連結」
+- 學習的策略
+  - 輸入與輸出的間隔
+    - 學習後立即測驗
+    - 效果優於單純重複閱讀
+  - 方法的重要性
+    - 「回想」是強化記憶的最佳方法
+    - 睡前是記憶的黃金時間
+- 欺騙大腦的技巧
+  - 創造「必要性」
+    - 想像知識在未來的使用場景
+  - 將知識與情感連結
+    - 賦予學習內容故事性
+  - 利用好奇心
+    - 主動提問，尋找答案
+        `;
+
+        const { root, features } = transformer.transform(markdown);
+        
+        // Create the Markmap instance with autoFit enabled
+        Markmap.create('#markmap-container', { autoFit: true }, root);
+      })();
+    </script>
 </body>
 </html>

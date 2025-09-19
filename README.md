@@ -11,6 +11,7 @@
 *   **多頁面架構**: 每本讀書筆記都是一個獨立的頁面，方便分享與管理。
 *   **模板化**: 所有筆記頁面共用統一的樣式與互動腳本，確保視覺一致性。
 *   **響應式設計**: 使用 Tailwind CSS 打造，在桌面與行動裝置上都有良好的閱讀體驗。
+*   **互動式心-智圖**: 整合 [Markmap.js](https://markmap.js.org/)，將書本的核心概念視覺化為可互動的心智圖，提升理解效率。
 *   **自動化部署**: 每次 `git push` 到 `main` 分支後，GitHub Actions 都會自動建置與部署網站。
 *   **UI 元件庫**: 整合 [Flowbite](https://flowbite.com/)，並**客製化**其樣式以符合網站整體的蘋果簡約風格。
 
@@ -19,6 +20,7 @@
 *   **建置工具**: [Vite](https://vitejs.dev/)
 *   **程式語言**: [TypeScript](https://www.typescriptlang.org/)
 *   **樣式框架**: [Tailwind CSS](https://tailwindcss.com/)
+*   **資料視覺化**: [Markmap.js](https://markmap.js.org/)
 *   **UI 元件庫**: [Flowbite](https://flowbite.com/)
 *   **自動化**: [GitHub Actions](https://github.com/features/actions)
 
