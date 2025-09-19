@@ -12,12 +12,14 @@
 *   **模板化**: 所有筆記頁面共用統一的樣式與互動腳本，確保視覺一致性。
 *   **響應式設計**: 使用 Tailwind CSS 打造，在桌面與行動裝置上都有良好的閱讀體驗。
 *   **自動化部署**: 每次 `git push` 到 `main` 分支後，GitHub Actions 都會自動建置與部署網站。
+*   **UI 元件庫**: 整合 [Flowbite](https://flowbite.com/)，可快速應用 tooltip, modal, dropdown 等多種互動元件。
 
 ## 🛠️ 技術棧
 
 *   **建置工具**: [Vite](https://vitejs.dev/)
 *   **程式語言**: [TypeScript](https://www.typescriptlang.org/)
 *   **樣式框架**: [Tailwind CSS](https://tailwindcss.com/)
+*   **UI 元件庫**: [Flowbite](https://flowbite.com/)
 *   **自動化**: [GitHub Actions](https://github.com/features/actions)
 
 ## 🚀 本地端開發
