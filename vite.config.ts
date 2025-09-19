@@ -8,10 +8,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        book1: resolve(__dirname, 'book-how-to-raise-social-child.html'),
-        book2: resolve(__dirname, 'book-unconscious-obedience-and-awareness.html'),
-        book3: resolve(__dirname, 'book-you-are-your-childs-best-toy.html'),
-        book4: resolve(__dirname, 'book-brain-science-of-studying.html')
+        'book-how-to-raise-social-child': resolve(__dirname, 'book-how-to-raise-social-child.html'),
+        'book-unconscious-obedience-and-awareness': resolve(__dirname, 'book-unconscious-obedience-and-awareness.html'),
+        'book-you-are-your-childs-best-toy': resolve(__dirname, 'book-you-are-your-childs-best-toy.html'),
+        'book-brain-science-of-studying': resolve(__dirname, 'book-brain-science-of-studying.html'),
+        'book-high-performance-coaching': resolve(__dirname, 'book-high-performance-coaching.html'),
       }
     }
   }
