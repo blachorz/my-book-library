@@ -31,6 +31,13 @@
                 </div>
             </section>
 
+            <section class="mindmap">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[500px]">
+                  <svg id="markmap-container" class="w-full h-full"></svg>
+                </div>
+            </section>
+
             <section>
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">第一部分：突破限制性的思維框架</h2>
                 <div class="flex flex-col gap-4">
@@ -151,5 +158,45 @@
         </footer>
     </div>
     <script type="module" src="./src/ts/main.ts"></script>
+    <!-- Markmap Libraries for Manual Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+
+    <!-- Custom Rendering Script -->
+    <script>
+      (async () => {
+        const { Transformer, Markmap } = window.markmap;
+        const transformer = new Transformer();
+
+        const markdown = `
+# 無意識順從與覺知
+- 核心：覺知 (Mindfulness)
+  - 突破無意識的順從
+- 突破思維框架
+  - 規則的幻覺
+  - 風險的認知偏差
+  - 控制的幻覺
+- 心態的力量
+  - 富足 vs 匱乏
+  - 決策 (沒有錯誤)
+  - 身心合一
+- 如何活在覺知中
+  - 覺知的三層次
+  - 覺知的傳染
+- 觀點實戰
+  - 質疑規則
+  - 先做再說
+  - 擁抱不確定性
+  - 打破標籤
+  - 利用身心連結
+  - 提升思維層次
+        `;
+
+        const { root, features } = transformer.transform(markdown);
+        
+        Markmap.create('#markmap-container', { autoFit: true }, root);
+      })();
+    </script>
 </body>
 </html>
