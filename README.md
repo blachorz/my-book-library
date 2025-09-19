@@ -1,6 +1,6 @@
 # 我的書庫 (My Book Library)
 
-這是一個基於 Vite + TypeScript + Tailwind CSS 打造的個人線上書庫，用於彙整與展示所有的讀書筆記。網站透過 GitHub Actions 實現 CI/CD，能自動部署到 GitHub Pages。
+這是一個基於 Vite + TypeScript + Tailwind CSS 打造的個人線上書庫，用於展示我的讀書筆記。網站透過 GitHub Actions 實現 CI/CD，能自動部署到 GitHub Pages。
 
 **線上預覽:** [https://blachorz.github.io/my-book-library/](https://blachorz.github.io/my-book-library/)
 
@@ -11,7 +11,7 @@
 *   **多頁面架構**: 每本讀書筆記都是一個獨立的頁面，方便分享與管理。
 *   **模板化**: 所有筆記頁面共用統一的樣式與互動腳本，確保視覺一致性。
 *   **響應式設計**: 使用 Tailwind CSS 打造，在桌面與行動裝置上都有良好的閱讀體驗。
-*   **互動式心-智圖**: 整合 [Markmap.js](https://markmap.js.org/)，將書本的核心概念視覺化為可互動的心智圖，提升理解效率。
+*   **互動式心智圖**: 整合 [Markmap.js](https://markmap.js.org/)，將書本的核心概念視覺化為可互動的心智圖，提升理解效率。
 *   **自動化部署**: 每次 `git push` 到 `main` 分支後，GitHub Actions 都會自動建置與部署網站。
 *   **UI 元件庫**: 整合 [Flowbite](https://flowbite.com/)，並**客製化**其樣式以符合網站整體的蘋果簡約風格。
 
@@ -50,9 +50,13 @@
     在專案根目錄，複製一份現有的 `book-*.html` 檔案 (例如 `book-how-to-raise-social-child.html`)，並將其重新命名為新書的檔案名，例如 `book-atomic-habits.html`。
 
 2.  **更新筆記內容**:
-    打開新的 `book-atomic-habits.html` 檔案，將 `<main>` 標籤內的所有內容，替換為您的新讀書筆記。
+    打開新的 `book-atomic-habits.html` 檔案，將 `<header>` 與 `<main>` 標籤內的所有內容，替換為您的新讀書筆記。
 
-3.  **更新 Vite 設定**:
+3.  **整合心智圖 (Markmap)**:
+    *   **提煉摘要**: 根據新的筆記內容，提煉一份精煉的、階層式的 Markdown 摘要。
+    *   **更新腳本**: 找到頁面底部的 `<script>` 區塊，將 `const markdown = \`...\`` 裡面的內容，替換為您剛剛提煉好的新摘要。
+
+4.  **更新 Vite 設定**:
     打開 `vite.config.ts` 檔案，在 `build.rollupOptions.input` 物件中，新增一行指向您的新檔案：
     ```ts
     // ...
@@ -64,10 +68,10 @@
     // ...
     ```
 
-4.  **更新書庫首頁**:
+5.  **更新書庫首頁**:
     打開 `index.html` 檔案，在 `<div id="book-list">` 中，複製一個 `<div class="book-card">...</div>` 區塊，修改其中的書名、作者、簡介，並將連結 `<a>` 的 `href` 屬性指向您剛剛建立的新 HTML 檔案。
 
-5.  **推送部署**:
+6.  **推送部署**:
     將所有變更加入版控並推送到 GitHub，網站將會自動更新。
     ```bash
     git add .
