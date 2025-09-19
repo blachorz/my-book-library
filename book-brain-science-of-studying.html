@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考試腦科學 | 我的書庫</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body class="bg-background font-sans text-text antialiased">
+    <div class="container max-w-3xl mx-auto px-5 py-10">
+        
+        <nav class="mb-10">
+            <a href="index.html" class="text-primary hover:underline">&larr; 返回書庫首頁</a>
+        </nav>
+
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-text mb-2">考試腦科學</h1>
+            <p class="text-lg text-secondary-text">池谷裕二</p>
+        </header>
+
+        <main>
+            <section class="core-concept">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">核心理念</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
+                    <h3 class="text-3xl font-bold m-0 text-primary">欺騙海馬體</h3>
+                    <p class="text-lg font-medium my-1 text-text">Trick the Hippocampus</p>
+                    <span class="text-base text-secondary-text">學習的本質是「欺騙」大腦的海馬體，讓它誤以為知識對生存至關重要，從而將短期記憶轉化為長期記憶。</span>
+                </div>
+            </section>
+
+            <section class="strategies">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">欺騙海馬體的四大策略</h2>
+                <div data-accordion="collapse" class="flex flex-col gap-4">
+                    <!-- Item 1 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-1">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
+                                <span class="text-lg font-medium text-text">1. 善用遺忘曲線的「重複」</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4">根據艾賓浩斯遺忘曲線，在學習後第2天、1週後、2週後、1個月後進行四次複習，能最有效地形成長期記憶。大腦重視輸出（考試）勝於輸入（複習）。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-2">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
+                                <span class="text-lg font-medium text-text">2. 觸發「LTP」的開關</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4">LTP (長時程增強作用) 是記憶的來源。透過激發<strong>好奇心</strong>（產生θ波）和<strong>情緒</strong>（啟動杏仁核），可以大幅提升記憶效率，但需注意過大壓力會抑制LTP。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-3">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
+                                <span class="text-lg font-medium text-text">3. 「獅子記憶法」</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4">模仿哺乳動物捕食時的狀態來強化記憶：<strong>飢餓</strong>（飯前是背誦黃金時間）、<strong>走動</strong>（邊走邊背有助記憶）、<strong>寒冷</strong>（適度寒冷帶來生存危機感）。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-4">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-4" aria-expanded="false" aria-controls="accordion-body-4">
+                                <span class="text-lg font-medium text-text">4. 利用「睡眠」整理記憶</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-4" class="hidden" aria-labelledby="accordion-heading-4">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4">睡眠時海馬體會整理白天資訊並轉存為長期記憶。因此，睡前適合記憶，上午適合邏輯思考。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="advanced-learning">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">進階學習與心態</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h4 class="m-0 mb-2.5 text-lg font-medium">排除法學習</h4>
+                        <p class="m-0 text-secondary-text">人腦透過不斷犯錯、反思、修正的「排除法」來學習，因此應不畏失敗、樂觀面對，並循序漸進。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
+                        <h4 class="m-0 mb-2.5 text-lg font-medium">行動創造幹勁</h4>
+                        <p class="m-0 text-secondary-text">幹勁來自於「開始行動」。不想學習時，只要開始，幹勁就會隨之而來（行動興奮原理）。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
+                        <h4 class="m-0 mb-2.5 text-lg font-medium">記憶類型轉換</h4>
+                        <p class="m-0 text-secondary-text">隨著年齡增長，應從依賴「知識記憶」（死記硬背）轉向利用「經驗記憶」（聯想）和「方法記憶」（理解原理）。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scenarios">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">觀點實戰</h2>
+                <div class="flex flex-col gap-4">
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h4 class="m-0 mb-2 font-medium">制定科學複習計畫</h4>
+                        <p class="m-0 text-secondary-text">根據「第二天、一週後、兩週後、一個月後」的節奏安排複習。</p>
+                    </div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
+                        <h4 class="m-0 mb-2 font-medium">調整學習環境</h4>
+                        <p class="m-0 text-secondary-text">嘗試在飯前到戶外走動背單字，睡前複習需要記憶的內容。</p>
+                    </div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
+                        <h4 class="m-0 mb-2 font-medium">克服拖延</h4>
+                        <p class="m-0 text-secondary-text">當提不起勁時，設定一個極小的目標（如只做一題），利用「行動興奮」原理啟動學習狀態。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resources">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">提及書目與情境</h2>
+                <ul class="fade-in-on-scroll list-disc pl-5">
+                    <li class="mb-2.5 text-secondary-text"><strong>《刻意練習》:</strong> 引用其「心理表徵」概念，說明大師級的記憶是透過刻意練習，將知識轉化為不需思考就能反應的「方法記憶」。</li>
+                    <li class="mb-2.5 text-secondary-text"><strong>《高能量姿勢》:</strong> 引用其核心觀點，說明考試緊張時只要「坐直」，就能改變體內的化學物質，提升自信心。</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
+            <p>&copy; 2025 FengMi Knowledge Base</p>
+        </footer>
+    </div>
+    <script type="module" src="./src/ts/main.ts"></script>
+</body>
+</html>
