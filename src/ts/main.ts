@@ -1,3 +1,5 @@
+import 'flowbite';
+
 // Main entry point for TypeScript
 console.log("My Book Library");
 
