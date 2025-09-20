@@ -1,4 +1,4 @@
-# 我的書庫 (My Book Library)
+# Readpiration (Read + Inspiration)
 
 這是一個基於 Vite + TypeScript + Tailwind CSS 打造的個人線上書庫，用於展示我的讀書筆記。網站透過 GitHub Actions 實現 CI/CD，能自動部署到 GitHub Pages。
 
