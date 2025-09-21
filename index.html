@@ -12,7 +12,14 @@
 <body class="bg-gray-100 font-sans text-gray-800 antialiased">
     <div class="container mx-auto px-4 py-12">
         <header class="relative text-center mb-12">
-            <button id="lang-switcher" class="absolute top-0 right-0 mt-2 mr-2 px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300" data-t="langSwitcher">切換為英文</button>
+            <button id="lang-switcher"
+                title="Switch Language"
+                class="absolute top-0 right-0 mt-2 mr-2 p-2 text-sm font-medium text-white bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto sm:h-auto sm:px-4 sm:py-2 sm:rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m4 13l4-4M19 5l-4 4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="hidden sm:inline" data-t="langSwitcher">切換為英文</span>
+            </button>
             <h1 class="text-5xl font-bold text-gray-900" data-t="pageTitle">Readpiration</h1>
             <p class="mt-4 text-xl text-primary tracking-[0.16em]" data-t="pageSubtitle">從閱讀到靈感，只需一個筆記</p>
         </header>
