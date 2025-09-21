@@ -16,6 +16,7 @@ export default defineConfig({
         'book-art-of-war-gong': resolve(__dirname, 'book-art-of-war-gong.html'),
         'book-adversity-quotient': resolve(__dirname, 'book-adversity-quotient.html'),
         'book-business-made-simple': resolve(__dirname, 'book-business-made-simple.html'),
+        'book-nonviolent-communication': resolve(__dirname, 'book-nonviolent-communication.html'),
       }
     }
   }
