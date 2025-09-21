@@ -23,3 +23,9 @@
     background-color: transparent !important;
   }
 }
+
+@layer utilities {
+  .break-anywhere {
+    word-break: break-all;
+  }
+}

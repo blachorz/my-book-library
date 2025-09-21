@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掌控談話 | 我的書庫</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body class="bg-background font-sans text-text antialiased">
+    <div class="container max-w-3xl mx-auto px-5 py-10">
+        
+        <nav class="mb-10">
+            <a href="./index.html" class="text-primary hover:underline">&larr; 返回書庫首頁</a>
+        </nav>
+
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-text mb-2">掌控談話</h1>
+            <p class="text-lg text-secondary-text">Chris Voss, Tahl Raz</p>
+        </header>
+
+        <main>
+            <section class="core-concept">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">核心前提</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
+                    <h3 class="text-3xl font-bold m-0 text-primary">人是非理性的</h3>
+                    <p class="text-lg font-medium my-1 text-text">談判的關鍵在於理解並引導人的「感性」層面。</p>
+                    <span class="text-base text-secondary-text">成功的談判是讓對方始終覺得自己掌控對話，同時引導他們達成我方的目標。</span>
+                </div>
+            </section>
+
+            <section class="mindmap">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[600px]">
+                  <svg id="markmap-container" class="w-full h-full"></svg>
+                </div>
+            </section>
+
+            <section class="techniques">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">九大談判技巧</h2>
+                <div data-accordion="collapse" class="flex flex-col gap-4">
+                    <!-- Technique 1 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-1">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
+                                <span class="text-lg font-medium text-text">1. 重複對方的話 (Mirroring)</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>做法：</strong>重複對方說話的最後幾個關鍵詞。</p>
+                                <p><strong>效果：</strong>讓對方感覺被傾聽，能快速建立和諧關係，並促使對方透露更多資訊。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Technique 2 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-2">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
+                                <span class="text-lg font-medium text-text">2. 深夜電台主持人的聲音</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>做法：</strong>使用平靜、舒緩、語調下沉的聲音說話。</p>
+                                <p><strong>效果：</strong>建立信任感與權威感，讓對方冷靜下來。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Technique 3 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-3">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
+                                <span class="text-lg font-medium text-text">3. 標註對方的痛苦 (Labeling)</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>做法：</strong>用「似乎...」、「聽起來...」等句式，說出你觀察到的對方情緒。</p>
+                                <p><strong>效果：</strong>策略性的同理心，讓對方感到被理解，從而建立信任。標註負面情緒可以削弱它。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Technique 4 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-4">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-4" aria-expanded="false" aria-controls="accordion-body-4">
+                                <span class="text-lg font-medium text-text">4. 拔刺 (Accusation Audit)</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-4" class="hidden" aria-labelledby="accordion-heading-4">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>做法：</strong>在談判開始前，主動說出對方可能對你抱持的最壞指控。</p>
+                                <p><strong>效果：</strong>將潛在的負面情緒直接攤在陽光下，使其失去攻擊力。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Technique 5 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-5">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-5" aria-expanded="false" aria-controls="accordion-body-5">
+                                <span class="text-lg font-medium text-text">5. 讓對方說「不」</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-5" class="hidden" aria-labelledby="accordion-heading-5">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>做法：</strong>設計問題讓對方有機會說「不」，例如用「你們是不是已經放棄這個計畫了？」</p>
+                                <p><strong>效果：</strong>「不」能讓對方產生安全感與掌控感，一個安心的對手反而更願意合作。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Technique 6 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-6">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-6" aria-expanded="false" aria-controls="accordion-body-6">
+                                <span class="text-lg font-medium text-text">6. 讓對方說出「你說得對」</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-6" class="hidden" aria-labelledby="accordion-heading-6">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>做法：</strong>精準地總結對方的處境與感受，直到他們發自內心地說出「你說得對」。</p>
+                                <p><strong>效果：</strong>這代表對方感到被完全理解，是談判的重大突破點。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Technique 7 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-7">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-7" aria-expanded="false" aria-controls="accordion-body-7">
+                                <span class="text-lg font-medium text-text">7. 談判價格 (Bargaining)</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-7" class="hidden" aria-labelledby="accordion-heading-7">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>核心原則：</strong>質疑錨定效應、讓時限成為盟友。</p>
+                                <p><strong>阿克曼議價法：</strong>設定目標價後，從 65% 開始出價，並準備好三次讓步（85%、95%、100%），同時使用特定數字增加可信度。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Technique 8 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-8">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-8" aria-expanded="false" aria-controls="accordion-body-8">
+                                <span class="text-lg font-medium text-text">8. 校準問題 (Calibrated Questions)</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-8" class="hidden" aria-labelledby="accordion-heading-8">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>做法：</strong>多用「如何 (How)」和「是什麼 (What)」開頭的開放式問題。</p>
+                                <p><strong>效果：</strong>讓對方感覺被尊重，並引導他們為你思考解決方案，將談判從對抗轉化為協作。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Technique 9 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-9">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-9" aria-expanded="false" aria-controls="accordion-body-9">
+                                <span class="text-lg font-medium text-text">9. 確保執行 (Ensuring Implementation)</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-9" class="hidden" aria-labelledby="accordion-heading-9">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>7-38-55 原則：</strong>密切觀察對方的語調(38%)與肢體表情(55%)，它們比語言(7%)更重要。</p>
+                                <p><strong>三次原則：</strong>在達成協議的過程中，至少從對方那裡獲得三次不同形式的確認。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scenarios">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">觀點實戰</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h4 class="text-lg font-medium mb-2">日常應用</h4>
+                        <p class="text-secondary-text">這些技巧不僅限於綁架案，也適用於親子溝通、職場協商、客訴處理等各種生活場景。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
+                        <h4 class="text-lg font-medium mb-2">心態調整</h4>
+                        <p class="text-secondary-text">這並非操縱，而是透過高度情商照顧對方情緒，讓對方在舒服的狀態下達成雙贏。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
+                        <h4 class="text-lg font-medium mb-2">擁抱衝突</h4>
+                        <p class="text-secondary-text">不要迴避衝突，透過有同理心的傾聽與有尊嚴的對話，可以為自己爭取到更好的結果。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resources">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">提及書目與情境</h2>
+                <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text">
+                    <li class="mb-2.5"><strong>《關鍵對話》與《非暴力溝通》:</strong> 作者認為本書的技巧比這兩本書更為新穎專業，凸顯了 FBI 的實戰獨特性。</li>
+                    <li class="mb-2.5"><strong>《思考，快與慢》:</strong> 本書策略建立在「人是非理性的」基礎上，利用大腦的快思（系統一）進行感性溝通。</li>
+                    <li class="mb-2.5"><strong>《高績效教練》:</strong> 書中「校準問題」的提問方式，與教練式引導的核心理念相似。</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
+            <p>&copy; 2025 FengMi Knowledge Base</p>
+        </footer>
+    </div>
+    <script type="module" src="./src/ts/main.ts"></script>
+
+    <!-- Markmap Libraries for Manual Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+
+    <!-- Custom Rendering Script -->
+    <script>
+      (async () => {
+        const { Transformer, Markmap } = window.markmap;
+        const transformer = new Transformer();
+
+        const markdown = `
+# 掌控談話
+- 核心前提：人是非理性的
+- 九大談判技巧
+  - 1. 重複對方的話
+  - 2. 深夜電台主持人的聲音
+  - 3. 標註對方的痛苦
+  - 4. 拔刺
+  - 5. 讓對方說「不」
+  - 6. 讓對方說出「你說得對」
+  - 7. 談判價格
+  - 8. 校準問題
+  - 9. 確保執行
+- 觀點實戰
+  - 日常應用
+  - 心態調整
+  - 擁抱衝突
+        `;
+
+        const { root, features } = transformer.transform(markdown);
+        
+        Markmap.create('#markmap-container', { autoFit: true }, root);
+      })();
+    </script>
+</body>
+</html>

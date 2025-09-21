@@ -1,5 +1,10 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,6 +25,9 @@ export default defineConfig({
         'book-rewire-your-anxious-brain': resolve(__dirname, 'book-rewire-your-anxious-brain.html'),
         'book-impromptu-speaking': resolve(__dirname, 'book-impromptu-speaking.html'),
         'book-awakening-of-growth': resolve(__dirname, 'book-awakening-of-growth.html'),
+        'book-building-a-storybrand': resolve(__dirname, 'book-building-a-storybrand.html'),
+        'book-never-split-the-difference': resolve(__dirname, 'book-never-split-the-difference.html'),
+        'book-crucial-conversations': resolve(__dirname, 'book-crucial-conversations.html'),
       }
     }
   }
