@@ -17,6 +17,8 @@ export default defineConfig({
         'book-adversity-quotient': resolve(__dirname, 'book-adversity-quotient.html'),
         'book-business-made-simple': resolve(__dirname, 'book-business-made-simple.html'),
         'book-nonviolent-communication': resolve(__dirname, 'book-nonviolent-communication.html'),
+        'book-rewire-your-anxious-brain': resolve(__dirname, 'book-rewire-your-anxious-brain.html'),
+        'book-impromptu-speaking': resolve(__dirname, 'book-impromptu-speaking.html'),
       }
     }
   }

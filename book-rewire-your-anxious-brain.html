@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重塑杏仁核 | 我的書庫</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body class="bg-background font-sans text-text antialiased">
+    <div class="container max-w-3xl mx-auto px-5 py-10">
+        
+        <nav class="mb-10">
+            <a href="./index.html" class="text-primary hover:underline">&larr; 返回書庫首頁</a>
+        </nav>
+
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-text mb-2">重塑杏仁核</h1>
+            <p class="text-lg text-secondary-text">Catherine M. Pittman</p>
+        </header>
+
+        <main>
+            <section class="core-concept">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">核心理念</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
+                    <h3 class="text-3xl font-bold m-0 text-primary">安撫 &amp; 教育</h3>
+                    <p class="text-lg font-medium my-1 text-text">了解杏仁核的運作，奪回大腦主導權</p>
+                    <span class="text-base text-secondary-text">本書從腦科學出發，提供安撫杏仁核（生理層面）與教育杏仁核（認知層面）的具體方法，將焦慮轉化為解決問題的正面力量。</span>
+                </div>
+            </section>
+
+            <section class="mindmap">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[500px]">
+                  <svg id="markmap-container" class="w-full h-full"></svg>
+                </div>
+            </section>
+
+            <section class="foundations">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">兩大策略：安撫與教育</h2>
+                <div data-accordion="collapse" class="flex flex-col gap-4">
+                    <!-- Item 1: 安撫杏仁核 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-1">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="true" aria-controls="accordion-body-1">
+                                <span class="text-lg font-medium text-text">1. 安撫杏仁核：生理層面的放鬆技巧</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>目標：</strong>當杏仁核被激化時，透過物理方法讓它平靜下來。</p>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li><strong>深呼吸：</strong>橫膈膜呼吸法、Give Me Five 呼吸法。</li>
+                                    <li><strong>放鬆想像：</strong>在腦中描繪平靜美好的畫面。</li>
+                                    <li><strong>漸進式肌肉放鬆：</strong>從頭到腳掃描並放鬆身體。</li>
+                                    <li><strong>睡眠：</strong>睡足7-9小時，確保足夠的快速動眼期。</li>
+                                    <li><strong>運動與飲食：</strong>規律有氧運動與穩定血糖的飲食。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2: 教育杏仁核 -->
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-2">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
+                                <span class="text-lg font-medium text-text">2. 教育杏仁核：心理層面的認知調整</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
+                            <div class="px-5 pb-5 text-secondary-text">
+                                <p class="mb-4"><strong>目標：</strong>透過改變認知與經驗，重新訓練大腦的反應模式。</p>
+                                 <ul class="list-disc pl-5 space-y-2">
+                                    <li><strong>暴露療法：</strong>在專業指導下，逐步接觸引發焦慮的刺激，解除舊的連結。</li>
+                                    <li><strong>認知療法：</strong>修正錯誤的思考模式（如悲觀主義、讀心術、災難化等），停止播放「焦慮頻道」。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="steps">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">正確使用焦慮：從思想到行動</h2>
+                <ul class="flex flex-col gap-5">
+                    <li class="fade-in-on-scroll step flex items-start gap-5">
+                        <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">1</div>
+                        <div class="step-content">
+                            <h4 class="mt-1 mb-1 text-lg font-medium">識別問題</h4>
+                            <p class="m-0 text-secondary-text">焦慮的核心功能是幫助我們「發現潛在問題，找到應對措施」。</p>
+                        </div>
+                    </li>
+                    <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 100ms;">
+                        <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">2</div>
+                        <div class="step-content">
+                            <h4 class="mt-1 mb-1 text-lg font-medium">制定計畫</h4>
+                            <p class="m-0 text-secondary-text">為讓你焦慮的事情制定一個應對計畫，即使是針對最壞情況的計畫。</p>
+                        </div>
+                    </li>
+                    <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 200ms;">
+                        <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">3</div>
+                        <div class="step-content">
+                            <h4 class="mt-1 mb-1 text-lg font-medium">行動或放下</h4>
+                            <p class="m-0 text-secondary-text">如果計畫可以立刻執行，就去做；如果時機未到，就先放下，不必持續擔憂。</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="scenarios">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">觀點實戰</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h3 class="m-0 mb-2.5 text-lg font-medium">育兒應用</h3>
+                        <p class="m-0 text-secondary-text">責罵會讓孩子杏仁核活躍，破壞專注力。應先創造放鬆安全的環境，再引導學習。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
+                        <h3 class="m-0 mb-2.5 text-lg font-medium">職場溝通</h3>
+                        <p class="m-0 text-secondary-text">面對報告感到緊張時，先用深呼吸平靜生理，再用認知療法告訴自己這不是危險。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
+                        <h3 class="m-0 mb-2.5 text-lg font-medium">改善拖延</h3>
+                        <p class="m-0 text-secondary-text">運用暴露療法，將任務分解，從最小步開始；用認知療法挑戰完美主義。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resources">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">提及書目與情境</h2>
+                <ul class="fade-in-on-scroll list-disc pl-5">
+                    <li class="mb-2.5 text-secondary-text"><strong>《關鍵對話》:</strong> 早期演講已提過「杏仁核」概念。</li>
+                    <li class="mb-2.5 text-secondary-text"><strong>《睡眠革命》 & 《史丹佛高效睡眠法》:</strong> 討論睡眠對杏仁核重要性時推薦。</li>
+                    <li class="mb-2.5 text-secondary-text"><strong>《解壓全書：壓力管理》等:</strong> 介紹漸進式肌肉放鬆法時提及。</li>
+                    <li class="mb-2.5 text-secondary-text"><strong>《跳出頭腦，融入生活》 & 《幸福的陷阱》:</strong> 講解「認知融合」時參考。</li>
+                    <li class="mb-2.5 text-secondary-text"><strong>《可複製的領導力》:</strong> 說明「讀心術」謬誤時引用。</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
+            <p>&copy; 2025 FengMi Knowledge Base</p>
+        </footer>
+    </div>
+    <script type="module" src="./src/ts/main.ts"></script>
+
+    <!-- Markmap Libraries for Manual Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+
+    <!-- Custom Rendering Script -->
+    <script>
+      (async () => {
+        const { Transformer, Markmap } = window.markmap;
+        const transformer = new Transformer();
+
+        const markdown = `
+# 重塑杏仁核
+- 杏仁核：大腦的焦慮中樞
+  - 兩條焦慮路徑
+    - 杏仁核通道 (快)
+    - 皮質通道 (慢)
+- 安撫杏仁核 (生理層面)
+  - 深呼吸
+  - 放鬆想像
+  - 漸進式肌肉放鬆
+  - 睡眠
+  - 運動與飲食
+- 教育杏仁核 (心理層面)
+  - 暴露療法
+  - 認知療法
+- 正確使用焦慮
+  - 識別問題 -> 制定計畫 -> 行動或放下
+        `;
+
+        const { root, features } = transformer.transform(markdown);
+        
+        Markmap.create('#markmap-container', { autoFit: true }, root);
+      })();
+    </script>
+</body>
+</html>
