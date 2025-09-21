@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Readpiration | 從閱讀到靈感，只需一個筆記</title>
+    <title data-t="pageTitle">Readpiration | 從閱讀到靈感，只需一個筆記</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -11,9 +11,10 @@
 </head>
 <body class="bg-gray-100 font-sans text-gray-800 antialiased">
     <div class="container mx-auto px-4 py-12">
-        <header class="text-center mb-12">
-            <h1 class="text-5xl font-bold text-gray-900">Readpiration</h1>
-            <p class="mt-4 text-xl text-primary tracking-[0.16em]">從閱讀到靈感，只需一個筆記</p>
+        <header class="relative text-center mb-12">
+            <button id="lang-switcher" class="absolute top-0 right-0 mt-2 mr-2 px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300" data-t="langSwitcher">切換為英文</button>
+            <h1 class="text-5xl font-bold text-gray-900" data-t="pageTitle">Readpiration</h1>
+            <p class="mt-4 text-xl text-primary tracking-[0.16em]" data-t="pageSubtitle">從閱讀到靈感，只需一個筆記</p>
         </header>
 
         <main>
@@ -22,18 +23,18 @@
                 <!-- Card for "考試腦科學" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">考試腦科學</h2>
-                        <p class="text-gray-400 font-medium mb-4">池谷裕二</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_brainScience">考試腦科學</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_brainScience">池谷裕二</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_brainScience">
                             學習的本質是「欺騙」大腦，讓海馬體誤以為知識攸關生死，從而形成長期記憶。
                         </p>
                         <a href="book-brain-science-of-studying.html" data-tooltip-target="tooltip-brain" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-brain" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-brain" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -42,18 +43,18 @@
                 <!-- Card for "你就是孩子最好的玩具" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">你就是孩子最好的玩具</h2>
-                        <p class="text-gray-400 font-medium mb-4">金伯莉·布雷恩 (Kimberley Clayton Blaine)</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_bestToy">你就是孩子最好的玩具</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_bestToy">金伯莉·布雷恩 (Kimberley Clayton Blaine)</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_bestToy">
                             父母應透過「情感引導」來理解並回應孩子的情緒，從而幫助孩子建立內在安全感與情緒管理能力。
                         </p>
                         <a href="book-you-are-your-childs-best-toy.html" data-tooltip-target="tooltip-toy" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-toy" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-toy" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -62,18 +63,18 @@
                 <!-- Card for "如何培養孩子的社會能力" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">如何培養孩子的社會能力</h2>
-                        <p class="text-gray-400 font-medium mb-4">Myrna B. Shure</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_socialChild">如何培養孩子的社會能力</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_socialChild">Myrna B. Shure</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_socialChild">
                             本書介紹 ICPS (我能解決問題) 的系統性方法，培養孩子自主解決衝突的能力。
                         </p>
                         <a href="book-how-to-raise-social-child.html" data-tooltip-target="tooltip-right" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -82,18 +83,18 @@
                 <!-- Card for "無意識順從與覺知" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">無意識順從與覺知</h2>
-                        <p class="text-gray-400 font-medium mb-4">艾倫·朗格 (Ellen J. Langer)</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_awareness">無意識順從與覺知</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_awareness">艾倫·朗格 (Ellen J. Langer)</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_awareness">
                             我們常被習慣和規則綁住，只要多一點覺察和主動思考，就能讓生活更自由有彈性。
                         </p>
                         <a href="book-unconscious-obedience-and-awareness.html" data-tooltip-target="tooltip-awareness" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-awareness" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-awareness" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -102,18 +103,18 @@
                 <!-- Card for "高績效教練" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">高績效教練</h2>
-                        <p class="text-gray-400 font-medium mb-4">約翰·惠特默</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_coaching">高績效教練</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_coaching">約翰·惠特默</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_coaching">
                             本書介紹以 GROW 模型為核心的提問技巧，激發個人潛能與責任感，達成自我驅動的高績效。
                         </p>
                         <a href="book-high-performance-coaching.html" data-tooltip-target="tooltip-coaching" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-coaching" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-coaching" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -122,18 +123,18 @@
                 <!-- Card for "善戰者說" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">善戰者說</h2>
-                        <p class="text-gray-400 font-medium mb-4">宮玉振</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_artOfWar">善戰者說</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_artOfWar">宮玉振</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_artOfWar">
                             本書深入解讀《孫子兵法》，闡述如何透過策略性思考，以最小成本取得長遠、全局的勝利。
                         </p>
                         <a href="book-art-of-war-gong.html" data-tooltip-target="tooltip-art-of-war" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-art-of-war" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-art-of-war" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -142,18 +143,18 @@
                 <!-- Card for "逆商" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">逆商</h2>
-                        <p class="text-gray-400 font-medium mb-4">保羅·史托茲 (Paul G. Stoltz)</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_aq_card">逆商</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_aq">保羅·史托茲 (Paul G. Stoltz)</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_aq">
                             本書闡述了為何逆商（AQ）比智商或情商更能決定一個人的成就，並提供實用方法將逆境轉化為機會。
                         </p>
                         <a href="book-adversity-quotient.html" data-tooltip-target="tooltip-aq" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-aq" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-aq" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -162,18 +163,18 @@
                 <!-- Card for "商業至簡" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">商業至簡</h2>
-                        <p class="text-gray-400 font-medium mb-4">Donald Miller</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_bms">商業至簡</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_bms">Donald Miller</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_bms">
                             將複雜的商業理論簡化為十大性格特質與十大核心技能，打造價值驅動型人才。
                         </p>
                         <a href="book-business-made-simple.html" data-tooltip-target="tooltip-bms" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-bms" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-bms" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -182,18 +183,18 @@
                 <!-- Card for "非暴力溝通" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">非暴力溝通</h2>
-                        <p class="text-gray-400 font-medium mb-4">馬歇爾·盧森堡 (Marshall B. Rosenberg)</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_nvc">非暴力溝通</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_nvc">馬歇爾·盧森堡 (Marshall B. Rosenberg)</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_nvc">
                             本書提供「觀察、感受、需求、請求」的四步驟溝通模式，幫助人們建立更深刻、真誠的人際連結。
                         </p>
                         <a href="book-nonviolent-communication.html" data-tooltip-target="tooltip-nvc" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-nvc" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-nvc" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -202,18 +203,18 @@
                 <!-- Card for "重塑杏仁核" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">重塑杏仁核</h2>
-                        <p class="text-gray-400 font-medium mb-4">Catherine M. Pittman</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_amygdala">重塑杏仁核</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_amygdala">Catherine M. Pittman</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_amygdala">
                             本書從腦科學的角度，解釋「杏仁核」如何運作，並提供安撫與教育它的具體方法，幫助我們有效管理焦慮。
                         </p>
                         <a href="book-rewire-your-anxious-brain.html" data-tooltip-target="tooltip-amygdala" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-amygdala" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-amygdala" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -222,18 +223,18 @@
                 <!-- Card for "即興演講" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">即興演講</h2>
-                        <p class="text-gray-400 font-medium mb-4">Judith Humphrey</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_impromptu">即興演講</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_impromptu">Judith Humphrey</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_impromptu">
                             真正的即興演講並非毫無準備，而是基於充分準備、心態調整與清晰結構的臨場領導力展現。
                         </p>
                         <a href="book-impromptu-speaking.html" data-tooltip-target="tooltip-impromptu" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-impromptu" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-impromptu" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -242,18 +243,18 @@
                 <!-- Card for "成長的覺醒" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">成長的覺醒</h2>
-                        <p class="text-gray-400 font-medium mb-4">樊登</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_growth">成長的覺醒</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_growth">樊登</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_growth">
                             本書從腦科學解釋為何孩子轉變總是突如其來，並提出父母需透過自我成長，為家庭注入愛、尊重與歡笑。
                         </p>
                         <a href="book-awakening-of-growth.html" data-tooltip-target="tooltip-growth" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-growth" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-growth" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -262,18 +263,18 @@
                 <!-- Card for "你的顧客需要一個好故事" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">你的顧客需要一個好故事</h2>
-                        <p class="text-gray-400 font-medium mb-4">Donald Miller</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_storybrand">你的顧客需要一個好故事</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_storybrand">Donald Miller</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_storybrand">
                             運用「SB7 故事框架」將顧客打造成英雄，品牌扮演引路人，藉此建立深刻連結並有效促進銷售。
                         </p>
                         <a href="book-building-a-storybrand.html" data-tooltip-target="tooltip-storybrand" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-storybrand" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-storybrand" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -282,18 +283,18 @@
                 <!-- Card for "掌控談話" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">掌控談話</h2>
-                        <p class="text-gray-400 font-medium mb-4">Chris Voss, Tahl Raz</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_negotiation">掌控談話</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_negotiation">Chris Voss, Tahl Raz</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_negotiation">
                             本書揭示了前 FBI 談判專家如何運用九大溝通技巧，透過策略性同理心，讓對方在感覺掌控對話的同時，達成雙贏。
                         </p>
                         <a href="book-never-split-the-difference.html" data-tooltip-target="tooltip-negotiation" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-negotiation" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-negotiation" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -302,18 +303,18 @@
                 <!-- Card for "關鍵對話" -->
                 <div class="book-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2 text-gray-900">關鍵對話</h2>
-                        <p class="text-gray-400 font-medium mb-4">Kerry Patterson, et al.</p>
-                        <p class="text-gray-700 mb-6">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900" data-t="bookTitle_crucial">關鍵對話</h2>
+                        <p class="text-gray-400 font-medium mb-4" data-t="author_crucial">Kerry Patterson, et al.</p>
+                        <p class="text-gray-700 mb-6" data-t="summary_crucial">
                             本書闡述了如何在高風險、情緒激烈或意見分歧的情境下進行有效溝通，創造安全的對話氛圍。
                         </p>
                         <a href="book-crucial-conversations.html" data-tooltip-target="tooltip-crucial" data-tooltip-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            閱讀筆記
+                            <span data-t="readNotesButton">閱讀筆記</span>
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
-                        <div id="tooltip-crucial" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200">
+                        <div id="tooltip-crucial" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-gray-700 bg-gray-200/75 rounded-full shadow-sm opacity-0 tooltip dark:bg-gray-700/75 dark:text-gray-200" data-t="tooltipText">
                             深入了解這本書的精華
                         </div>
                     </div>
@@ -321,7 +322,7 @@
 
                 <!-- Future book cards will be added here -->
                 <div class="book-card-placeholder flex items-center justify-center bg-white border-2 border-dashed border-gray-300 rounded-lg">
-                    <p class="text-gray-500">下一本好書...</p>
+                    <p class="text-gray-500" data-t="placeholder_nextBook">下一本好書...</p>
                 </div>
 
             </div>
