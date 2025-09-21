@@ -19,6 +19,7 @@ export default defineConfig({
         'book-nonviolent-communication': resolve(__dirname, 'book-nonviolent-communication.html'),
         'book-rewire-your-anxious-brain': resolve(__dirname, 'book-rewire-your-anxious-brain.html'),
         'book-impromptu-speaking': resolve(__dirname, 'book-impromptu-speaking.html'),
+        'book-awakening-of-growth': resolve(__dirname, 'book-awakening-of-growth.html'),
       }
     }
   }
