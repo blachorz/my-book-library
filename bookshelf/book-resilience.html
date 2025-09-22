@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>韌性：不確定時代的精進法則 | 我的書庫</title>
+    <title data-t="resilience_pageTitle">韌性：不確定時代的精進法則 | 我的書庫</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -12,66 +12,74 @@
 <body class="bg-background font-sans text-text antialiased">
     <div class="container max-w-3xl mx-auto px-5 py-10">
         
-        <nav class="mb-10">
-            <a href="../index.html" class="text-primary hover:underline">&larr; 返回書庫首頁</a>
+        <nav class="flex justify-between items-center mb-10">
+            <a href="../index.html" class="text-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <button id="lang-switcher"
+                title="Switch Language"
+                class="p-2 text-sm font-medium text-white bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto sm:h-auto sm:px-4 sm:py-2 sm:rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m4 13l4-4M19 5l-4 4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="hidden sm:inline" data-t="langSwitcher">切換為英文</span>
+            </button>
         </nav>
 
         <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-text mb-2">韌性：不確定時代的精進法則</h1>
-            <p class="text-lg text-secondary-text">張曉萌</p>
+            <h1 class="text-4xl font-bold text-text mb-2" data-t="resilience_mainTitle">韌性：不確定時代的精進法則</h1>
+            <p class="text-lg text-secondary-text" data-t="resilience_author">張曉萌</p>
         </header>
 
         <main>
             <section class="core-concept">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">核心理念</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="resilience_section_coreConcept">核心理念</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
-                    <h3 class="text-3xl font-bold m-0 text-primary">韌性飛輪</h3>
-                    <p class="text-lg font-medium my-1 text-text">柔而固也</p>
-                    <span class="text-base text-secondary-text">本書闡述了韌性並非死扛硬撐，而是「柔而固也」的復原、成長與獲益過程；其核心是透過「持續小贏」的策略，驅動「覺察」、「意義」與「連接」三大飛輪，讓我們在不確定性中找到內在的穩定力量。</span>
+                    <h3 class="text-3xl font-bold m-0 text-primary" data-t="resilience_coreConcept_title">韌性飛輪</h3>
+                    <p class="text-lg font-medium my-1 text-text" data-t="resilience_coreConcept_subtitle">柔而固也</p>
+                    <span class="text-base text-secondary-text" data-t="resilience_coreConcept_desc">本書闡述了韌性並非死扛硬撐，而是「柔而固也」的復原、成長與獲益過程；其核心是透過「持續小贏」的策略，驅動「覺察」、「意義」與「連接」三大飛輪，讓我們在不確定性中找到內在的穩定力量。</span>
                 </div>
             </section>
 
             <section class="mindmap">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="resilience_section_mindmap">心智圖</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[500px]">
                   <svg id="markmap-container" class="w-full h-full"></svg>
                 </div>
             </section>
 
             <section class="driving-force">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">驅動力：持續小贏</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="resilience_section_drivingForce">驅動力：持續小贏</h2>
                 <div class="fade-in-on-scroll grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div class="bg-card-bg rounded-xl p-6">
-                        <h4 class="m-0 mb-2.5 text-lg font-medium">概念：跑馬拉松而非衝刺</h4>
-                        <p class="m-0 text-secondary-text">專注於每日微小的、可持續的進步，而非追求生命中的高光時刻。持續的正面回饋能提供源源不絕的動力。</p>
+                        <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="resilience_drivingForce1_title">概念：跑馬拉松而非衝刺</h4>
+                        <p class="m-0 text-secondary-text" data-t="resilience_drivingForce1_desc">專注於每日微小的、可持續的進步，而非追求生命中的高光時刻。持續的正面回饋能提供源源不絕的動力。</p>
                     </div>
                     <div class="bg-card-bg rounded-xl p-6">
-                        <h4 class="m-0 mb-2.5 text-lg font-medium">範例：微小行動的力量</h4>
-                        <p class="m-0 text-secondary-text">每天讀一頁《古文觀止》、每天記錄三件好事、每天聽一本書。每天進步1%，一年後將有近37倍的成長。</p>
+                        <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="resilience_drivingForce2_title">範例：微小行動的力量</h4>
+                        <p class="m-0 text-secondary-text" data-t="resilience_drivingForce2_desc">每天讀一頁《古文觀止》、每天記錄三件好事、每天聽一本書。每天進步1%，一年後將有近37倍的成長。</p>
                     </div>
                 </div>
             </section>
 
             <section class="flywheels">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">韌性飛輪三大支柱</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="resilience_section_flywheels">韌性飛輪三大支柱</h2>
                 <div data-accordion="collapse" class="flex flex-col gap-4">
                     <!-- 飛輪一：覺察 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-1">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
-                                <span class="text-lg font-medium text-text">飛輪一：覺察 (Awareness)</span>
+                                <span class="text-lg font-medium text-text" data-t="resilience_flywheel1_title">飛輪一：覺察 (Awareness)</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p class="mb-4"><strong>目標：</strong>剝開不同社會角色的外殼，看見最真實的「本我」，並將事實與情緒分離。</p>
-                                <p class="font-medium text-text mb-2">實踐工具：焦慮拆彈</p>
+                                <p class="mb-4" data-t="resilience_flywheel1_p1"><strong>目標：</strong>剝開不同社會角色的外殼，看見最真實的「本我」，並將事實與情緒分離。</p>
+                                <p class="font-medium text-text mb-2" data-t="resilience_flywheel1_p2">實踐工具：焦慮拆彈</p>
                                 <ol class="list-decimal pl-5 space-y-1">
-                                    <li><strong>區分事實與臆想</strong>：寫下客觀事實，剔除主觀恐懼。</li>
-                                    <li><strong>劃分掌控圈</strong>：將事情分為「可控」與「不可控」。</li>
-                                    <li><strong>專注於可控部分</strong>：將精力投入能改變的行動。</li>
-                                    <li><strong>發現亮點</strong>：在困境中尋找積極面。</li>
+                                    <li data-t="resilience_flywheel1_li1"><strong>區分事實與臆想</strong>：寫下客觀事實，剔除主觀恐懼。</li>
+                                    <li data-t="resilience_flywheel1_li2"><strong>劃分掌控圈</strong>：將事情分為「可控」與「不可控」。</li>
+                                    <li data-t="resilience_flywheel1_li3"><strong>專注於可控部分</strong>：將精力投入能改變的行動。</li>
+                                    <li data-t="resilience_flywheel1_li4"><strong>發現亮點</strong>：在困境中尋找積極面。</li>
                                 </ol>
                             </div>
                         </div>
@@ -80,19 +88,19 @@
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-2">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
-                                <span class="text-lg font-medium text-text">飛輪二：意義 (Meaning)</span>
+                                <span class="text-lg font-medium text-text" data-t="resilience_flywheel2_title">飛輪二：意義 (Meaning)</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p class="mb-4"><strong>目標：</strong>在苦難中找到前進的動力與方向，認清生活真相後依然熱愛生活。</p>
-                                <p class="font-medium text-text mb-2">實踐工具：意義樹</p>
+                                <p class="mb-4" data-t="resilience_flywheel2_p1"><strong>目標：</strong>在苦難中找到前進的動力與方向，認清生活真相後依然熱愛生活。</p>
+                                <p class="font-medium text-text mb-2" data-t="resilience_flywheel2_p2">實踐工具：意義樹</p>
                                 <ol class="list-decimal pl-5 space-y-1">
-                                    <li><strong>列出日常行為</strong>：記錄每天在做的事。</li>
-                                    <li><strong>連接短期目標</strong>：將行為與一年內的目標連線。</li>
-                                    <li><strong>反思彈窗</strong>：若行為與目標脫節，則反思與調整。</li>
-                                    <li><strong>確立頂層目標</strong>：將所有目標與人生的頂層意義相連。</li>
+                                    <li data-t="resilience_flywheel2_li1"><strong>列出日常行為</strong>：記錄每天在做的事。</li>
+                                    <li data-t="resilience_flywheel2_li2"><strong>連接短期目標</strong>：將行為與一年內的目標連線。</li>
+                                    <li data-t="resilience_flywheel2_li3"><strong>反思彈窗</strong>：若行為與目標脫節，則反思與調整。</li>
+                                    <li data-t="resilience_flywheel2_li4"><strong>確立頂層目標</strong>：將所有目標與人生的頂層意義相連。</li>
                                 </ol>
                             </div>
                         </div>
@@ -101,15 +109,15 @@
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-3">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
-                                <span class="text-lg font-medium text-text">飛輪三：連接 (Connection)</span>
+                                <span class="text-lg font-medium text-text" data-t="resilience_flywheel3_title">飛輪三：連接 (Connection)</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p class="mb-4"><strong>目標：</strong>人的價值感與歸屬感產生於人際連接之中，韌性在信任關係中產生。</p>
-                                <p class="font-medium text-text mb-2">實踐工具：信任公式</p>
-                                <p class="font-mono text-center bg-gray-100 dark:bg-gray-800 rounded p-2">信任 = (勝任力 x 可靠度 x 親密度) / 自私度</p>
+                                <p class="mb-4" data-t="resilience_flywheel3_p1"><strong>目標：</strong>人的價值感與歸屬感產生於人際連接之中，韌性在信任關係中產生。</p>
+                                <p class="font-medium text-text mb-2" data-t="resilience_flywheel3_p2">實踐工具：信任公式</p>
+                                <p class="font-mono text-center bg-gray-100 dark:bg-gray-800 rounded p-2" data-t="resilience_flywheel3_p3">信任 = (勝任力 x 可靠度 x 親密度) / 自私度</p>
                             </div>
                         </div>
                     </div>
@@ -117,34 +125,34 @@
             </section>
             
             <section class="scenarios">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">觀點實戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="resilience_section_scenarios">觀點實戰</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <h3 class="m-0 mb-2.5 text-lg font-medium">面對中年危機</h3>
-                        <p class="m-0 text-secondary-text">將「養家糊口」與「追求夢想」視為並行線，從「持續小贏」開始，逐步發展熱愛。</p>
+                        <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="resilience_scenario1_title">面對中年危機</h3>
+                        <p class="m-0 text-secondary-text" data-t="resilience_scenario1_desc">將「養家糊口」與「追求夢想」視為並行線，從「持續小贏」開始，逐步發展熱愛。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
-                        <h3 class="m-0 mb-2.5 text-lg font-medium">孩子學習挫敗</h3>
-                        <p class="m-0 text-secondary-text">家長先「覺察」自身焦慮，幫助孩子找到自己既快樂又擅長的事，而非聚焦單一成績。</p>
+                        <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="resilience_scenario2_title">孩子學習挫敗</h3>
+                        <p class="m-0 text-secondary-text" data-t="resilience_scenario2_desc">家長先「覺察」自身焦慮，幫助孩子找到自己既快樂又擅長的事，而非聚焦單一成績。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
-                        <h3 class="m-0 mb-2.5 text-lg font-medium">大學生畢業迷茫</h3>
-                        <p class="m-0 text-secondary-text">在「卷」與「躺平」間，先思考長遠目標，並以「行動興奮」代替空想，在實踐中探索。</p>
+                        <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="resilience_scenario3_title">大學生畢業迷茫</h3>
+                        <p class="m-0 text-secondary-text" data-t="resilience_scenario3_desc">在「卷」與「躺平」間，先思考長遠目標，並以「行動興奮」代替空想，在實踐中探索。</p>
                     </div>
                 </div>
             </section>
 
             <section class="resources">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">提及書目與情境</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="resilience_section_resources">提及書目與情境</h2>
                 <ul class="fade-in-on-scroll list-disc pl-5">
-                    <li class="mb-2.5 text-secondary-text"><strong>《說文解字》:</strong> 用於解釋「韌」字的本義——「柔而固也」。</li>
-                    <li class="mb-2.5 text-secondary-text"><strong>《古文觀止》:</strong> 作為「持續小贏」策略的一個具體範例。</li>
+                    <li class="mb-2.5 text-secondary-text" data-t="resilience_resource1"><strong>《說文解字》:</strong> 用於解釋「韌」字的本義——「柔而固也」。</li>
+                    <li class="mb-2.5 text-secondary-text" data-t="resilience_resource2"><strong>《古文觀止》:</strong> 作為「持續小贏」策略的一個具體範例。</li>
                 </ul>
             </section>
         </main>
 
         <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
-            <p>&copy; 2025 FengMi Knowledge Base</p>
+            <p data-t="footer_copyright">&copy; 2025 FengMi Knowledge Base</p>
         </footer>
     </div>
     <script type="module" src="/src/ts/main.ts"></script>

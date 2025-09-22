@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你的顧客需要一個好故事 | 我的書庫</title>
+    <title data-t="storybrand_pageTitle">你的顧客需要一個好故事 | 我的書庫</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -12,97 +12,105 @@
 <body class="bg-background font-sans text-text antialiased">
     <div class="container max-w-3xl mx-auto px-5 py-10">
         
-        <nav class="mb-10">
-            <a href="../index.html" class="text-primary hover:underline">&larr; 返回書庫首頁</a>
+        <nav class="flex justify-between items-center mb-10">
+            <a href="../index.html" class="text-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <button id="lang-switcher"
+                title="Switch Language"
+                class="p-2 text-sm font-medium text-white bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto sm:h-auto sm:px-4 sm:py-2 sm:rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m4 13l4-4M19 5l-4 4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="hidden sm:inline" data-t="langSwitcher">切換為英文</span>
+            </button>
         </nav>
 
         <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-text mb-2">你的顧客需要一個好故事</h1>
-            <p class="text-lg text-secondary-text">Donald Miller</p>
+            <h1 class="text-4xl font-bold text-text mb-2" data-t="storybrand_mainTitle">你的顧客需要一個好故事</h1>
+            <p class="text-lg text-secondary-text" data-t="storybrand_author">Donald Miller</p>
         </header>
 
         <main>
             <section class="core-concept">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">核心原則</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="storybrand_section_coreConcept">核心原則</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
-                    <h3 class="text-3xl font-bold m-0 text-primary">顧客才是英雄，品牌是嚮導</h3>
-                    <p class="text-lg font-medium my-1 text-text">典範轉移</p>
-                    <span class="text-base text-secondary-text">品牌不該是英雄，而應扮演嚮導（導師）的角色，幫助身為英雄的顧客解決問題、達成願望。</span>
+                    <h3 class="text-3xl font-bold m-0 text-primary" data-t="storybrand_coreConcept_title">顧客才是英雄，品牌是嚮導</h3>
+                    <p class="text-lg font-medium my-1 text-text" data-t="storybrand_coreConcept_subtitle">典範轉移</p>
+                    <span class="text-base text-secondary-text" data-t="storybrand_coreConcept_desc">品牌不該是英雄，而應扮演嚮導（導師）的角色，幫助身為英雄的顧客解決問題、達成願望。</span>
                 </div>
             </section>
 
             <section class="mindmap">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="storybrand_section_mindmap">心智圖</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[500px]">
                   <svg id="markmap-container" class="w-full h-full"></svg>
                 </div>
             </section>
 
             <section class="steps">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">SB7 故事品牌七大框架</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="storybrand_section_sb7">SB7 故事品牌七大框架</h2>
                 <ul class="flex flex-col gap-5">
                     <li class="fade-in-on-scroll step flex items-start gap-5">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">1</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">一個人物 (顧客)</h4>
-                            <p class="m-0 text-secondary-text">顧客是故事的英雄，品牌必須明確界定顧客的核心慾望。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="storybrand_step1_title">一個人物 (顧客)</h4>
+                            <p class="m-0 text-secondary-text" data-t="storybrand_step1_desc">顧客是故事的英雄，品牌必須明確界定顧客的核心慾望。</p>
                         </div>
                     </li>
                     <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 100ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">2</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">遭遇了一個問題</h4>
-                            <p class="m-0 text-secondary-text">問題製造了故事的張力，並為品牌出場創造機會。問題包含外部、內部、哲學三個層次。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="storybrand_step2_title">遭遇了一個問題</h4>
+                            <p class="m-0 text-secondary-text" data-t="storybrand_step2_desc">問題製造了故事的張力，並為品牌出場創造機會。問題包含外部、內部、哲學三個層次。</p>
                         </div>
                     </li>
                     <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 200ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">3</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">遇到一位嚮導 (品牌)</h4>
-                            <p class="m-0 text-secondary-text">嚮導需具備共情（理解顧客的內部問題）與權威（證明有能力解決問題）兩個特質。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="storybrand_step3_title">遇到一位嚮導 (品牌)</h4>
+                            <p class="m-0 text-secondary-text" data-t="storybrand_step3_desc">嚮導需具備共情（理解顧客的內部問題）與權威（證明有能力解決問題）兩個特質。</p>
                         </div>
                     </li>
                     <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 300ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">4</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">提供一套方案</h4>
-                            <p class="m-0 text-secondary-text">為顧客鋪設一條清晰的路徑（過程方案）並打消其疑慮（協議方案），以降低行動風險。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="storybrand_step4_title">提供一套方案</h4>
+                            <p class="m-0 text-secondary-text" data-t="storybrand_step4_desc">為顧客鋪設一條清晰的路徑（過程方案）並打消其疑慮（協議方案），以降低行動風險。</p>
                         </div>
                     </li>
                     <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 400ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">5</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">召喚他採取行動</h4>
-                            <p class="m-0 text-secondary-text">顧客不會主動行動，品牌必須透過直接召喚（如「立即購買」）或轉換型召喚（如「免費試用」）來激勵他們。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="storybrand_step5_title">召喚他採取行動</h4>
+                            <p class="m-0 text-secondary-text" data-t="storybrand_step5_desc">顧客不會主動行動，品牌必須透過直接召喚（如「立即購買」）或轉換型召喚（如「免費試用」）來激勵他們。</p>
                         </div>
                     </li>
                     <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 500ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">6</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">幫助他避免失敗</h4>
-                            <p class="m-0 text-secondary-text">闡明若不採取行動可能面臨的負面後果，利用人類「厭惡損失」的心理。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="storybrand_step6_title">幫助他避免失敗</h4>
+                            <p class="m-0 text-secondary-text" data-t="storybrand_step6_desc">闡明若不採取行動可能面臨的負面後果，利用人類「厭惡損失」的心理。</p>
                         </div>
                     </li>
                     <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 600ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">7</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">最終獲得成功</h4>
-                            <p class="m-0 text-secondary-text">為顧客描繪一個成功後的理想圖景，例如贏得地位、達成自我實現，完成故事的閉環。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="storybrand_step7_title">最終獲得成功</h4>
+                            <p class="m-0 text-secondary-text" data-t="storybrand_step7_desc">為顧客描繪一個成功後的理想圖景，例如贏得地位、達成自我實現，完成故事的閉環。</p>
                         </div>
                     </li>
                 </ul>
             </section>
 
             <section class="scenarios">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">觀點實戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="storybrand_section_scenarios">觀點實戰</h2>
                 
                 <div class="mb-4 border-b border-border">
                     <ul class="flex flex-wrap -mb-px text-base font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                         <li class="me-2" role="presentation">
-                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="website-tab" data-tabs-target="#website-content" type="button" role="tab" aria-controls="website-content" aria-selected="true">改造你的網站</button>
+                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="website-tab" data-tabs-target="#website-content" type="button" role="tab" aria-controls="website-content" aria-selected="true" data-t="storybrand_tab_website">改造你的網站</button>
                         </li>
                         <li class="me-2" role="presentation">
-                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="marketing-tab" data-tabs-target="#marketing-content" type="button" role="tab" aria-controls="marketing-content" aria-selected="false">五個免費的行銷行動</button>
+                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="marketing-tab" data-tabs-target="#marketing-content" type="button" role="tab" aria-controls="marketing-content" aria-selected="false" data-t="storybrand_tab_marketing">五個免費的行銷行動</button>
                         </li>
                     </ul>
                 </div>
@@ -110,37 +118,37 @@
                 <div id="myTabContent">
                     <div class="hidden" id="website-content" role="tabpanel" aria-labelledby="website-tab">
                         <div class="bg-card-bg rounded-xl p-6">
-                            <h3 class="text-xl font-medium mb-4 text-text">第一屏五要素</h3>
+                            <h3 class="text-xl font-medium mb-4 text-text" data-t="storybrand_website_title">第一屏五要素</h3>
                             <ul class="flex flex-col gap-3 list-decimal list-inside text-secondary-text">
-                                <li><strong>承諾的人格轉變：</strong>明確告知你將幫助顧客成為什麼樣的人。</li>
-                                <li><strong>承諾解決的問題：</strong>用一句簡潔的廣告語說明你能解決什麼痛點。</li>
-                                <li><strong>成功的圖像：</strong>展示顧客使用你的產品或服務後，開心、成功的模樣。</li>
-                                <li><strong>直接召喚行動按鈕：</strong>將「立即購買」或「馬上註冊」等按鈕置於網站最顯眼的位置（如右上角或正中央）。</li>
-                                <li><strong>精簡文字：</strong>人們是用「掃視」而非「閱讀」網頁，確保首頁文字不超過十句話。</li>
+                                <li data-t="storybrand_website_li1"><strong>承諾的人格轉變：</strong>明確告知你將幫助顧客成為什麼樣的人。</li>
+                                <li data-t="storybrand_website_li2"><strong>承諾解決的問題：</strong>用一句簡潔的廣告語說明你能解決什麼痛點。</li>
+                                <li data-t="storybrand_website_li3"><strong>成功的圖像：</strong>展示顧客使用你的產品或服務後，開心、成功的模樣。</li>
+                                <li data-t="storybrand_website_li4"><strong>直接召喚行動按鈕：</strong>將「立即購買」或「馬上註冊」等按鈕置於網站最顯眼的位置（如右上角或正中央）。</li>
+                                <li data-t="storybrand_website_li5"><strong>精簡文字：</strong>人們是用「掃視」而非「閱讀」網頁，確保首頁文字不超過十句話。</li>
                             </ul>
                         </div>
                     </div>
                     <div class="hidden" id="marketing-content" role="tabpanel" aria-labelledby="marketing-tab">
                         <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
                            <div class="border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                                <h4 class="m-0 mb-2.5 text-lg font-medium">1. 創作一句妙語</h4>
-                                <p class="m-0 text-secondary-text">融合「人物＋問題＋方案＋成功」四要素，讓所有員工都能脫口而出。</p>
+                                <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="storybrand_marketing1_title">1. 創作一句妙語</h4>
+                                <p class="m-0 text-secondary-text" data-t="storybrand_marketing1_desc">融合「人物＋問題＋方案＋成功」四要素，讓所有員工都能脫口而出。</p>
                             </div>
                             <div class="border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
-                                <h4 class="m-0 mb-2.5 text-lg font-medium">2. 創造一個引流器</h4>
-                                <p class="m-0 text-secondary-text">提供有價值的資料或工具（如 PDF、試用），以收集潛在客戶名單。</p>
+                                <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="storybrand_marketing2_title">2. 創造一個引流器</h4>
+                                <p class="m-0 text-secondary-text" data-t="storybrand_marketing2_desc">提供有價值的資料或工具（如 PDF、試用），以收集潛在客戶名單。</p>
                             </div>
                             <div class="border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
-                                <h4 class="m-0 mb-2.5 text-lg font-medium">3. 製作自動化電郵</h4>
-                                <p class="m-0 text-secondary-text">持續與潛在客戶溝通，建立信任感與專業形象。</p>
+                                <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="storybrand_marketing3_title">3. 製作自動化電郵</h4>
+                                <p class="m-0 text-secondary-text" data-t="storybrand_marketing3_desc">持續與潛在客戶溝通，建立信任感與專業形象。</p>
                             </div>
                             <div class="border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 300ms;">
-                                <h4 class="m-0 mb-2.5 text-lg font-medium">4. 蒐集並講述轉變故事</h4>
-                                <p class="m-0 text-secondary-text">用真實的客戶成功案例來證明你的價值，建立社會認同。</p>
+                                <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="storybrand_marketing4_title">4. 蒐集並講述轉變故事</h4>
+                                <p class="m-0 text-secondary-text" data-t="storybrand_marketing4_desc">用真實的客戶成功案例來證明你的價值，建立社會認同。</p>
                             </div>
                             <div class="border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 400ms;">
-                                <h4 class="m-0 mb-2.5 text-lg font-medium">5. 創造客戶推薦系統</h4>
-                                <p class="m-0 text-secondary-text">鼓勵滿意的顧客為你帶來新顧客，形成指數級增長。</p>
+                                <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="storybrand_marketing5_title">5. 創造客戶推薦系統</h4>
+                                <p class="m-0 text-secondary-text" data-t="storybrand_marketing5_desc">鼓勵滿意的顧客為你帶來新顧客，形成指數級增長。</p>
                             </div>
                         </div>
                     </div>
@@ -148,15 +156,15 @@
             </section>
 
             <section class="resources">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">提及書目與情境</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="storybrand_section_resources">提及書目與情境</h2>
                 <ul class="fade-in-on-scroll list-disc pl-5">
-                    <li class="mb-2.5 text-secondary-text">未提及其他書目。</li>
+                    <li class="mb-2.5 text-secondary-text" data-t="storybrand_resource1">未提及其他書目。</li>
                 </ul>
             </section>
         </main>
 
         <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
-            <p>&copy; 2025 FengMi Knowledge Base</p>
+            <p data-t="footer_copyright">&copy; 2025 FengMi Knowledge Base</p>
         </footer>
     </div>
     <script type="module" src="/src/ts/main.ts"></script>

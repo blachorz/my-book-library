@@ -12,167 +12,175 @@
 <body class="bg-background font-sans text-text antialiased">
     <div class="container max-w-3xl mx-auto px-5 py-10">
         
-        <nav class="mb-10">
-            <a href="../index.html" class="text-primary hover:underline">&larr; 返回書庫首頁</a>
+        <nav class="flex justify-between items-center mb-10">
+            <a href="../index.html" class="text-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <button id="lang-switcher"
+                title="Switch Language"
+                class="p-2 text-sm font-medium text-white bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto sm:h-auto sm:px-4 sm:py-2 sm:rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m4 13l4-4M19 5l-4 4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="hidden sm:inline" data-t="langSwitcher">切換為英文</span>
+            </button>
         </nav>
 
         <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-text mb-2">商業至簡</h1>
-            <p class="text-lg text-secondary-text">Donald Miller</p>
+            <h1 class="text-4xl font-bold text-text mb-2" data-t="bms_pageTitle">商業至簡</h1>
+            <p class="text-lg text-secondary-text" data-t="author_bms">Donald Miller</p>
         </header>
 
         <main>
             <section class="core-concept">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">本書核心</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="bms_coreConceptTitle">本書核心</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
-                    <h3 class="text-3xl font-bold m-0 text-primary">價值驅動型人才</h3>
-                    <p class="text-lg font-medium my-1 text-text">(Value-Driven Professional)</p>
-                    <span class="text-base text-secondary-text">將複雜的商業理論簡化為十大性格特質與十大核心技能，透過掌握商業基本功，成為無論創業或在職都能獲得成功的人才。</span>
+                    <h3 class="text-3xl font-bold m-0 text-primary" data-t="bms_coreConceptHeading">價值驅動型人才</h3>
+                    <p class="text-lg font-medium my-1 text-text" data-t="bms_coreConceptEnglish">(Value-Driven Professional)</p>
+                    <span class="text-base text-secondary-text" data-t="bms_coreConceptSummary">將複雜的商業理論簡化為十大性格特質與十大核心技能，透過掌握商業基本功，成為無論創業或在職都能獲得成功的人才。</span>
                 </div>
             </section>
 
             <section class="mindmap">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="bms_mindmapTitle">心智圖</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[500px]">
                   <svg id="markmap-container" class="w-full h-full"></svg>
                 </div>
             </section>
 
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">價值驅動型人才的十大性格特徵</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="bms_traitsTitle">價值驅動型人才的十大性格特徵</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>1. 把自己視為公開市場上的產品</strong>：為別人對你的投資負責，成為一個可靠的人。</p></div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>2. 你是個英雄，而不是受害者</strong>：採取主動解決問題的英雄視角，而非抱怨環境的受害者視角。</p></div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>3. 不小題大作</strong>：避免將小挫折戲劇化，展現承擔責任的成熟。</p></div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>4. 把回饋當禮物</strong>：將批評與建議視為改進的機會，而非人身攻擊。</p></div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>5. 知道如何正確應對衝突</strong>：學習有效溝通，處理不同意見以達成共識。</p></div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>6. 渴望被信任和尊重，而非被喜歡</strong>：管理者的目標是建立威信，而非討好員工。</p></div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>7. 堅定的行動派</strong>：將想法迅速付諸實踐。</p></div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>8. 不自欺欺人</strong>：勇敢面對現實，不受取悅他人、怕丟臉或恐懼等因素影響。</p></div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>9. 永遠樂觀</strong>：看清現實的困難後，依然保持積極的態度。</p></div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p><strong>10. 成長型心態</strong>：將困難與挫折視為學習與成長的機會。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait1"><strong>1. 把自己視為公開市場上的產品</strong>：為別人對你的投資負責，成為一個可靠的人。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait2"><strong>2. 你是個英雄，而不是受害者</strong>：採取主動解決問題的英雄視角，而非抱怨環境的受害者視角。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait3"><strong>3. 不小題大作</strong>：避免將小挫折戲劇化，展現承擔責任的成熟。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait4"><strong>4. 把回饋當禮物</strong>：將批評與建議視為改進的機會，而非人身攻擊。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait5"><strong>5. 知道如何正確應對衝突</strong>：學習有效溝通，處理不同意見以達成共識。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait6"><strong>6. 渴望被信任和尊重，而非被喜歡</strong>：管理者的目標是建立威信，而非討好員工。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait7"><strong>7. 堅定的行動派</strong>：將想法迅速付諸實踐。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait8"><strong>8. 不自欺欺人</strong>：勇敢面對現實，不受取悅他人、怕丟臉或恐懼等因素影響。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait9"><strong>9. 永遠樂觀</strong>：看清現實的困難後，依然保持積極的態度。</p></div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5"><p data-t="bms_trait10"><strong>10. 成長型心態</strong>：將困難與挫折視為學習與成長的機會。</p></div>
                 </div>
             </section>
 
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">十大核心商業技能</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="bms_skillsTitle">十大核心商業技能</h2>
                 <div data-accordion="collapse" class="flex flex-col gap-4">
                     <!-- Leadership -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-1"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1"><span class="text-lg font-medium text-text">領導力：創建清晰的藍圖</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li>創建使命宣言</li><li>定義關鍵特徵</li><li>決定關鍵行動</li><li>講一個好故事</li><li>定義主題與為什麼</li></ul></div></div>
+                        <h3 id="accordion-heading-1"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1"><span class="text-lg font-medium text-text" data-t="bms_skill1Title">領導力：創建清晰的藍圖</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li data-t="bms_skill1_li1">創建使命宣言</li><li data-t="bms_skill1_li2">定義關鍵特徵</li><li data-t="bms_skill1_li3">決定關鍵行動</li><li data-t="bms_skill1_li4">講一個好故事</li><li data-t="bms_skill1_li5">定義主題與為什麼</li></ul></div></div>
                     </div>
                     <!-- Productivity -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-2"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2"><span class="text-lg font-medium text-text">生產力：最大化時間價值</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li>每日早晨反思</li><li>優先處理主要任務</li><li>利用高效時間</li><li>提前鎖定時間</li></ul></div></div>
+                        <h3 id="accordion-heading-2"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2"><span class="text-lg font-medium text-text" data-t="bms_skill2Title">生產力：最大化時間價值</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li data-t="bms_skill2_li1">每日早晨反思</li><li data-t="bms_skill2_li2">優先處理主要任務</li><li data-t="bms_skill2_li3">利用高效時間</li><li data-t="bms_skill2_li4">提前鎖定時間</li></ul></div></div>
                     </div>
                     <!-- Strategy -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-3"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3"><span class="text-lg font-medium text-text">策略：企業飛行的藍圖</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li>機身 (營運費用)</li><li>機翼 (產品/服務)</li><li>引擎 (行銷/銷售)</li><li>燃料 (資本/現金流)</li></ul></div></div>
+                        <h3 id="accordion-heading-3"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3"><span class="text-lg font-medium text-text" data-t="bms_skill3Title">策略：企業飛行的藍圖</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li data-t="bms_skill3_li1">機身 (營運費用)</li><li data-t="bms_skill3_li2">機翼 (產品/服務)</li><li data-t="bms_skill3_li3">引擎 (行銷/銷售)</li><li data-t="bms_skill3_li4">燃料 (資本/現金流)</li></ul></div></div>
                     </div>
                      <!-- Messaging -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-4"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-4" aria-expanded="false" aria-controls="accordion-body-4"><span class="text-lg font-medium text-text">資訊：清晰傳達你的價值</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-4" class="hidden" aria-labelledby="accordion-heading-4"><div class="px-5 pb-5 text-secondary-text"><p>採用故事框架清晰地傳達：人物、問題、嚮導、方案、召喚、結果。</p></div></div>
+                        <h3 id="accordion-heading-4"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-4" aria-expanded="false" aria-controls="accordion-body-4"><span class="text-lg font-medium text-text" data-t="bms_skill4Title">資訊：清晰傳達你的價值</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-4" class="hidden" aria-labelledby="accordion-heading-4"><div class="px-5 pb-5 text-secondary-text"><p data-t="bms_skill4_p1">採用故事框架清晰地傳達：人物、問題、嚮導、方案、召喚、結果。</p></div></div>
                     </div>
                     <!-- Marketing -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-5"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-5" aria-expanded="false" aria-controls="accordion-body-5"><span class="text-lg font-medium text-text">行銷：從好奇到承諾的三部曲</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-5" class="hidden" aria-labelledby="accordion-heading-5"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li>第一步：好奇 (Curiosity)</li><li>第二步：了解 (Enlightenment)</li><li>第三步：承諾 (Commitment)</li></ul></div></div>
+                        <h3 id="accordion-heading-5"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-5" aria-expanded="false" aria-controls="accordion-body-5"><span class="text-lg font-medium text-text" data-t="bms_skill5Title">行銷：從好奇到承諾的三部曲</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-5" class="hidden" aria-labelledby="accordion-heading-5"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li data-t="bms_skill5_li1">第一步：好奇 (Curiosity)</li><li data-t="bms_skill5_li2">第二步：了解 (Enlightenment)</li><li data-t="bms_skill5_li3">第三步：承諾 (Commitment)</li></ul></div></div>
                     </div>
                     <!-- Communication -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-6"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-6" aria-expanded="false" aria-controls="accordion-body-6"><span class="text-lg font-medium text-text">溝通：有效的演講結構</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-6" class="hidden" aria-labelledby="accordion-heading-6"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li>結構化內容</li><li>鋪陳高潮</li><li>明確召喚</li><li>有力結尾</li></ul></div></div>
+                        <h3 id="accordion-heading-6"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-6" aria-expanded="false" aria-controls="accordion-body-6"><span class="text-lg font-medium text-text" data-t="bms_skill6Title">溝通：有效的演講結構</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-6" class="hidden" aria-labelledby="accordion-heading-6"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li data-t="bms_skill6_li1">結構化內容</li><li data-t="bms_skill6_li2">鋪陳高潮</li><li data-t="bms_skill6_li3">明確召喚</li><li data-t="bms_skill6_li4">有力結尾</li></ul></div></div>
                     </div>
                     <!-- Sales -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-7"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-7" aria-expanded="false" aria-controls="accordion-body-7"><span class="text-lg font-medium text-text">銷售：引導客戶進入你的故事</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-7" class="hidden" aria-labelledby="accordion-heading-7"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li>驗證客戶資格</li><li>邀請客戶進入故事</li><li>扮演嚮導</li><li>提供清晰的報價單</li><li>心態：別把事情看得那麼嚴重</li></ul></div></div>
+                        <h3 id="accordion-heading-7"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-7" aria-expanded="false" aria-controls="accordion-body-7"><span class="text-lg font-medium text-text" data-t="bms_skill7Title">銷售：引導客戶進入你的故事</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-7" class="hidden" aria-labelledby="accordion-heading-7"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li data-t="bms_skill7_li1">驗證客戶資格</li><li data-t="bms_skill7_li2">邀請客戶進入故事</li><li data-t="bms_skill7_li3">扮演嚮導</li><li data-t="bms_skill7_li4">提供清晰的報價單</li><li data-t="bms_skill7_li5">心態：別把事情看得那麼嚴重</li></ul></div></div>
                     </div>
                     <!-- Negotiation -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-8"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-8" aria-expanded="false" aria-controls="accordion-body-8"><span class="text-lg font-medium text-text">談判：合作與競爭的藝術</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-8" class="hidden" aria-labelledby="accordion-heading-8"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li>識別對手類型 (合作性 vs 競爭性)</li><li>提供額外收益</li><li>提出最初報價</li><li>避免情緒化</li></ul></div></div>
+                        <h3 id="accordion-heading-8"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-8" aria-expanded="false" aria-controls="accordion-body-8"><span class="text-lg font-medium text-text" data-t="bms_skill8Title">談判：合作與競爭的藝術</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-8" class="hidden" aria-labelledby="accordion-heading-8"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li data-t="bms_skill8_li1">識別對手類型 (合作性 vs 競爭性)</li><li data-t="bms_skill8_li2">提供額外收益</li><li data-t="bms_skill8_li3">提出最初報價</li><li data-t="bms_skill8_li4">避免情緒化</li></ul></div></div>
                     </div>
                     <!-- Management -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-9"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-9" aria-expanded="false" aria-controls="accordion-body-9"><span class="text-lg font-medium text-text">管理：推動團隊前進</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-9" class="hidden" aria-labelledby="accordion-heading-9"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li>確定優先事項</li><li>創建精簡流程</li><li>提供有價值的回饋</li><li>做教練，而非啦啦隊長</li></ul></div></div>
+                        <h3 id="accordion-heading-9"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-9" aria-expanded="false" aria-controls="accordion-body-9"><span class="text-lg font-medium text-text" data-t="bms_skill9Title">管理：推動團隊前進</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-9" class="hidden" aria-labelledby="accordion-heading-9"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li data-t="bms_skill9_li1">確定優先事項</li><li data-t="bms_skill9_li2">創建精簡流程</li><li data-t="bms_skill9_li3">提供有價值的回饋</li><li data-t="bms_skill9_li4">做教練，而非啦啦隊長</li></ul></div></div>
                     </div>
                     <!-- Execution -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl">
-                        <h3 id="accordion-heading-10"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-10" aria-expanded="false" aria-controls="accordion-body-10"><span class="text-lg font-medium text-text">執行：將計畫化為現實</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
-                        <div id="accordion-body-10" class="hidden" aria-labelledby="accordion-heading-10"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li>召開啟動會議</li><li>使用單頁管理工具</li><li>每週進度檢查</li><li>記錄與慶祝</li></ul></div></div>
+                        <h3 id="accordion-heading-10"><button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-10" aria-expanded="false" aria-controls="accordion-body-10"><span class="text-lg font-medium text-text" data-t="bms_skill10Title">執行：將計畫化為現實</span><span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span></button></h3>
+                        <div id="accordion-body-10" class="hidden" aria-labelledby="accordion-heading-10"><div class="px-5 pb-5 text-secondary-text"><ul class="list-disc pl-5"><li data-t="bms_skill10_li1">召開啟動會議</li><li data-t="bms_skill10_li2">使用單頁管理工具</li><li data-t="bms_skill10_li3">每週進度檢查</li><li data-t="bms_skill10_li4">記錄與慶祝</li></ul></div></div>
                     </div>
                 </div>
             </section>
 
             <section class="leadership-example">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">本書精華範例：領導力一頁紙</h2>
-                <p class="fade-in-on-scroll text-secondary-text text-right -mt-4 mb-8">（珍妮花店案例）</p>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="bms_exampleTitle">本書精華範例：領導力一頁紙</h2>
+                <p class="fade-in-on-scroll text-secondary-text text-right -mt-4 mb-8" data-t="bms_exampleSubtitle">（珍妮花店案例）</p>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 space-y-6">
                     <div>
-                        <h3 class="text-xl font-semibold text-primary mb-2">一、使命宣言</h3>
-                        <p class="text-secondary-text">我們致力於用休士頓地區最優質的鮮花，為人們帶來歡樂。因為當人們收到摯愛送來的花時，會感受到被關懷與煥然一新。</p>
+                        <h3 class="text-xl font-semibold text-primary mb-2" data-t="bms_example1Title">一、使命宣言</h3>
+                        <p class="text-secondary-text" data-t="bms_example1_p1">我們致力於用休士頓地區最優質的鮮花，為人們帶來歡樂。因為當人們收到摯愛送來的花時，會感受到被關懷與煥然一新。</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-primary mb-2">二、三大關鍵特徵</h3>
+                        <h3 class="text-xl font-semibold text-primary mb-2" data-t="bms_example2Title">二、三大關鍵特徵</h3>
                         <ul class="list-disc list-inside text-secondary-text space-y-1">
-                            <li><strong>正面</strong>：相信每個人的生活都能被花點亮。</li>
-                            <li><strong>創意</strong>：提供本地最美麗、最具創意的花藝。</li>
-                            <li><strong>專注</strong>：全心投入本職，因為他人的快樂取決於我們的努力。</li>
+                            <li data-t="bms_example2_li1"><strong>正面</strong>：相信每個人的生活都能被花點亮。</li>
+                            <li data-t="bms_example2_li2"><strong>創意</strong>：提供本地最美麗、最具創意的花藝。</li>
+                            <li data-t="bms_example2_li3"><strong>專注</strong>：全心投入本職，因為他人的快樂取決於我們的努力。</li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-primary mb-2">三、三大關鍵行動</h3>
+                        <h3 class="text-xl font-semibold text-primary mb-2" data-t="bms_example3Title">三、三大關鍵行動</h3>
                         <ul class="list-disc list-inside text-secondary-text space-y-1">
-                            <li><strong>微笑服務</strong>：以樂觀、正面的態度迎接每一位顧客。</li>
-                            <li><strong>持續學習</strong>：不斷精進花藝知識，追求更佳作品。</li>
-                            <li><strong>嚴格清潔</strong>：每日三次徹底清掃，維持店面整潔。</li>
+                            <li data-t="bms_example3_li1"><strong>微笑服務</strong>：以樂觀、正面的態度迎接每一位顧客。</li>
+                            <li data-t="bms_example3_li2"><strong>持續學習</strong>：不斷精進花藝知識，追求更佳作品。</li>
+                            <li data-t="bms_example3_li3"><strong>嚴格清潔</strong>：每日三次徹底清掃，維持店面整潔。</li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-primary mb-2">四、故事推介</h3>
-                        <p class="text-secondary-text">我們深信，許多人在生活中渴望被認可。當收到鮮花時，會感受到有人惦記與關心，這份溫暖能帶來幾天的好心情。珍妮花店以最好的鮮花，成為傳遞認可與關愛的橋樑，讓每個人都值得擁有這份美好。</p>
+                        <h3 class="text-xl font-semibold text-primary mb-2" data-t="bms_example4Title">四、故事推介</h3>
+                        <p class="text-secondary-text" data-t="bms_example4_p1">我們深信，許多人在生活中渴望被認可。當收到鮮花時，會感受到有人惦記與關心，這份溫暖能帶來幾天的好心情。珍妮花店以最好的鮮花，成為傳遞認可與關愛的橋樑，讓每個人都值得擁有這份美好。</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-primary mb-2">五、主題摘要</h3>
-                        <p class="text-secondary-text">收到鮮花、獲得認可，能讓人心情煥然一新。</p>
+                        <h3 class="text-xl font-semibold text-primary mb-2" data-t="bms_example5Title">五、主題摘要</h3>
+                        <p class="text-secondary-text" data-t="bms_example5_p1">收到鮮花、獲得認可，能讓人心情煥然一新。</p>
                     </div>
                 </div>
             </section>
             
             <section class="scenarios">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">觀點實戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="bms_scenariosTitle">觀點實戰</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <h4 class="text-lg font-medium mb-2">製作你的領導力一頁紙</h4>
-                        <p class="text-secondary-text">仿照書中的花店範例，為你的團隊或公司定義「使命宣言」、「關鍵特徵」、「關鍵行動」和「品牌故事」。</p>
+                        <h4 class="text-lg font-medium mb-2" data-t="bms_scenario1Title">製作你的領導力一頁紙</h4>
+                        <p class="text-secondary-text" data-t="bms_scenario1_p1">仿照書中的花店範例，為你的團隊或公司定義「使命宣言」、「關鍵特徵」、「關鍵行動」和「品牌故事」。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
-                        <h4 class="text-lg font-medium mb-2">打造你的「一句話摘要」</h4>
-                        <p class="text-secondary-text">練習用「問題—方案—結果」的公式介紹你的工作或產品。</p>
+                        <h4 class="text-lg font-medium mb-2" data-t="bms_scenario2Title">打造你的「一句話摘要」</h4>
+                        <p class="text-secondary-text" data-t="bms_scenario2_p1">練習用「問題—方案—結果」的公式介紹你的工作或產品。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
-                        <h4 class="text-lg font-medium mb-2">執行「穴居人測試」</h4>
-                        <p class="text-secondary-text">檢查你的網站或傳單，確保外行人能在五秒內理解你是誰、你能做什麼、以及如何購買。</p>
+                        <h4 class="text-lg font-medium mb-2" data-t="bms_scenario3Title">執行「穴居人測試」</h4>
+                        <p class="text-secondary-text" data-t="bms_scenario3_p1">檢查你的網站或傳單，確保外行人能在五秒內理解你是誰、你能做什麼、以及如何購買。</p>
                     </div>
                 </div>
             </section>
 
             <section class="resources">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">提及書目與情境</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="bms_resourcesTitle">提及書目與情境</h2>
                 <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text">
-                    <li class="mb-2.5"><strong>《可複製的領導力》</strong>: 在說明「把回饋當禮物」的重要性時提及。</li>
-                    <li class="mb-2.5"><strong>《關鍵衝突》</strong>: 在探討「如何正確應對衝突」時引用。</li>
-                    <li class="mb-2.5"><strong>《亮劍》</strong>: 以李雲龍為例，說明領導者需要的是信任而非喜愛。</li>
-                    <li class="mb-2.5"><strong>《終身成長》</strong>: 在解釋「成長型心態」時引用。</li>
-                    <li class="mb-2.5"><strong>《你的顧客需要一個好故事》</strong>: 其故事框架被應用於「領導力」與「資訊」章節。</li>
-                    <li class="mb-2.5"><strong>《掌控談話》</strong>: 在「談判」能力章節中推薦。</li>
-                    <li class="mb-2.5"><strong>《OKR工作法》</strong>: 作為設定與追蹤團隊目標的方法被提及。</li>
+                    <li class="mb-2.5" data-t="bms_resource1"><strong>《可複製的領導力》</strong>: 在說明「把回饋當禮物」的重要性時提及。</li>
+                    <li class="mb-2.5" data-t="bms_resource2"><strong>《關鍵衝突》</strong>: 在探討「如何正確應對衝突」時引用。</li>
+                    <li class="mb-2.5" data-t="bms_resource3"><strong>《亮劍》</strong>: 以李雲龍為例，說明領導者需要的是信任而非喜愛。</li>
+                    <li class="mb-2.5" data-t="bms_resource4"><strong>《終身成長》</strong>: 在解釋「成長型心態」時引用。</li>
+                    <li class="mb-2.5" data-t="bms_resource5"><strong>《你的顧客需要一個好故事》</strong>: 其故事框架被應用於「領導力」與「資訊」章節。</li>
+                    <li class="mb-2.5" data-t="bms_resource6"><strong>《掌控談話》</strong>: 在「談判」能力章節中推薦。</li>
+                    <li class="mb-2.5" data-t="bms_resource7"><strong>《OKR工作法》</strong>: 作為設定與追蹤團隊目標的方法被提及。</li>
                 </ul>
             </section>
 

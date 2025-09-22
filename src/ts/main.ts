@@ -16,7 +16,7 @@ const setLanguage = (lang: Language) => {
         const translationData = translations as Translations;
         // 2. 如果 key 存在於 translations.json 中，就更新該元素的文字
         if (key && translationData[key]) {
-            el.innerText = translationData[key][lang];
+            el.innerHTML = translationData[key][lang];
         }
     });
     // 3. 更新網頁的 lang 屬性，有助於 SEO 與無障礙閱讀

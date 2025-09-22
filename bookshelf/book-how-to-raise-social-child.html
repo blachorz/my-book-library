@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>如何培養孩子的社會能力 | 我的書庫</title>
+    <title data-t="socialChild_pageTitle">如何培養孩子的社會能力 | 我的書庫</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -12,47 +12,55 @@
 <body class="bg-background font-sans text-text antialiased">
     <div class="container max-w-3xl mx-auto px-5 py-10">
         
-        <nav class="mb-10">
-            <a href="../index.html" class="text-primary hover:underline">&larr; 返回書庫首頁</a>
+        <nav class="flex justify-between items-center mb-10">
+            <a href="../index.html" class="text-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <button id="lang-switcher"
+                title="Switch Language"
+                class="p-2 text-sm font-medium text-white bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto sm:h-auto sm:px-4 sm:py-2 sm:rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m4 13l4-4M19 5l-4 4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="hidden sm:inline" data-t="langSwitcher">切換為英文</span>
+            </button>
         </nav>
 
         <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-text mb-2">如何培養孩子的社會能力</h1>
-            <p class="text-lg text-secondary-text">Myrna B. Shure</p>
+            <h1 class="text-4xl font-bold text-text mb-2" data-t="socialChild_mainTitle">如何培養孩子的社會能力</h1>
+            <p class="text-lg text-secondary-text" data-t="socialChild_author">Myrna B. Shure</p>
         </header>
 
         <main>
             <section class="core-concept">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">核心理念</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="socialChild_section_coreConcept">核心理念</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
-                    <h3 class="text-3xl font-bold m-0 text-primary">ICPS</h3>
-                    <p class="text-lg font-medium my-1 text-text">我能解決問題 (I Can Problem Solve)</p>
-                    <span class="text-base text-secondary-text">本書的核心是教導家長從「命令者」轉變為「引導者」，培養孩子獨立思考與解決人際問題的能力，而不是直接給予答案。</span>
+                    <h3 class="text-3xl font-bold m-0 text-primary" data-t="socialChild_coreConcept_title">ICPS</h3>
+                    <p class="text-lg font-medium my-1 text-text" data-t="socialChild_coreConcept_subtitle">我能解決問題 (I Can Problem Solve)</p>
+                    <span class="text-base text-secondary-text" data-t="socialChild_coreConcept_desc">本書的核心是教導家長從「命令者」轉變為「引導者」，培養孩子獨立思考與解決人際問題的能力，而不是直接給予答案。</span>
                 </div>
             </section>
 
             <section class="mindmap">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="socialChild_section_mindmap">心智圖</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[500px]">
                   <svg id="markmap-container" class="w-full h-full"></svg>
                 </div>
             </section>
 
             <section class="foundations">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">基礎準備：三大遊戲化練習</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="socialChild_section_foundations">基礎準備：三大遊戲化練習</h2>
                 <div data-accordion="collapse" class="flex flex-col gap-4">
                     <!-- Item 1 -->
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-1">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
-                                <span class="text-lg font-medium text-text">1. 字詞遊戲：擴展思維空間</span>
+                                <span class="text-lg font-medium text-text" data-t="socialChild_foundation1_title">1. 字詞遊戲：擴展思維空間</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p class="mb-4"><strong>目的：</strong>讓孩子理解世界不是非黑即白，凡事皆有多種可能性。</p>
-                                <p><strong>方法：</strong>在日常對話中有意識地使用並練習「是/不是」、「和/或者」、「一些/所有」、「之前/之後」、「相同/不同」等詞彙。</p>
+                                <p class="mb-4" data-t="socialChild_foundation1_p1"><strong>目的：</strong>讓孩子理解世界不是非黑即白，凡事皆有多種可能性。</p>
+                                <p data-t="socialChild_foundation1_p2"><strong>方法：</strong>在日常對話中有意識地使用並練習「是/不是」、「和/或者」、「一些/所有」、「之前/之後」、「相同/不同」等詞彙。</p>
                             </div>
                         </div>
                     </div>
@@ -60,14 +68,14 @@
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-2">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
-                                <span class="text-lg font-medium text-text">2. 理解感受：培養同理心</span>
+                                <span class="text-lg font-medium text-text" data-t="socialChild_foundation2_title">2. 理解感受：培養同理心</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p class="mb-4"><strong>目的：</strong>讓孩子能識別自己與他人的情緒，這是解決人際問題的基礎。</p>
-                                <p><strong>方法：</strong>透過看圖說故事、生活觀察、討論感受等方式，引導孩子思考「你覺得他現在是什麼感覺？」</p>
+                                <p class="mb-4" data-t="socialChild_foundation2_p1"><strong>目的：</strong>讓孩子能識別自己與他人的情緒，這是解決人際問題的基礎。</p>
+                                <p data-t="socialChild_foundation2_p2"><strong>方法：</strong>透過看圖說故事、生活觀察、討論感受等方式，引導孩子思考「你覺得他現在是什麼感覺？」</p>
                             </div>
                         </div>
                     </div>
@@ -75,14 +83,14 @@
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-3">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
-                                <span class="text-lg font-medium text-text">3. 進階詞彙：學習邏輯與因果</span>
+                                <span class="text-lg font-medium text-text" data-t="socialChild_foundation3_title">3. 進階詞彙：學習邏輯與因果</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p class="mb-4"><strong>目的：</strong>幫助孩子建立更複雜的因果關係思考。</p>
-                                <p><strong>方法：</strong>玩「為什麼」遊戲，交換角色，讓孩子練習解釋原因，重點是思考過程。</p>
+                                <p class="mb-4" data-t="socialChild_foundation3_p1"><strong>目的：</strong>幫助孩子建立更複雜的因果關係思考。</p>
+                                <p data-t="socialChild_foundation3_p2"><strong>方法：</strong>玩「為什麼」遊戲，交換角色，讓孩子練習解釋原因，重點是思考過程。</p>
                             </div>
                         </div>
                     </div>
@@ -90,49 +98,49 @@
             </section>
 
             <section class="steps">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">解決問題的四步驟</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="socialChild_section_steps">解決問題的四步驟</h2>
                 <ul class="flex flex-col gap-5">
                     <li class="fade-in-on-scroll step flex items-start gap-5">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">1</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">發生什麼事了？</h4>
-                            <p class="m-0 text-secondary-text">釐清問題，並讓每個孩子都有表述自己觀點的機會。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="socialChild_step1_title">發生什麼事了？</h4>
+                            <p class="m-0 text-secondary-text" data-t="socialChild_step1_desc">釐清問題，並讓每個孩子都有表述自己觀點的機會。</p>
                         </div>
                     </li>
                     <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 100ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">2</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">你們的感受如何？</h4>
-                            <p class="m-0 text-secondary-text">引導孩子識別並表達自己的情緒，同時也聽見對方的情緒。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="socialChild_step2_title">你們的感受如何？</h4>
+                            <p class="m-0 text-secondary-text" data-t="socialChild_step2_desc">引導孩子識別並表達自己的情緒，同時也聽見對方的情緒。</p>
                         </div>
                     </li>
                     <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 200ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">3</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">有什麼辦法讓大家開心？</h4>
-                            <p class="m-0 text-secondary-text">將焦點從「誰對誰錯」轉移到「如何解決問題」，鼓勵腦力激盪。拿出紙筆記錄能讓孩子感到被尊重。</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="socialChild_step3_title">有什麼辦法讓大家開心？</h4>
+                            <p class="m-0 text-secondary-text" data-t="socialChild_step3_desc">將焦點從「誰對誰錯」轉移到「如何解決問題」，鼓勵腦力激盪。拿出紙筆記錄能讓孩子感到被尊重。</p>
                         </div>
                     </li>
                     <li class="fade-in-on-scroll step flex items-start gap-5" style="transition-delay: 300ms;">
                         <div class="step-number flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white text-lg font-medium flex items-center justify-center">4</div>
                         <div class="step-content">
-                            <h4 class="mt-1 mb-1 text-lg font-medium">為成功的方法命名</h4>
-                            <p class="m-0 text-secondary-text">強化正向行為。當問題解決後，明確地告訴他們：「你們剛剛的行為就叫做『分享』。」</p>
+                            <h4 class="mt-1 mb-1 text-lg font-medium" data-t="socialChild_step4_title">為成功的方法命名</h4>
+                            <p class="m-0 text-secondary-text" data-t="socialChild_step4_desc">強化正向行為。當問題解決後，明確地告訴他們：「你們剛剛的行為就叫做『分享』。」</p>
                         </div>
                     </li>
                 </ul>
             </section>
 
             <section class="techniques">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">方法與技巧</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="socialChild_section_techniques">方法與技巧</h2>
                 
                 <div class="mb-4 border-b border-border">
                     <ul class="flex flex-wrap -mb-px text-base font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                         <li class="me-2" role="presentation">
-                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="practice-tab" data-tabs-target="#practice-content" type="button" role="tab" aria-controls="practice-content" aria-selected="true">日常練習</button>
+                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="practice-tab" data-tabs-target="#practice-content" type="button" role="tab" aria-controls="practice-content" aria-selected="true" data-t="socialChild_tab_practice">日常練習</button>
                         </li>
                         <li class="me-2" role="presentation">
-                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="advanced-tab" data-tabs-target="#advanced-content" type="button" role="tab" aria-controls="advanced-content" aria-selected="false">進階技巧</button>
+                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="advanced-tab" data-tabs-target="#advanced-content" type="button" role="tab" aria-controls="advanced-content" aria-selected="false" data-t="socialChild_tab_advanced">進階技巧</button>
                         </li>
                     </ul>
                 </div>
@@ -140,24 +148,24 @@
                     <div class="hidden" id="practice-content" role="tabpanel" aria-labelledby="practice-tab">
                         <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5">
                            <div class="border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                                <h4 class="m-0 mb-2.5 text-lg font-medium">角色扮演遊戲</h4>
-                                <p class="m-0 text-secondary-text">將白天的衝突，在晚上用輕鬆的戲劇方式重新演練。</p>
+                                <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="socialChild_practice1_title">角色扮演遊戲</h4>
+                                <p class="m-0 text-secondary-text" data-t="socialChild_practice1_desc">將白天的衝突，在晚上用輕鬆的戲劇方式重新演練。</p>
                             </div>
                             <div class="border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
-                                <h4 class="m-0 mb-2.5 text-lg font-medium">玩偶遊戲</h4>
-                                <p class="m-0 text-secondary-text">利用手偶作為第三方，讓孩子更容易敞開心扉對話。</p>
+                                <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="socialChild_practice2_title">玩偶遊戲</h4>
+                                <p class="m-0 text-secondary-text" data-t="socialChild_practice2_desc">利用手偶作為第三方，讓孩子更容易敞開心扉對話。</p>
                             </div>
                             <div class="border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
-                                <h4 class="m-0 mb-2.5 text-lg font-medium">「找辦法」遊戲</h4>
-                                <p class="m-0 text-secondary-text">遇到難題時，把它變成一場競賽，看誰能想出最多的解決方法。</p>
+                                <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="socialChild_practice3_title">「找辦法」遊戲</h4>
+                                <p class="m-0 text-secondary-text" data-t="socialChild_practice3_desc">遇到難題時，把它變成一場競賽，看誰能想出最多的解決方法。</p>
                             </div>
                         </div>
                     </div>
                     <div class="hidden" id="advanced-content" role="tabpanel" aria-labelledby="advanced-tab">
                         <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5">
                             <div class="border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                                <h4 class="m-0 mb-2.5 text-lg font-medium">教會孩子考慮後果</h4>
-                                <p class="m-0 text-secondary-text">透過「之前/之後」造句或「故事接龍」的遊戲，引導孩子思考「然後呢？」，從而培養責任感與自制力。</p>
+                                <h4 class="m-0 mb-2.5 text-lg font-medium" data-t="socialChild_advanced1_title">教會孩子考慮後果</h4>
+                                <p class="m-0 text-secondary-text" data-t="socialChild_advanced1_desc">透過「之前/之後」造句或「故事接龍」的遊戲，引導孩子思考「然後呢？」，從而培養責任感與自制力。</p>
                             </div>
                         </div>
                     </div>
@@ -166,53 +174,53 @@
             </section>
             
             <section class="principles">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">家長三大核心原則</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="socialChild_section_principles">家長三大核心原則</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <h3 class="m-0 mb-2.5 text-lg font-medium">多了解、少評判</h3>
-                        <p class="m-0 text-secondary-text">對孩子的想法抱持好奇心，專注於傾聽與理解，而非灌輸自己的價值觀。</p>
+                        <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="socialChild_principle1_title">多了解、少評判</h3>
+                        <p class="m-0 text-secondary-text" data-t="socialChild_principle1_desc">對孩子的想法抱持好奇心，專注於傾聽與理解，而非灌輸自己的價值觀。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
-                        <h3 class="m-0 mb-2.5 text-lg font-medium">讓孩子解決</h3>
-                        <p class="m-0 text-secondary-text">相信孩子有能力處理自己的問題，家長的放手才能真正賦予孩子責任感。</p>
+                        <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="socialChild_principle2_title">讓孩子解決</h3>
+                        <p class="m-0 text-secondary-text" data-t="socialChild_principle2_desc">相信孩子有能力處理自己的問題，家長的放手才能真正賦予孩子責任感。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
-                        <h3 class="m-0 mb-2.5 text-lg font-medium">過程重於結果</h3>
-                        <p class="m-0 text-secondary-text">目標是培養孩子解決問題的「能力」，而不是確保「每一件事」都有完美的結果。</p>
+                        <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="socialChild_principle3_title">過程重於結果</h3>
+                        <p class="m-0 text-secondary-text" data-t="socialChild_principle3_desc">目標是培養孩子解決問題的「能力」，而不是確保「每一件事」都有完美的結果。</p>
                     </div>
                 </div>
             </section>
 
             <section class="scenarios">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">觀點實戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="socialChild_section_scenarios">觀點實戰</h2>
                 <div class="flex flex-col gap-4">
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <h4 class="m-0 mb-2 font-medium">微習慣的轉變</h4>
-                        <p class="m-0 text-secondary-text">下次孩子哭鬧時，嘗試將第一反應從「不要哭！」改為「發生什麼事讓你這麼難過？」</p>
+                        <h4 class="m-0 mb-2 font-medium" data-t="socialChild_scenario1_title">微習慣的轉變</h4>
+                        <p class="m-0 text-secondary-text" data-t="socialChild_scenario1_desc">下次孩子哭鬧時，嘗試將第一反應從「不要哭！」改為「發生什麼事讓你這麼難過？」</p>
                     </div>
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
-                        <h4 class="m-0 mb-2 font-medium">衝突變遊戲</h4>
-                        <p class="m-0 text-secondary-text">當孩子們爭吵時，立刻拿出紙筆說：「我們來玩一個『找辦法』的遊戲吧！」</p>
+                        <h4 class="m-0 mb-2 font-medium" data-t="socialChild_scenario2_title">衝突變遊戲</h4>
+                        <p class="m-0 text-secondary-text" data-t="socialChild_scenario2_desc">當孩子們爭吵時，立刻拿出紙筆說：「我們來玩一個『找辦法』的遊戲吧！」</p>
                     </div>
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
-                        <h4 class="m-0 mb-2 font-medium">建立「後果連結」</h4>
-                        <p class="m-0 text-secondary-text">與其禁止，不如和他討論：「如果我們一直玩，你覺得『之後』會發生什麼事？」</p>
+                        <h4 class="m-0 mb-2 font-medium" data-t="socialChild_scenario3_title">建立「後果連結」</h4>
+                        <p class="m-0 text-secondary-text" data-t="socialChild_scenario3_desc">與其禁止，不如和他討論：「如果我們一直玩，你覺得『之後』會發生什麼事？」</p>
                     </div>
                 </div>
             </section>
 
             <section class="resources">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">提及書目與情境</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="socialChild_section_resources">提及書目與情境</h2>
                 <ul class="fade-in-on-scroll list-disc pl-5">
-                    <li class="mb-2.5 text-secondary-text"><strong>《你就是孩子最好的玩具》:</strong> 作為處理搶玩具錯誤方法的反面教材對照。</li>
-                    <li class="mb-2.5 text-secondary-text"><strong>《叛逆不是孩子的錯》:</strong> 作為處理年齡較大孩子問題的參考書籍。</li>
-                    <li class="mb-2.5 text-secondary-text"><strong>《高績效教練》:</strong> 將 ICPS 類比為成人領導力中的教練式輔導方法。</li>
+                    <li class="mb-2.5 text-secondary-text" data-t="socialChild_resource1"><strong>《你就是孩子最好的玩具》:</strong> 作為處理搶玩具錯誤方法的反面教材對照。</li>
+                    <li class="mb-2.5 text-secondary-text" data-t="socialChild_resource2"><strong>《叛逆不是孩子的錯》:</strong> 作為處理年齡較大孩子問題的參考書籍。</li>
+                    <li class="mb-2.5 text-secondary-text" data-t="socialChild_resource3"><strong>《高績效教練》:</strong> 將 ICPS 類比為成人領導力中的教練式輔導方法。</li>
                 </ul>
             </section>
         </main>
 
         <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
-            <p>&copy; 2025 FengMi Knowledge Base</p>
+            <p data-t="footer_copyright">&copy; 2025 FengMi Knowledge Base</p>
         </footer>
     </div>
     <script type="module" src="/src/ts/main.ts"></script>

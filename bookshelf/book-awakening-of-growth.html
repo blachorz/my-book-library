@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>成長的覺醒 | 我的書庫</title>
+    <title data-t="growth_pageTitle">成長的覺醒 | 我的書庫</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -12,101 +12,109 @@
 <body class="bg-background font-sans text-text antialiased">
     <div class="container max-w-3xl mx-auto px-5 py-10">
         
-        <nav class="mb-10">
-            <a href="../index.html" class="text-primary hover:underline">&larr; 返回書庫首頁</a>
+        <nav class="flex justify-between items-center mb-10">
+            <a href="../index.html" class="text-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <button id="lang-switcher"
+                title="Switch Language"
+                class="p-2 text-sm font-medium text-white bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto sm:h-auto sm:px-4 sm:py-2 sm:rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m4 13l4-4M19 5l-4 4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="hidden sm:inline" data-t="langSwitcher">切換為英文</span>
+            </button>
         </nav>
 
         <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-text mb-2">成長的覺醒</h1>
-            <p class="text-lg text-secondary-text">樊登</p>
+            <h1 class="text-4xl font-bold text-text mb-2" data-t="growth_mainTitle">成長的覺醒</h1>
+            <p class="text-lg text-secondary-text" data-t="growth_author">樊登</p>
         </header>
 
         <main>
             <section class="core-concept">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">本書挑戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_challenge">本書挑戰</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
-                    <h3 class="text-3xl font-bold m-0 text-primary">冪次法則與大腦健康</h3>
-                    <p class="text-lg font-medium my-1 text-text">(Power Law & Brain Health)</p>
-                    <span class="text-base text-secondary-text">孩子的轉變符合「冪次法則」，是長期壓力累積的結果。家長唯有透過自我成長，為家庭注入愛、尊重與歡笑，才能滋養孩子大腦，培養其自驅力。</span>
+                    <h3 class="text-3xl font-bold m-0 text-primary" data-t="growth_coreConcept_title">冪次法則與大腦健康</h3>
+                    <p class="text-lg font-medium my-1 text-text" data-t="growth_coreConcept_subtitle">(Power Law & Brain Health)</p>
+                    <span class="text-base text-secondary-text" data-t="growth_coreConcept_desc">孩子的轉變符合「冪次法則」，是長期壓力累積的結果。家長唯有透過自我成長，為家庭注入愛、尊重與歡笑，才能滋養孩子大腦，培養其自驅力。</span>
                 </div>
             </section>
 
             <section class="mindmap">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">心智圖</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_mindmap">心智圖</h2>
                 <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[550px]">
                   <svg id="markmap-container" class="w-full h-full"></svg>
                 </div>
             </section>
 
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">第一部分：為何孩子的轉變是「斷崖式」的？</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_part1">第一部分：為何孩子的轉變是「斷崖式」的？</h2>
                 <div class="flex flex-col gap-4">
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2">冪次法則效應</h3>
-                        <p class="text-secondary-text">孩子的厭學、叛逆等問題看似突然，實則是長期壓力累積後突破「閾值」的結果，如同金屬的「疲勞斷裂」。</p>
+                        <h3 class="text-xl font-medium mb-2" data-t="growth_part1_item1_title">冪次法則效應</h3>
+                        <p class="text-secondary-text" data-t="growth_part1_item1_desc">孩子的厭學、叛逆等問題看似突然，實則是長期壓力累積後突破「閾值」的結果，如同金屬的「疲勞斷裂」。</p>
                     </div>
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2">家長常見的歸因謬誤</h3>
-                        <p class="text-secondary-text">誤將孩子被打罵後的和好視為「皮實」，或將成績的「回歸均值」現象歸功於「棍棒教育」，都是常見的錯覺。</p>
+                        <h3 class="text-xl font-medium mb-2" data-t="growth_part1_item2_title">家長常見的歸因謬誤</h3>
+                        <p class="text-secondary-text" data-t="growth_part1_item2_desc">誤將孩子被打罵後的和好視為「皮實」，或將成績的「回歸均值」現象歸功於「棍棒教育」，都是常見的錯覺。</p>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">第二部分：給父母的腦科學課</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_part2">第二部分：給父母的腦科學課</h2>
                 <div class="flex flex-col gap-4">
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2">壓力如何摧毀學習能力</h3>
-                        <p class="text-secondary-text">長期壓力分泌的皮質醇會抑制負責理性的「前額葉皮質」，同時過度激活負責原始生存反應（打、逃、僵）的「杏仁核」，使大腦無法進行複雜學習。</p>
+                        <h3 class="text-xl font-medium mb-2" data-t="growth_part2_item1_title">壓力如何摧毀學習能力</h3>
+                        <p class="text-secondary-text" data-t="growth_part2_item1_desc">長期壓力分泌的皮質醇會抑制負責理性的「前額葉皮質」，同時過度激活負責原始生存反應（打、逃、僵）的「杏仁核」，使大腦無法進行複雜學習。</p>
                     </div>
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2">創造滋養大腦的化學環境</h3>
-                        <p class="text-secondary-text">透過成就感（多巴胺）、享受感（內啡肽）與愛（催產素），可以為孩子的大腦發展提供健康的化學基礎。</p>
+                        <h3 class="text-xl font-medium mb-2" data-t="growth_part2_item2_title">創造滋養大腦的化學環境</h3>
+                        <p class="text-secondary-text" data-t="growth_part2_item2_desc">透過成就感（多巴胺）、享受感（內啡肽）與愛（催產素），可以為孩子的大腦發展提供健康的化學基礎。</p>
                     </div>
                 </div>
             </section>
             
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">第三部分：家長應對的實用工具</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_part3">第三部分：家長應對的實用工具</h2>
                 <div data-accordion="collapse" class="flex flex-col gap-4">
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-1">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
-                                <span class="text-lg font-medium text-text">情感引導：情緒降溫的鑰匙</span>
+                                <span class="text-lg font-medium text-text" data-t="growth_accordion1_title">情感引導：情緒降溫的鑰匙</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>當孩子情緒激動時，用「我知道你現在感覺...」句式準確反映其情緒，能讓對方迅速平靜，開啟有效溝通。</p>
+                                <p data-t="growth_accordion1_desc">當孩子情緒激動時，用「我知道你現在感覺...」句式準確反映其情緒，能讓對方迅速平靜，開啟有效溝通。</p>
                             </div>
                         </div>
                     </div>
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-2">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
-                                <span class="text-lg font-medium text-text">輔導而非告知：培養自驅力</span>
+                                <span class="text-lg font-medium text-text" data-t="growth_accordion2_title">輔導而非告知：培養自驅力</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
                             <div class="px-5 pb-5 text-secondary-text">
-                                <p>採用 GROW 模型透過提問引導孩子自己找到解決方案。自己想出的辦法，執行意願遠高於被強加的建議。</p>
+                                <p data-t="growth_accordion2_desc">採用 GROW 模型透過提問引導孩子自己找到解決方案。自己想出的辦法，執行意願遠高於被強加的建議。</p>
                             </div>
                         </div>
                     </div>
                     <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-3">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
-                                <span class="text-lg font-medium text-text">塑造行為的正確時機</span>
+                                <span class="text-lg font-medium text-text" data-t="growth_accordion3_title">塑造行為的正確時機</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
                         <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
                             <div class="px-5 pb-5 text-secondary-text">
                                 <ul class="list-disc pl-5">
-                                    <li class="mb-2"><strong>做對時強化</strong>：及時、具體地表揚，讓大腦將正確行為與多巴胺連結。</li>
-                                    <li><strong>做錯時連結</strong>：分享自己過去的錯誤，建立信任感，是拉近關係的最佳時機。</li>
+                                    <li class="mb-2" data-t="growth_accordion3_li1"><strong>做對時強化</strong>：及時、具體地表揚，讓大腦將正確行為與多巴胺連結。</li>
+                                    <li data-t="growth_accordion3_li2"><strong>做錯時連結</strong>：分享自己過去的錯誤，建立信任感，是拉近關係的最佳時機。</li>
                                 </ul>
                             </div>
                         </div>
@@ -115,57 +123,57 @@
             </section>
             
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">第四部分：家庭教育的三大支柱</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_part4">第四部分：家庭教育的三大支柱</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <h4 class="text-2xl font-bold mb-2 text-primary">愛</h4>
-                        <p class="text-secondary-text">付出無條件的愛，沒有交換與威脅，讓孩子知道無論如何父母的愛都在。</p>
+                        <h4 class="text-2xl font-bold mb-2 text-primary" data-t="growth_pillar1_title">愛</h4>
+                        <p class="text-secondary-text" data-t="growth_pillar1_desc">付出無條件的愛，沒有交換與威脅，讓孩子知道無論如何父母的愛都在。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
-                        <h4 class="text-2xl font-bold mb-2 text-primary">尊重</h4>
-                        <p class="text-secondary-text">允許孩子做決定，鼓勵他為家庭負責，培養他的「價值感」。</p>
+                        <h4 class="text-2xl font-bold mb-2 text-primary" data-t="growth_pillar2_title">尊重</h4>
+                        <p class="text-secondary-text" data-t="growth_pillar2_desc">允許孩子做決定，鼓勵他為家庭負責，培養他的「價值感」。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
-                        <h4 class="text-2xl font-bold mb-2 text-primary">歡笑</h4>
-                        <p class="text-secondary-text">家中充滿歡笑，能拿失敗開玩笑，塑造孩子的「終身成長」心態。</p>
+                        <h4 class="text-2xl font-bold mb-2 text-primary" data-t="growth_pillar3_title">歡笑</h4>
+                        <p class="text-secondary-text" data-t="growth_pillar3_desc">家中充滿歡笑，能拿失敗開玩笑，塑造孩子的「終身成長」心態。</p>
                     </div>
                 </div>
             </section>
 
             <section class="scenarios">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">觀點實戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_scenarios">觀點實戰</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <h4 class="text-lg font-medium mb-2">練習情感引導</h4>
-                        <p class="text-secondary-text">孩子鬧情緒時，先共情：「我知道你現在很生氣...」。</p>
+                        <h4 class="text-lg font-medium mb-2" data-t="growth_scenario1_title">練習情感引導</h4>
+                        <p class="text-secondary-text" data-t="growth_scenario1_desc">孩子鬧情緒時，先共情：「我知道你現在很生氣...」。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
-                        <h4 class="text-lg font-medium mb-2">下放決策權</h4>
-                        <p class="text-secondary-text">將週末午餐地點等決定完全交給孩子。</p>
+                        <h4 class="text-lg font-medium mb-2" data-t="growth_scenario2_title">下放決策權</h4>
+                        <p class="text-secondary-text" data-t="growth_scenario2_desc">將週末午餐地點等決定完全交給孩子。</p>
                     </div>
                     <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
-                        <h4 class="text-lg font-medium mb-2">建立「失敗分享會」</h4>
-                        <p class="text-secondary-text">晚餐時家人分享搞砸的小事並一笑置之。</p>
+                        <h4 class="text-lg font-medium mb-2" data-t="growth_scenario3_title">建立「失敗分享會」</h4>
+                        <p class="text-secondary-text" data-t="growth_scenario3_desc">晚餐時家人分享搞砸的小事並一笑置之。</p>
                     </div>
                 </div>
             </section>
 
             <section class="resources">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border">提及書目與情境</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_resources">提及書目與情境</h2>
                 <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text">
-                    <li class="mb-2.5"><strong>《自驅型成長》</strong>: 解釋壓力對大腦的影響。</li>
-                    <li class="mb-2.5"><strong>《煤氣燈效應》</strong>: 說明長期批評的精神虐待後果。</li>
-                    <li class="mb-2.5"><strong>《你就是孩子最好的玩具》</strong>: 作為「情感引導」的理論來源。</li>
-                    <li class="mb-2.5"><strong>《高績效教練》</strong>: 作為 GROW 模型的技能來源。</li>
-                    <li class="mb-2.5"><strong>《陪孩子終身成長》</strong>: 強調成長由內在基因決定。</li>
-                    <li class="mb-2.5"><strong>《世界觀》 & 《思辨與立場》</strong>: 作為提升家長認知的範例。</li>
+                    <li class="mb-2.5" data-t="growth_resource1"><strong>《自驅型成長》</strong>: 解釋壓力對大腦的影響。</li>
+                    <li class="mb-2.5" data-t="growth_resource2"><strong>《煤氣燈效應》</strong>: 說明長期批評的精神虐待後果。</li>
+                    <li class="mb-2.5" data-t="growth_resource3"><strong>《你就是孩子最好的玩具》</strong>: 作為「情感引導」的理論來源。</li>
+                    <li class="mb-2.5" data-t="growth_resource4"><strong>《高績效教練》</strong>: 作為 GROW 模型的技能來源。</li>
+                    <li class="mb-2.5" data-t="growth_resource5"><strong>《陪孩子終身成長》</strong>: 強調成長由內在基因決定。</li>
+                    <li class="mb-2.5" data-t="growth_resource6"><strong>《世界觀》 & 《思辨與立場》</strong>: 作為提升家長認知的範例。</li>
                 </ul>
             </section>
 
         </main>
 
         <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
-            <p>&copy; 2025 FengMi Knowledge Base</p>
+            <p data-t="footer_copyright">&copy; 2025 FengMi Knowledge Base</p>
         </footer>
     </div>
     <script type="module" src="/src/ts/main.ts"></script>
