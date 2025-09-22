@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-t="speech_pageTitle">高效演講 | 我的書庫</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-background font-sans text-text antialiased">
+    <div class="container max-w-3xl mx-auto px-5 py-10">
+        
+        <nav class="flex justify-between items-center mb-10">
+            <a href="../index.html" class="text-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <button id="lang-switcher"
+                title="Switch Language"
+                class="p-2 text-sm font-medium text-white bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto sm:h-auto sm:px-4 sm:py-2 sm:rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m4 13l4-4M19 5l-4 4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="hidden sm:inline" data-t="langSwitcher">切換為英文</span>
+            </button>
+        </nav>
+
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-text mb-2" data-t="speech_mainTitle">高效演講</h1>
+            <p class="text-lg text-secondary-text" data-t="speech_author">樊登</p>
+        </header>
+
+        <main>
+            <section class="core-concept">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="speech_section_core_concept">核心概念</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
+                    <h3 class="text-3xl font-bold m-0 text-primary" data-t="speech_coreConcept_title">贈禮心態</h3>
+                    <p class="text-lg font-medium my-1 text-text" data-t="speech_coreConcept_subtitle">(The Gift-Giving Mindset)</p>
+                    <span class="text-base text-secondary-text" data-t="speech_coreConcept_desc">將演講從自我表現轉為贈送禮物，並搭配「坡道、發現、甜點」的框架，是克服緊張、有效溝通的關鍵。</span>
+                </div>
+            </section>
+
+            <section class="mindmap">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="speech_section_mindmap">心智圖</h2>
+                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[500px]">
+                  <svg id="markmap-container" class="w-full h-full"></svg>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="speech_section_preparation">演講前的心理建設</h2>
+                <div class="flex flex-col gap-4">
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
+                        <h3 class="text-xl font-medium mb-2" data-t="speech_prep_item1_title">克服緊張的根源——動物精神</h3>
+                        <p class="text-secondary-text" data-t="speech_prep_item1_desc">人們上台演講會緊張，源於原始時代被多雙眼睛注視所觸發的「戰鬥或逃跑」本能反應，導致大腦缺血、一片空白。</p>
+                    </div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
+                        <h3 class="text-xl font-medium mb-2" data-t="speech_prep_item2_title">調整心態——從自我表現到贈送禮物</h3>
+                        <p class="text-secondary-text" data-t="speech_prep_item2_desc">最有效的克服緊張方法，是將心態從「取悅觀眾」轉變為「贈送禮物」。你的責任是分享有價值的資訊（禮物），至於對方是否接受，則無需過度在意。</p>
+                    </div>
+                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
+                        <h3 class="text-xl font-medium mb-2" data-t="speech_prep_item3_title">內容為王</h3>
+                        <p class="text-secondary-text" data-t="speech_prep_item3_desc">演講的風格、狀態固然重要，但對普通人而言，最核心的是「演講內容」。紮實的內容是自信的基石。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="speech_section_framework">高效演講的結構化框架</h2>
+                
+                <h3 class="fade-in-on-scroll text-2xl font-medium mt-10 mb-5" data-t="speech_framework_step1">第一步：演講前的四個關鍵思考</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+                    <div class="fade-in-on-scroll border border-accent rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-accent/5">
+                        <h4 class="text-lg font-medium mb-2" data-t="speech_framework_s1_item1_title">目的 (Purpose)</h4>
+                        <p class="text-secondary-text" data-t="speech_framework_s1_item1_desc">你希望聽眾聽完後，做出什麼具體決定？</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-accent rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-accent/5" style="transition-delay: 100ms;">
+                        <h4 class="text-lg font-medium mb-2" data-t="speech_framework_s1_item2_title">發現 (Discovery)</h4>
+                        <p class="text-secondary-text" data-t="speech_framework_s1_item2_desc">為了讓他們做出該決定，他們需要知道哪三件最重要的事？</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-accent rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-accent/5" style="transition-delay: 200ms;">
+                        <h4 class="text-lg font-medium mb-2" data-t="speech_framework_s1_item3_title">感受 (Feeling)</h4>
+                        <p class="text-secondary-text" data-t="speech_framework_s1_item3_desc">你希望他們聽完後，有什麼樣的感受？(例如：急迫感、熱情)</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-accent rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-accent/5" style="transition-delay: 300ms;">
+                        <h4 class="text-lg font-medium mb-2" data-t="speech_framework_s1_item4_title">關聯 (Relevance)</h4>
+                        <p class="text-secondary-text" data-t="speech_framework_s1_item4_desc">他們為什麼要關心你講的主題？這與他們何干？</p>
+                    </div>
+                </div>
+
+                <h3 class="fade-in-on-scroll text-2xl font-medium mt-10 mb-5" data-t="speech_framework_step2">第二步：演講結構三部曲</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5">
+                    <div class="fade-in-on-scroll border border-primary rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-primary/5">
+                        <h4 class="text-lg font-medium mb-2" data-t="speech_framework_s2_item1_title">坡道 (Ramp): 開場</h4>
+                        <p class="text-secondary-text" data-t="speech_framework_s2_item1_desc">抓住聽眾注意力，讓他們願意聽下去。內容來自於第四個關鍵思考：「他為什麼要關心」。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-primary rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-primary/5" style="transition-delay: 100ms;">
+                        <h4 class="text-lg font-medium mb-2" data-t="speech_framework_s2_item2_title">發現 (Discovery): 主體</h4>
+                        <p class="text-secondary-text" data-t="speech_framework_s2_item2_desc">清晰地傳達你準備好的三件核心資訊。</p>
+                    </div>
+                    <div class="fade-in-on-scroll border border-primary rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-primary/5" style="transition-delay: 200ms;">
+                        <h4 class="text-lg font-medium mb-2" data-t="speech_framework_s2_item3_title">甜點 (Dessert): 結尾</h4>
+                        <p class="text-secondary-text" data-t="speech_framework_s2_item3_desc">昇華主題，留下感性、深刻的印象，觸動聽眾做出決定。內容來自於第三個關鍵思考：「你希望對方感受到什麼」。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="scenarios">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="speech_section_scenarios">觀點實戰</h2>
+                <p class="fade-in-on-scroll mt-5 text-secondary-text" data-t="speech_scenario_overview_desc">「坡道-發現-甜點」框架不僅適用於正式演講，也能靈活運用於日常溝通、會議簡報、家庭對話等多元場景。核心是先釐清「四個關鍵思考」，再依此安排內容，能大幅提升表達的清晰度與影響力。</p>
+                <div class="fade-in-on-scroll mt-5 p-6 bg-card-bg border-l-4 border-primary rounded-r-lg" style="transition-delay: 100ms;">
+                    <div class="flex flex-col md:flex-row md:gap-8">
+                        <div class="flex-1 mb-6 md:mb-0">
+                            <h4 class="text-lg font-medium mb-2" data-t="speech_scenario_wedding_title">案例：婚禮致詞</h4>
+                            <ul class="list-disc pl-5 text-secondary-text space-y-2">
+                                <li data-t="speech_scenario_wedding_li1"><strong>坡道</strong>：設計一個有趣的爆料或故事，吸引新人與賓客的注意力，讓大家產生共鳴。</li>
+                                <li data-t="speech_scenario_wedding_li2"><strong>發現</strong>：挑選三個與新人有關的溫馨故事或特質，作為主要內容。</li>
+                                <li data-t="speech_scenario_wedding_li3"><strong>甜點</strong>：最後送上真誠的祝福，讓情感昇華，留下深刻印象。</li>
+                            </ul>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-lg font-medium mb-2" data-t="speech_scenario_family_title">案例：家庭溝通（說服孩子少打遊戲）</h4>
+                            <ul class="list-disc pl-5 text-secondary-text space-y-2">
+                                <li data-t="speech_scenario_family_li1"><strong>坡道</strong>：以孩子的興趣或現實困擾切入，讓孩子覺得這件事與自己有關。</li>
+                                <li data-t="speech_scenario_family_li2"><strong>發現</strong>：明確提出三個關鍵理由或事實，說明為何需要調整遊戲時間。</li>
+                                <li data-t="speech_scenario_family_li3"><strong>甜點</strong>：給予鼓勵或承諾，讓孩子感受到被理解與支持。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resources">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="speech_section_resources">提及書目與情境</h2>
+                <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text">
+                    <li class="mb-2.5" data-t="speech_resource1"><strong>《動物精神》:</strong> 用於解釋人類在公眾演講時感到緊張的原始本能根源。</li>
+                    <li class="mb-2.5" data-t="speech_resource2"><strong>《金字塔原理》:</strong> 強調在準備演講內容（發現）時，應將所有資訊歸納為三個核心要點，因為這是人類最容易記住的數量。</li>
+                    <li class="mb-2.5" data-t="speech_resource3"><strong>《批判性思維》:</strong> 建議讀者閱讀此書，以提升選擇核心論點和組織論證過程的能力。</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
+            <p data-t="footer_copyright">&copy; 2025 FengMi Knowledge Base</p>
+        </footer>
+    </div>
+    <script type="module" src="/src/ts/main.ts"></script>
+    <!-- Markmap Libraries for Manual Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+
+    <!-- Custom Rendering Script -->
+    <script>
+      (async () => {
+        const { Transformer, Markmap } = window.markmap;
+        const transformer = new Transformer();
+
+        const markdown = `
+# 高效演講
+- 心理建設
+  - 克服緊張 (動物精神)
+  - 調整心態 (贈送禮物)
+  - 內容為王
+- 結構化框架
+  - 四個關鍵思考
+    - 目的 (Purpose)
+    - 發現 (Discovery)
+    - 感受 (Feeling)
+    - 關聯 (Relevance)
+  - 演講結構三部曲
+    - 坡道 (Ramp)
+    - 發現 (Discovery)
+    - 甜點 (Dessert)
+- 觀點實戰
+- 提及書目
+  - 《動物精神》
+  - 《金字塔原理》
+  - 《批判性思維》
+        `;
+
+        const { root, features } = transformer.transform(markdown);
+        
+        Markmap.create('#markmap-container', { autoFit: true }, root);
+      })();
+    </script>
+</body>
+</html>
