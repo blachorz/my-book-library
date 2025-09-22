@@ -3,6 +3,7 @@ export default {
   content: [
     "./index.html",
     "./book-*.html", // Scans all future book pages
+    "./bookshelf/book-*.html", // Scans all future book pages
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/flowbite/**/*.js"
   ],
