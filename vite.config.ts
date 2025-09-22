@@ -19,7 +19,7 @@ export default defineConfig({
         'book-brain-science-of-studying': resolve(__dirname, 'bookshelf/book-brain-science-of-studying.html'),
         'book-high-performance-coaching': resolve(__dirname, 'bookshelf/book-high-performance-coaching.html'),
         'book-art-of-war-gong': resolve(__dirname, 'bookshelf/book-art-of-war-gong.html'),
-        'book-adversity-quotient': resolve(__dirname, 'book-adversity-quotient.html'),
+        'book-adversity-quotient': resolve(__dirname, 'bookshelf/book-adversity-quotient.html'),
         'book-business-made-simple': resolve(__dirname, 'bookshelf/book-business-made-simple.html'),
         'book-nonviolent-communication': resolve(__dirname, 'bookshelf/book-nonviolent-communication.html'),
         'book-rewire-your-anxious-brain': resolve(__dirname, 'bookshelf/book-rewire-your-anxious-brain.html'),
