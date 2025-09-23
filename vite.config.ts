@@ -30,6 +30,7 @@ export default defineConfig({
         'book-crucial-conversations': resolve(__dirname, 'bookshelf/book-crucial-conversations.html'),
         'book-resilience': resolve(__dirname, 'bookshelf/book-resilience.html'),
         'book-effective-speech': resolve(__dirname, 'bookshelf/book-effective-speech.html'),
+        'book-speak-with-facts': resolve(__dirname, 'bookshelf/book-speak-with-facts.html'),
       }
     }
   }
