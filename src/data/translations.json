@@ -99,7 +99,7 @@
   "author_resilience": { "zh": "張曉萌", "en": "Zhang Xiaomeng" },
   "summary_resilience": { "zh": "本書闡述了韌性並非死扛硬撐，而是「柔而固也」的復原、成長與獲益過程，其核心是透過「持續小贏」的策略，驅動「覺察」、「意義」與「連接」三大飛輪。", "en": "This book explains that resilience is not about toughing it out, but a process of flexible recovery, growth, and benefit. Its core is to drive the three flywheels of 'Awareness', 'Meaning', and 'Connection' through a strategy of 'continuous small wins'." },
   
-  "bms_pageTitle": { "zh": "商業至簡", "en": "Business Made Simple" },
+  "bms_mainTitle": { "zh": "商業至簡", "en": "Business Made Simple" },
   "bms_coreConceptTitle": { "zh": "本書核心", "en": "Core Concept" },
   "bms_coreConceptHeading": { "zh": "價值驅動型人才", "en": "Value-Driven Professional" },
   "bms_coreConceptEnglish": { "zh": "(Value-Driven Professional)", "en": "(Value-Driven Professional)" },
@@ -197,7 +197,7 @@
   "bms_resource6": { "zh": "<strong>《掌控談話》</strong>: 在「談判」能力章節中推薦。", "en": "<strong>'Never Split the Difference':</strong> Recommended in the 'Negotiation' skills chapter." },
   "bms_resource7": { "zh": "<strong>《OKR工作法》</strong>: 作為設定與追蹤團隊目標的方法被提及。", "en": "<strong>'Measure What Matters':</strong> Mentioned as a method for setting and tracking team goals." },
 
-  "artOfWar_pageTitle": { "zh": "善戰者說 | 我的書庫", "en": "The Art of War, as Told by a Master | My Bookshelf" },
+  "artOfWar_mainTitle": { "zh": "善戰者說 | 我的書庫", "en": "The Art of War, as Told by a Master | My Bookshelf" },
   "artOfWar_sectionTitle_challenge": { "zh": "本書挑戰", "en": "Core Challenge" },
   "artOfWar_challenge_title": { "zh": "策略性思考", "en": "Strategic Thinking" },
   "artOfWar_challenge_subtitle": { "zh": "(Strategic Thinking)", "en": "(Strategic Thinking)" },
@@ -248,7 +248,6 @@
   "artOfWar_resource7": { "zh": "<strong>《論語》:</strong> 「君事臣以禮，臣事君以忠」的互動關係，呼應了「將道」中領導與下屬之間需要相互的胸懷與擔當。", "en": "<strong>'The Analects':</strong> The reciprocal relationship that 'a ruler should employ his minister with propriety; a minister should serve his ruler with loyalty' echoes the mutual respect and responsibility required between leaders and subordinates in 'The Way of the Commander'." },
   "footer_copyright": { "zh": "&copy; 2025 FengMi Knowledge Base", "en": "&copy; 2025 FengMi Knowledge Base" },
 
-  "brainScience_pageTitle": { "zh": "考試腦科學 | 我的書庫", "en": "Brain Science of Studying | My Bookshelf" },
   "brainScience_mainTitle": { "zh": "考試腦科學", "en": "Brain Science of Studying" },
   "brainScience_author": { "zh": "池谷裕二", "en": "Yuji Ikeya" },
   "brainScience_section_coreConcept": { "zh": "核心理念", "en": "Core Concept" },
@@ -283,7 +282,6 @@
   "brainScience_resource1": { "zh": "<strong>《刻意練習》:</strong> 引用其「心理表徵」概念，說明大師級的記憶是透過刻意練習，將知識轉化為不需思考就能反應的「方法記憶」。", "en": "<strong>'Peak: Secrets from the New Science of Expertise':</strong> Cites its concept of 'mental representations' to explain that expert-level memory is achieved through deliberate practice, transforming knowledge into 'procedural memory' that can be recalled without conscious thought." },
   "brainScience_resource2": { "zh": "<strong>《高能量姿勢》:</strong> 引用其核心觀點，說明考試緊張時只要「坐直」，就能改變體內的化學物質，提升自信心。", "en": "<strong>'Presence: Bringing Your Boldest Self to Your Biggest Challenges':</strong> Cites its core idea that simply 'sitting up straight' during a stressful exam can change body chemistry and boost confidence." },
 
-  "bestToy_pageTitle": { "zh": "你就是孩子最好的玩具 | 我的書庫", "en": "You Are Your Child's Best Toy | My Bookshelf" },
   "bestToy_mainTitle": { "zh": "你就是孩子最好的玩具", "en": "You Are Your Child's Best Toy" },
   "bestToy_author": { "zh": "Kimberley Clayton Blaine (金伯莉·布雷恩)", "en": "Kimberley Clayton Blaine" },
   "bestToy_section_coreConcept": { "zh": "核心理念", "en": "Core Concept" },
@@ -323,7 +321,6 @@
   "bestToy_section_resources": { "zh": "提及書目與情境", "en": "Mentioned Books & Contexts" },
   "bestToy_resource1": { "zh": "<strong>《關鍵對話》:</strong> 強調人需要成為「雙核對話人」，除了溝通內容，也要時刻關注溝通氛圍。先處理好情緒，才能有效溝通。", "en": "<strong>'Crucial Conversations':</strong> Emphasizes the need to be a 'dual-processor,' paying attention not only to the content but also to the communication atmosphere. Emotions must be managed before effective communication can occur." },
 
-  "socialChild_pageTitle": { "zh": "如何培養孩子的社會能力 | 我的書庫", "en": "How to Raise a Socially Competent Child | My Bookshelf" },
   "socialChild_mainTitle": { "zh": "如何培養孩子的社會能力", "en": "How to Raise a Socially Competent Child" },
   "socialChild_author": { "zh": "Myrna B. Shure", "en": "Myrna B. Shure" },
   "socialChild_section_coreConcept": { "zh": "核心理念", "en": "Core Concept" },
@@ -380,7 +377,6 @@
   "socialChild_resource2": { "zh": "<strong>《叛逆不是孩子的錯》:</strong> 作為處理年齡較大孩子問題的參考書籍。", "en": "<strong>'Untangled: Guiding Teenage Girls Through the Seven Transitions into Adulthood':</strong> Referenced for handling issues with older children." },
   "socialChild_resource3": { "zh": "<strong>《高績效教練》:</strong> 將 ICPS 類比為成人領導力中的教練式輔導方法。", "en": "<strong>'Coaching for Performance':</strong> Analogizes ICPS to coaching methods in adult leadership." },
 
-  "awareness_pageTitle": { "zh": "無意識順從與覺知 | 我的書庫", "en": "Mindfulness | My Bookshelf" },
   "awareness_mainTitle": { "zh": "無意識順從與覺知", "en": "Mindfulness" },
   "awareness_author": { "zh": "Ellen J. Langer (艾倫·朗格)", "en": "Ellen J. Langer" },
   "awareness_section_challenge": { "zh": "本書挑戰", "en": "Core Challenge" },
@@ -429,7 +425,6 @@
   "awareness_resource4": { "zh": "<strong>《羅馬假期》 (電影):</strong> 說明簡單、自由的生活能帶來快樂。", "en": "<strong>'Roman Holiday' (Film):</strong> Shows that a simple, free life can bring happiness." },
   "awareness_resource5": { "zh": "<strong>《思考，快與慢》 (丹尼爾·卡尼曼):</strong> 引用其理論，並指出即便是深思熟慮的「系統2」也可能是無覺知的。", "en": "<strong>'Thinking, Fast and Slow' (Daniel Kahneman):</strong> Cites its theory and points out that even the deliberate 'System 2' can be mindless." },
 
-  "coaching_pageTitle": { "zh": "高績效教練 | 我的書庫", "en": "Coaching for Performance | My Bookshelf" },
   "coaching_mainTitle": { "zh": "高績效教練", "en": "Coaching for Performance" },
   "coaching_author": { "zh": "約翰·惠特默 (John Whitmore)", "en": "John Whitmore" },
   "coaching_section_challenge": { "zh": "本書挑戰", "en": "Core Challenge" },
@@ -467,7 +462,6 @@
   "coaching_resource1": { "zh": "<strong>《如何培養孩子的社會能力》:</strong> 其核心方法與 GROW 模型針對成年人的輔導精神不謀而合，都是透過提問引導對方自己解決問題。", "en": "<strong>'How to Raise a Socially Competent Child':</strong> Its core method aligns with the coaching spirit of the GROW model for adults, both guiding individuals to solve their own problems through questioning." },
   "coaching_resource2": { "zh": "<strong>《共享經濟》:</strong> 描繪了未來人人都是獨立商業個體的趨勢，在這種協作模式下，能夠激發他人潛能的教練式溝通將變得至關重要。", "en": "<strong>'The Sharing Economy':</strong> Depicts the future trend where everyone is an independent business entity. In this collaborative model, coaching-style communication that can unlock others' potential will become crucial." },
 
-  "nvc_pageTitle": { "zh": "非暴力溝通 | 我的書庫", "en": "Nonviolent Communication | My Bookshelf" },
   "nvc_mainTitle": { "zh": "非暴力溝通", "en": "Nonviolent Communication" },
   "nvc_author": { "zh": "馬歇爾·盧森堡 (Marshall B. Rosenberg)", "en": "Marshall B. Rosenberg" },
   "nvc_section_coreConcept": { "zh": "核心理念", "en": "Core Concept" },
@@ -504,7 +498,6 @@
   "nvc_resource1": { "zh": "<strong>《關鍵對話》:</strong> 被視為《非暴力溝通》的基礎版，但後者更深入地剖析了暴力溝通的心理根源。", "en": "<strong>'Crucial Conversations':</strong> Considered a foundational version of NVC, but the latter delves deeper into the psychological roots of violent communication." },
   "nvc_resource2": { "zh": "<strong>《你就是孩子最好的玩具》 & 《如何培養孩子的社會能力》:</strong> 在討論「體會和表達感受」時被引用，用以佐證幫助孩子建立豐富情感詞彙的重要性。", "en": "<strong>'You Are Your Child's Best Toy' & 'How to Raise a Socially Competent Child':</strong> Cited when discussing 'experiencing and expressing feelings' to support the importance of helping children build a rich emotional vocabulary." },
 
-  "rewire_pageTitle": { "zh": "重塑杏仁核 | 我的書庫", "en": "Rewire Your Anxious Brain | My Bookshelf" },
   "rewire_mainTitle": { "zh": "重塑杏仁核", "en": "Rewire Your Anxious Brain" },
   "rewire_author": { "zh": "Catherine M. Pittman", "en": "Catherine M. Pittman" },
   "rewire_section_coreConcept": { "zh": "核心理念", "en": "Core Concept" },
@@ -545,7 +538,6 @@
   "rewire_resource4": { "zh": "<strong>《跳出頭腦，融入生活》 & 《幸福的陷阱》:</strong> 講解「認知融合」時參考。", "en": "<strong>'Get Out of Your Mind and Into Your Life' & 'The Happiness Trap':</strong> Referenced when explaining 'cognitive fusion.'" },
   "rewire_resource5": { "zh": "<strong>《可複製的領導力》:</strong> 說明「讀心術」謬誤時引用。", "en": "<strong>'The Leadership Pipeline':</strong> Cited when explaining the 'mind-reading' fallacy." },
 
-  "impromptu_pageTitle": { "zh": "即興演講 | 我的書庫", "en": "Impromptu Speaking | My Bookshelf" },
   "impromptu_mainTitle": { "zh": "即興演講", "en": "Impromptu Speaking" },
   "impromptu_author": { "zh": "Judith Humphrey", "en": "Judith Humphrey" },
   "impromptu_section_challenge": { "zh": "本書挑戰", "en": "Core Challenge" },
@@ -581,7 +573,6 @@
   "impromptu_section_resources": { "zh": "提及書目與情境", "en": "Mentioned Books & Contexts" },
   "impromptu_resource1": { "zh": "未提及其他書目。", "en": "No other books were mentioned." },
 
-  "growth_pageTitle": { "zh": "成長的覺醒 | 我的書庫", "en": "The Awakening of Growth | My Bookshelf" },
   "growth_mainTitle": { "zh": "成長的覺醒", "en": "The Awakening of Growth" },
   "growth_author": { "zh": "樊登", "en": "Fan Deng" },
   "growth_section_challenge": { "zh": "本書挑戰", "en": "Core Challenge" },
@@ -629,7 +620,6 @@
   "growth_resource5": { "zh": "<strong>'Raising An Emotionally Intelligent Child':</strong> Emphasizes that growth is determined by intrinsic factors.", "en": "<strong>'Raising An Emotionally Intelligent Child':</strong> Emphasizes that growth is determined by intrinsic factors." },
   "growth_resource6": { "zh": "<strong>'The Story of Philosophy' & 'Thinking, Fast and Slow':</strong> Examples for enhancing parental cognition.", "en": "<strong>'The Story of Philosophy' & 'Thinking, Fast and Slow':</strong> Examples for enhancing parental cognition." },
 
-  "storybrand_pageTitle": { "zh": "你的顧客需要一個好故事 | 我的書庫", "en": "Building a StoryBrand | My Bookshelf" },
   "storybrand_mainTitle": { "zh": "你的顧客需要一個好故事", "en": "Building a StoryBrand" },
   "storybrand_author": { "zh": "Donald Miller", "en": "Donald Miller" },
   "storybrand_section_coreConcept": { "zh": "核心原則", "en": "Core Principle" },
@@ -674,9 +664,6 @@
   "storybrand_section_resources": { "zh": "提及書目與情境", "en": "Mentioned Books & Contexts" },
   "storybrand_resource1": { "zh": "未提及其他書目。", "en": "No other books were mentioned." },
 
-  "placeholder_nextBook": { "zh": "下一本好書...", "en": "Next good book..." },
-
-  "negotiation_pageTitle": { "zh": "掌控談話 | 我的書庫", "en": "Never Split the Difference | My Bookshelf" },
   "negotiation_mainTitle": { "zh": "掌控談話", "en": "Never Split the Difference" },
   "negotiation_author": { "zh": "Chris Voss, Tahl Raz", "en": "Chris Voss, Tahl Raz" },
   "negotiation_section_premise": { "zh": "核心前提", "en": "Core Premise" },
@@ -724,7 +711,6 @@
   "negotiation_resource2": { "zh": "<strong>《思考，快與慢》:</strong> 本書策略建立在「人是非理性的」基礎上，利用大腦的快思（系統一）進行感性溝通。", "en": "<strong>'Thinking, Fast and Slow':</strong> The strategies in this book are based on the premise that people are irrational, utilizing the brain's System 1 thinking for emotional communication." },
   "negotiation_resource3": { "zh": "<strong>'Coaching for Performance':</strong> The 'calibrated questions' method in the book is similar to the core principles of coaching.", "en": "<strong>'Coaching for Performance':</strong> The 'calibrated questions' method in the book is similar to the core principles of coaching." },
 
-  "cc_pageTitle": { "zh": "關鍵對話 | 我的書庫", "en": "Crucial Conversations | My Bookshelf" },
   "cc_mainTitle": { "zh": "關鍵對話", "en": "Crucial Conversations" },
   "cc_author": { "zh": "Kerry Patterson, et al.", "en": "Kerry Patterson, et al." },
   "cc_section_coreConcept": { "zh": "核心理念", "en": "Core Concept" },
@@ -766,9 +752,6 @@
   "cc_resource2": { "zh": "<strong>《高效能人士的七個習慣》:</strong> 在強調「主動積極」、不輕易被他人情緒所決定的重要性時，作為推薦參考讀物。", "en": "<strong>'The 7 Habits of Highly Effective People':</strong> Recommended as a reference to emphasize the importance of being proactive and not easily swayed by others' emotions." },
   "cc_resource3": { "zh": "<strong>《教父》:</strong> 引用電影中教父的智慧：「永遠不要被你的對手激怒」，說明在關鍵對話中保持冷靜的重要性。", "en": "<strong>'The Godfather':</strong> Cites the Godfather's wisdom from the movie, 'Never get angry at your rival,' to illustrate the importance of staying calm in crucial conversations." },
 
-  "placeholder_nextBook": { "zh": "下一本好書...", "en": "Next good book..." },
-
-  "resilience_pageTitle": { "zh": "韌性：不確定時代的精進法則 | 我的書庫", "en": "Resilience: The Principles of Advancement in an Uncertain Era | My Bookshelf" },
   "resilience_mainTitle": { "zh": "韌性：不確定時代的精進法則", "en": "Resilience: The Principles of Advancement in an Uncertain Era" },
   "resilience_author": { "zh": "張曉萌", "en": "Zhang Xiaomeng" },
   "resilience_section_coreConcept": { "zh": "核心理念", "en": "Core Concept" },
@@ -817,7 +800,6 @@
   "bookTitle_speech": { "zh": "高效演講", "en": "Effective Speech" },
   "author_speech": { "zh": "樊登", "en": "Fan Deng" },
   "summary_speech": { "zh": "本書拆解了高效演講的底層邏輯，說明如何透過「送禮物」的心態克服緊張，並提供一套包含「坡道、發現、甜點」的實用結構化框架。", "en": "This book breaks down the underlying logic of effective public speaking, explaining how to overcome nervousness with a 'gift-giving' mindset and providing a practical structured framework including 'Ramp, Discovery, and Dessert'." },
-  "speech_pageTitle": { "zh": "高效演講 | 我的書庫", "en": "Effective Speech | My Bookshelf" },
   "speech_mainTitle": { "zh": "高效演講", "en": "Effective Speech" },
   "speech_section_core_concept": { "zh": "核心概念", "en": "Core Concept" },
   "speech_coreConcept_title": { "zh": "贈禮心態", "en": "The Gift-Giving Mindset" },
@@ -866,7 +848,6 @@
   "bookTitle_facts": { "zh": "用事實說話", "en": "Speak with Facts" },
   "author_facts": { "zh": "Mark Murphy (馬克·墨菲)", "en": "Mark Murphy" },
   "summary_facts": { "zh": "本書旨在解決因人們抗拒真相而導致的溝通困境，透過FIRE模型等工具，引導讀者進行有建設性的對話。", "en": "This book aims to solve communication difficulties caused by people's resistance to truth, guiding readers to conduct constructive dialogues through tools like the FIRE model." },
-  "facts_pageTitle": { "zh": "用事實說話 | 我的書庫", "en": "Speak with Facts | My Bookshelf" },
   "facts_mainTitle": { "zh": "用事實說話", "en": "Speak with Facts" },
   "facts_author": { "zh": "Mark Murphy (馬克·墨菲)", "en": "Mark Murphy" },
   "facts_section_summary": { "zh": "本書總結", "en": "Book Summary" },
