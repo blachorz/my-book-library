@@ -24,6 +24,15 @@
   }
 }
 
+/* --- Language-Specific Styles --- */
+[lang="zh-Hant"] [data-t="pageSubtitle"] {
+    letter-spacing: 0.16em;
+}
+
+[lang="en"] [data-t="pageSubtitle"] {
+    font-size: 0.875rem; /* text-sm */
+}
+
 @layer utilities {
   .break-anywhere {
     word-break: break-all;
