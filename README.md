@@ -22,8 +22,8 @@
 *   **程式語言**: [TypeScript](https://www.typescriptlang.org/)
 *   **樣式框架**: [Tailwind CSS](https://tailwindcss.com/)
 *   **國際化 (i18n)**:
-    *   **資料庫**: 使用 `src/data/translations.json` 存放中英雙語的鍵值對。
-    *   **動態渲染**: 透過 `[data-t]` 屬性標記 HTML 元素，並利用 TypeScript 腳本實現動態內容切換。
+    *   **資料庫**: 翻譯內容被模組化存放於 `src/data/locales/` 目錄下，包含 `en` (英文) 與 `zh` (繁體中文) 兩個語系。每個語系中又分為 `common.json` (共用文字)、`index.json` (首頁專用) 以及各本書籍獨立的 `[book-id].json` 檔案。
+    *   **動態渲染**: 透過 `[data-book-id]` (用於 `<body>` 標籤) 和 `[data-t]` (用於內文元素) 屬性，並利用 TypeScript 腳本與 Vite 的 `import.meta.glob` 功能實現高效的內容切換。
 *   **資料視覺化**: [Markmap.js](https://markmap.js.org/)
 *   **UI 元件庫**: [Flowbite](https://flowbite.com/)
 *   **自動化**: [GitHub Actions](https://github.com/features/actions)
@@ -50,25 +50,31 @@
 
 請遵循以下整合了**國際化 (i18n)** 的標準作業流程 (SOP)：
 
-1.  **複製模板**:
-    *   在 `bookshelf/` 目錄下，複製一份現有的 `book-*.html` 檔案 (任選一本即可)，並將其重新命名為新書的檔案名 (e.g., `book-atomic-habits.html`)。
+1.  **複製模板與設定 ID**:
+    *   在 `bookshelf/` 目錄下，複製一份現有的 `book-*.html` 檔案，並將其重新命名為新書的檔案名 (e.g., `book-atomic-habits.html`)。
+    *   打開新檔案，找到 `<body>` 標籤，為其新增 `data-book-id="[book-id]"` 屬性。`[book-id]` 是一個**自訂的簡短英文代碼** (e.g., `atomicHabits`)，將作為後續翻譯檔案的檔名。
 
-2.  **更新翻譯資料庫**:
-    *   打開 `src/data/translations.json` 檔案。
-    *   為新書筆記中的**所有**使用者可見文字（包含書名、作者、章節標題、內文段落、甚至是「提及書目」裡的項目），新增對應的 `zh` (繁體中文) 與 `en` (英文) 翻譯。
-    *   **請務必為每個鍵值 (key) 加上能識別書籍的前綴**，例如 `atomicHabits_mainTitle`，以避免與其他書籍的鍵值衝突。
+2.  **建立筆記頁面翻譯檔**:
+    *   在 `src/data/locales/en/` 目錄下，建立一個 `[book-id].json` 檔案 (e.g., `atomicHabits.json`)。
+    *   將新書筆記**內頁**的所有英文內容（書名、作者、章節標題、段落等）以鍵值對 (key-value pair) 的形式填入。
+    *   在 `src/data/locales/zh/` 目錄下重複此步驟，建立對應的繁體中文翻譯檔。
 
 3.  **更新 HTML 內容與標籤**:
-    *   打開新的 `book-*.html` 檔案。
+    *   回到新建立的 `book-*.html` 檔案。
     *   將 `<header>` 與 `<main>` 標籤內的舊內容，替換為您的新讀書筆記。
-    *   為**每一個**需要翻譯的 HTML 元素，掛上對應的 `data-t` 屬性，其值為您在 `translations.json` 中設定好的鍵名。
-    *   **範例**: `<h1 data-t="atomicHabits_mainTitle">原子習慣</h1>`
+    *   為**每一個**需要翻譯的 HTML 元素，掛上 `data-t` 屬性，其值為您在 `[book-id].json` 中設定好的鍵名。
 
-4.  **整合心智圖 (Markmap)**:
+4.  **更新書庫首頁與其翻譯**:
+    *   打開 `index.html`，在 `<div id="book-list">` 中複製一個卡片區塊給新書使用。
+    *   將卡片連結 `<a>` 的 `href` 指向新建立的 HTML 檔案。
+    *   打開 `src/data/locales/en/index.json` 和 `src/data/locales/zh/index.json`，為新書卡片上的文字（書名、作者、摘要）新增對應的翻譯鍵值對。
+    *   回到 `index.html`，為新卡片上的元素掛上對應的 `data-t` 屬性。
+
+5.  **整合心智圖 (Markmap)**:
     *   根據新的筆記內容，提煉一份階層式的 Markdown 摘要。
-    *   找到頁面底部的 `<script>` 區塊，將 `const markdown = \`...\`` 裡面的內容，替換為新的摘要。
+    *   在新的 `book-*.html` 頁面底部找到 `<script>` 區塊，將 `const markdown = \`...\`` 裡面的內容，替換為新的摘要。
 
-5.  **更新 Vite 設定**:
+6.  **更新 Vite 設定**:
     *   打開 `vite.config.ts` 檔案，在 `build.rollupOptions.input` 物件中，新增一行指向您的新檔案：
     ```ts
     // ...
@@ -80,14 +86,10 @@
     // ...
     ```
 
-6.  **更新書庫首頁**:
-    *   打開 `index.html` 檔案，在 `<div id="book-list">` 中，複製一個 `<div class="book-card">...</div>` 區塊。
-    *   為卡片上的各個元素（書名、作者、簡介）掛上 `data-t` 屬性，並將連結 `<a>` 的 `href` 指向新建立的 HTML 檔案。
-
 7.  **推送部署**:
     *   將所有變更加入版控並推送到 GitHub，網站將會自動更新。
     ```bash
     git add .
-    git commit -m "feat: Add 'Atomic Habits' book note with i18n support"
+    git commit -m "feat: Add 'Atomic Habits' book note"
     git push origin main
     ```

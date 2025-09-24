@@ -1,52 +1,109 @@
 import 'flowbite';
-// 導入翻譯檔案，使其成為可用的資料來源
-import translations from '../data/translations.json';
 
-// --- 翻譯邏輯核心區塊 ---
-
-// 定義語言類型與翻譯資料的結構
+// Define language type and the structure for storing translations
 type Language = 'zh' | 'en';
-type Translations = Record<string, Record<Language, string>>;
-
-// 主要的語言設定函式
-const setLanguage = (lang: Language) => {
-    // 1. 找到頁面上所有帶有 `data-t` 屬性的 HTML 元素
-    document.querySelectorAll<HTMLElement>('[data-t]').forEach(el => {
-        const key = el.dataset.t; // 讀取 data-t 的值 (也就是 key)
-        const translationData = translations as Translations;
-        // 2. 如果 key 存在於 translations.json 中，就更新該元素的文字
-        if (key && translationData[key]) {
-            el.innerHTML = translationData[key][lang];
-        }
-    });
-    // 3. 更新網頁的 lang 屬性，有助於 SEO 與無障礙閱讀
-    document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
-    // 4. 將使用者的語言偏好存入瀏覽器的 localStorage，以便下次記住選擇
-    localStorage.setItem('language', lang);
+type TranslationData = Record<string, Record<string, string>>;
+let translations: TranslationData = {
+    zh: {},
+    en: {}
 };
 
-// --- 核心邏輯結束 ---
+// --- Translation Logic Core ---
 
+/**
+ * Use Vite's import.meta.glob to statically import all translation files.
+ * This allows Vite to handle path resolution and bundling, avoiding runtime path issues.
+ */
+const loadAllTranslations = async () => {
+    const zhModules = import.meta.glob('/src/data/locales/zh/*.json');
+    const enModules = import.meta.glob('/src/data/locales/en/*.json');
 
-// 當 HTML 文件完全載入後，開始執行以下程式碼
-document.addEventListener('DOMContentLoaded', () => {
+    const loadLangFiles = async (modules: Record<string, () => Promise<unknown>>): Promise<Record<string, string>> => {
+        let loadedTranslations: Record<string, string> = {};
+        for (const path in modules) {
+            const module = await modules[path]();
+            const fileName = path.split('/').pop()?.replace('.json', '');
+            if (fileName && typeof module === 'object' && module !== null && 'default' in module) {
+                const content = (module as { default: Record<string, string> }).default;
+                if (fileName === 'common' || fileName === 'index') {
+                    loadedTranslations = { ...loadedTranslations, ...content };
+                } else {
+                    // For book-specific files, merge them directly
+                    loadedTranslations = { ...loadedTranslations, ...content };
+                }
+            }
+        }
+        return loadedTranslations;
+    };
     
-    // --- 語言切換器初始化 ---
+    // Preload all translations into the translations object
+    translations.zh = await loadLangFiles(zhModules);
+    translations.en = await loadLangFiles(enModules);
+};
+
+
+/**
+ * Applies the loaded translations to all elements with a `data-t` attribute.
+ * @param lang - The language to apply.
+ */
+const applyTranslations = (lang: Language) => {
+    const bookId = document.body.dataset.bookId || 'index';
+    
+    document.querySelectorAll<HTMLElement>('[data-t]').forEach(el => {
+        const key = el.dataset.t;
+        // Determine which translation set to use
+        const translationSet = translations[lang];
+
+        if (key && translationSet && translationSet[key]) {
+            el.innerHTML = translationSet[key];
+        }
+    });
+};
+
+/**
+ * Sets the application language. It applies the pre-loaded translations
+ * to the DOM and saves the preference.
+ * @param lang - The language to set.
+ */
+const setLanguage = (lang: Language) => {
+    applyTranslations(lang);
+
+    // Update the lang attribute for SEO and accessibility
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+    
+    // Store language preference
+    localStorage.setItem('language', lang);
+
+    // Specifically update the language switcher text
+    const langSwitcherSpan = document.querySelector('#lang-switcher span');
+    if (langSwitcherSpan && translations[lang] && translations[lang]['langSwitcher']) {
+        langSwitcherSpan.textContent = translations[lang]['langSwitcher'];
+    }
+};
+
+// --- Core Logic End ---
+
+
+// Main execution block after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', async () => {
+    
+    // Pre-load all translation files at startup
+    await loadAllTranslations();
+
     const langSwitcher = document.getElementById('lang-switcher');
     
-    // 嘗試從 localStorage 讀取已儲存的語言，若無，則預設為中文 'zh'
+    // Determine and set the initial language
     const initialLang: Language = localStorage.getItem('language') as Language || 'zh';
-    // 立即套用初始語言
     setLanguage(initialLang);
 
-    // 為語言切換按鈕綁定點擊事件
+    // Add click event listener for the language switcher
     langSwitcher?.addEventListener('click', () => {
         const currentLang = localStorage.getItem('language') as Language || 'zh';
         const newLang: Language = currentLang === 'zh' ? 'en' : 'zh';
         setLanguage(newLang);
     });
 
-    // --- 原有的捲動淡入功能 ---
+    // --- Existing scroll fade-in functionality ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
