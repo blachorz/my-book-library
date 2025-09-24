@@ -78,25 +78,101 @@ const setLanguage = async (lang: Language) => {
             langSwitcherSpan.textContent = translations[lang][key];
         }
     }
+
+    // Update theme toggle text based on current theme and language
+    const themeToggleSpan = document.querySelector('#theme-toggle span');
+    if (themeToggleSpan) {
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            themeToggleSpan.textContent = lang === 'zh' ? '淺色' : 'Light';
+        } else {
+            themeToggleSpan.textContent = lang === 'zh' ? '深色' : 'Dark';
+        }
+    }
 };
 
 // --- Core Logic End ---
 
 
+// --- Theme Management ---
+
+/**
+ * Sets the application theme (light/dark mode).
+ * @param theme - The theme to set ('light' or 'dark').
+ */
+const setTheme = (theme: 'light' | 'dark') => {
+    const html = document.documentElement;
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+    const themeToggleSpan = document.querySelector('#theme-toggle span');
+    
+    if (theme === 'dark') {
+        html.classList.add('dark');
+        sunIcon?.classList.remove('hidden');
+        moonIcon?.classList.add('hidden');
+        if (themeToggleSpan) {
+            // Check current language to show appropriate text
+            const currentLang = localStorage.getItem('language') || 'zh';
+            themeToggleSpan.textContent = currentLang === 'zh' ? '淺色' : 'Light';
+        }
+    } else {
+        html.classList.remove('dark');
+        sunIcon?.classList.add('hidden');
+        moonIcon?.classList.remove('hidden');
+        if (themeToggleSpan) {
+            // Check current language to show appropriate text
+            const currentLang = localStorage.getItem('language') || 'zh';
+            themeToggleSpan.textContent = currentLang === 'zh' ? '深色' : 'Dark';
+        }
+    }
+    
+    // Store theme preference
+    localStorage.setItem('theme', theme);
+};
+
+/**
+ * Gets the current theme from localStorage or system preference.
+ */
+const getInitialTheme = (): 'light' | 'dark' => {
+    const storedTheme = localStorage.getItem('theme') as 'light' | 'dark';
+    if (storedTheme) {
+        return storedTheme;
+    }
+    
+    // Check system preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+    }
+    
+    return 'light';
+};
+
 // Main execution block after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', async () => {
     
     const langSwitcher = document.getElementById('lang-switcher');
+    const themeToggle = document.getElementById('theme-toggle');
     
     // Determine and set the initial language
     const initialLang: Language = localStorage.getItem('language') as Language || 'zh';
     await setLanguage(initialLang);
+
+    // Determine and set the initial theme
+    const initialTheme = getInitialTheme();
+    setTheme(initialTheme);
 
     // Add click event listener for the language switcher
     langSwitcher?.addEventListener('click', async () => {
         const currentLang = localStorage.getItem('language') as Language || 'zh';
         const newLang: Language = currentLang === 'zh' ? 'en' : 'zh';
         await setLanguage(newLang);
+    });
+
+    // Add click event listener for the theme toggle
+    themeToggle?.addEventListener('click', () => {
+        const currentTheme = localStorage.getItem('theme') as 'light' | 'dark' || 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
     });
 
     // --- Existing scroll fade-in functionality ---

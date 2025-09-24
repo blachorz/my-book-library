@@ -1,7 +1,7 @@
 {
-    "bookTitle_naval": "納瓦爾寶典",
-    "author_naval": "Naval Ravikant",
-    "summary_naval": "透過「把自己產品化」來創造財富，並學習將幸福視為一種技能，活在當下，為自己的人生負起全部責任。",
+  "bookTitle_naval": "納瓦爾寶典",
+  "author_naval": "Naval Ravikant",
+  "summary_naval": "透過「把自己產品化」來創造財富，並學習將幸福視為一種技能，活在當下，為自己的人生負起全部責任。",
   "bookTitle_aq": "逆商：如何將逆境轉化為機會",
   "author_aq": "保羅·史托茲 (Paul G. Stoltz)",
   "bookTitle_brainScience": "考試腦科學",
@@ -61,6 +61,8 @@
   "author_peak": "安德斯‧艾瑞克森, 羅伯特‧普爾",
   "summary_peak": "專家級技能並非源於天賦，而是透過<strong>「刻意練習」</strong>達成，其關鍵在於建立高品質的<strong>「心理表徵」</strong>，將複雜技能內化為直覺反應。",
   "welcomeMessage": "分享這些改變我思維的好書，希望也能為你帶來啟發",
+  "themeToggle": "深色",
   "footer_builtBy1": "Mike",
-  "footer_builtBy2": "一位喜愛閱讀與終身學習的產品經理"
+  "footer_builtBy2": "一位喜愛閱讀與終身學習的產品經理",
+  "footer_copyright": "&copy; 2025 FengMi Knowledge Base"
 }

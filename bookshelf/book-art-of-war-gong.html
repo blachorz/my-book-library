@@ -15,8 +15,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/style.css">
+    <!-- Prevent FOUC for Dark Mode -->
+    <script id="prevent-fouc-script">
+        (function() {
+            // Get theme from localStorage or system preference
+            const getInitialTheme = () => {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                    return storedTheme;
+                }
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return 'dark';
+                }
+                return 'light';
+            };
+            
+            // Apply theme immediately to prevent FOUC
+            const theme = getInitialTheme();
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
-<body data-book-id="artOfWar" class="bg-background font-sans text-text antialiased">
+<body data-book-id="artOfWar" class="bg-background dark:bg-dark-background font-sans text-text dark:text-dark-text antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X4HPMSP"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -25,47 +47,69 @@
 
         <button id="lang-switcher"
             title="Switch Language"
-            class="fixed top-12 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-sm font-medium text-gray-600 transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
+            class="fixed top-12 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991-2.696a4.125 4.125 0 0 1-5.832 0c-1.553-1.553-1.553-4.075 0-5.832 1.553-1.553 4.075-1.553 5.832 0 1.553 1.553 1.553 4.075 0 5.832Z"></path>
             </svg>
-            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher">切換為英文</span>
+            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher">換英文</span>
+        </button>
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle"
+            title="Toggle Theme"
+            class="fixed top-28 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
+            <!-- Sun icon (visible in dark mode) -->
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+            </svg>
+            <!-- Moon icon (visible in light mode) -->
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0 hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+            </svg>
+            <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle">換深色</span>
         </button>
         
         <nav class="flex justify-between items-center mb-10">
-            <a href="../index.html" class="text-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <a href="../index.html" class="text-primary dark:text-dark-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
         </nav>
 
         <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-text mb-2" data-t="artOfWar_mainTitle">善戰者說</h1>
-            <p class="text-lg text-secondary-text" data-t="author_artOfWar">宮玉振</p>
+            <h1 class="text-4xl font-bold text-text dark:text-dark-text mb-2" data-t="artOfWar_mainTitle">善戰者說</h1>
+            <p class="text-lg text-secondary-text dark:text-dark-secondary-text" data-t="author_artOfWar">宮玉振</p>
         </header>
 
         <main>
             <section class="core-concept">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="artOfWar_sectionTitle_challenge">本書挑戰</h2>
-                <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
-                    <h3 class="text-3xl font-bold m-0 text-primary" data-t="artOfWar_challenge_title">策略性思考</h3>
-                    <p class="text-lg font-medium my-1 text-text" data-t="artOfWar_challenge_subtitle">(Strategic Thinking)</p>
-                    <span class="text-base text-secondary-text" data-t="artOfWar_challenge_desc">《孫子兵法》並非陰謀詭計，而是教導如何在複雜競爭中，透過「道、天、地、將、法」奠定根基，並運用「先勝」、「任勢」、「擊虛」等策略性思考，以最小成本取得長遠、全局的勝利。</span>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="artOfWar_sectionTitle_challenge">本書挑戰</h2>
+                <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-8 text-center">
+                    <h3 class="text-3xl font-bold m-0 text-primary dark:text-dark-primary" data-t="artOfWar_challenge_title">策略性思考</h3>
+                    <p class="text-lg font-medium my-1 text-text dark:text-dark-text" data-t="artOfWar_challenge_subtitle">(Strategic Thinking)</p>
+                    <span class="text-base text-secondary-text dark:text-dark-secondary-text" data-t="artOfWar_challenge_desc">《孫子兵法》並非陰謀詭計，而是教導如何在複雜競爭中，透過「道、天、地、將、法」奠定根基，並運用「先勝」、「任勢」、「擊虛」等策略性思考，以最小成本取得長遠、全局的勝利。</span>
                 </div>
             </section>
 
             <section class="mindmap">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="artOfWar_sectionTitle_mindmap">心智圖</h2>
-                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[600px]">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="artOfWar_sectionTitle_mindmap">心智圖</h2>
+                <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl h-[600px] relative">
+                  <!-- Reset button for mindmap -->
+                  <button id="mindmap-reset" 
+                          title="重置心智圖位置"
+                          class="absolute bottom-4 left-4 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[2px_2px_5px_#b8b8b8,-2px_-2px_5px_#ffffff] dark:shadow-[2px_2px_5px_#1a1a1a,-2px_-2px_5px_#2a2a2a] hover:shadow-[1px_1px_3px_#b8b8b8,-1px_-1px_3px_#ffffff] dark:hover:shadow-[1px_1px_3px_#1a1a1a,-1px_-1px_3px_#2a2a2a] focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                    </svg>
+                  </button>
                   <svg id="markmap-container" class="w-full h-full"></svg>
                 </div>
             </section>
             
             <section class="lectures">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="artOfWar_sectionTitle_lectures">取勝法則十二講</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="artOfWar_sectionTitle_lectures">取勝法則十二講</h2>
                  <div data-accordion="collapse" class="grid grid-cols-1 md:grid-cols-2 md:items-start gap-4">
                     <!-- Lecture 1: 五事七計 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-1">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture1_title">法則一：五事七計 - 勝利的根基</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture1_title">法則一：五事七計 - 勝利的根基</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -77,10 +121,10 @@
                         </div>
                     </div>
                     <!-- Lecture 2: 全勝 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-2">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture2_title">法則二：全勝 - 不戰而屈人之兵</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture2_title">法則二：全勝 - 不戰而屈人之兵</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -91,10 +135,10 @@
                         </div>
                     </div>
                     <!-- Lecture 3: 先勝 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-3">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture3_title">法則三：先勝 - 先立於不敗之地</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture3_title">法則三：先勝 - 先立於不敗之地</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -105,10 +149,10 @@
                         </div>
                     </div>
                     <!-- Lecture 4: 任勢 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-4">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-4" aria-expanded="false" aria-controls="accordion-body-4">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture4_title">法則四：任勢 - 放大資源效能</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture4_title">法則四：任勢 - 放大資源效能</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -119,10 +163,10 @@
                         </div>
                     </div>
                     <!-- Lecture 5: 擊虛 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-5">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-5" aria-expanded="false" aria-controls="accordion-body-5">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture5_title">法則五：擊虛 - 選擇對手的薄弱環節</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture5_title">法則五：擊虛 - 選擇對手的薄弱環節</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -133,10 +177,10 @@
                         </div>
                     </div>
                     <!-- Lecture 6: 詭道 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-6">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-6" aria-expanded="false" aria-controls="accordion-body-6">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture6_title">法則六：詭道 - 策略的靈活應用</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture6_title">法則六：詭道 - 策略的靈活應用</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -147,10 +191,10 @@
                         </div>
                     </div>
                     <!-- Lecture 7: 並力 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-7">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-7" aria-expanded="false" aria-controls="accordion-body-7">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture7_title">法則七：並力 - 集中優勢資源</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture7_title">法則七：並力 - 集中優勢資源</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -161,10 +205,10 @@
                         </div>
                     </div>
                     <!-- Lecture 8: 主動 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-8">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-8" aria-expanded="false" aria-controls="accordion-body-8">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture8_title">法則八：主動 - 掌握局面主導權</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture8_title">法則八：主動 - 掌握局面主導權</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -175,10 +219,10 @@
                         </div>
                     </div>
                     <!-- Lecture 9: 機變 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-9">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-9" aria-expanded="false" aria-controls="accordion-body-9">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture9_title">法則九：機變 - 打造水一樣的組織</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture9_title">法則九：機變 - 打造水一樣的組織</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -189,10 +233,10 @@
                         </div>
                     </div>
                     <!-- Lecture 10: 先知 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-10">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-10" aria-expanded="false" aria-controls="accordion-body-10">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture10_title">法則十：先知 - 資訊是最大優勢</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture10_title">法則十：先知 - 資訊是最大優勢</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -203,10 +247,10 @@
                         </div>
                     </div>
                     <!-- Lecture 11: 將道 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-11">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-11" aria-expanded="false" aria-controls="accordion-body-11">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture11_title">法則十一：將道 - 動態環境的領導力</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture11_title">法則十一：將道 - 動態環境的領導力</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -217,10 +261,10 @@
                         </div>
                     </div>
                     <!-- Lecture 12: 終章 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-12">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-12" aria-expanded="false" aria-controls="accordion-body-12">
-                                <span class="text-lg font-medium text-text" data-t="artOfWar_lecture12_title">終章：學會策略性思考</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="artOfWar_lecture12_title">終章：學會策略性思考</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -234,21 +278,21 @@
             </section>
 
             <section class="scenarios">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="artOfWar_sectionTitle_scenarios">觀點實戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="artOfWar_sectionTitle_scenarios">觀點實戰</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="artOfWar_scenario1_title">企業經營</h3>
                         <p class="m-0 text-secondary-text" data-t="artOfWar_scenario1_desc">將「道、天、地、將、法」應用於企業體質評估，檢查使命願景、產業趨勢、市場定位、團隊能力與組織管理是否健全。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
                         <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="artOfWar_scenario2_title">市場競爭</h3>
                         <p class="m-0 text-secondary-text" data-t="artOfWar_scenario2_desc">運用「七計」分析與競爭對手的優劣勢，找出可攻擊的「虛」與自身需鞏固的「實」。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
                         <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="artOfWar_scenario3_title">資源配置</h3>
                         <p class="m-0 text-secondary-text" data-t="artOfWar_scenario3_desc">效法華為「不在非策略性機會點上消耗力量」的原則，將資源高度集中於主攻方向，避免多線作戰。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 300ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 300ms;">
                         <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="artOfWar_scenario4_title">個人發展</h3>
                         <p class="m-0 text-secondary-text" data-t="artOfWar_scenario4_desc">在職涯規劃中，先求「不敗」（穩固核心技能），再抓住「大勢」（產業趨勢），找到能發揮自身優勢的「地」（市場/領域）。</p>
                     </div>
@@ -256,7 +300,7 @@
             </section>
 
             <section class="resources">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="artOfWar_sectionTitle_resources">提及書目與情境</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="artOfWar_sectionTitle_resources">提及書目與情境</h2>
                 <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text">
                     <li class="mb-2.5" data-t="artOfWar_resource1"><strong>《三十六計》:</strong> 作為《孫子兵法》的通俗版本，是其局部的發揮，但兩者並非同一本書。</li>
                     <li class="mb-2.5" data-t="artOfWar_resource2"><strong>《指數型組織》:</strong> 強調偉大願景的重要性，與「五事」中的「道」相呼應。</li>
@@ -270,7 +314,9 @@
 
         </main>
 
-        <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
+        <footer class="text-center mt-16 text-gray-500 dark:text-dark-secondary-text">
+            <p data-t="footer_builtBy1">Mike</p>
+            <p data-t="footer_builtBy2">一位喜愛閱讀與終身學習的產品經理</p>
             <p data-t="footer_copyright">&copy; 2025 FengMi Knowledge Base</p>
         </footer>
     </div>
@@ -321,7 +367,14 @@
 
         const { root, features } = transformer.transform(markdown);
         
-        Markmap.create('#markmap-container', { autoFit: true }, root);
+        const markmapInstance = Markmap.create('#markmap-container', { autoFit: true }, root);
+        
+        // Add reset functionality
+        document.getElementById('mindmap-reset')?.addEventListener('click', () => {
+          if (markmapInstance) {
+            markmapInstance.fit();
+          }
+        });
       })();
     </script>
 </body>

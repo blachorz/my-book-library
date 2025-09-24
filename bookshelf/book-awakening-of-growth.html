@@ -15,8 +15,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/style.css">
+    <!-- Prevent FOUC for Dark Mode -->
+    <script id="prevent-fouc-script">
+        (function() {
+            // Get theme from localStorage or system preference
+            const getInitialTheme = () => {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                    return storedTheme;
+                }
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return 'dark';
+                }
+                return 'light';
+            };
+            
+            // Apply theme immediately to prevent FOUC
+            const theme = getInitialTheme();
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
-<body data-book-id="growth" class="bg-background font-sans text-text antialiased">
+<body data-book-id="growth" class="bg-background dark:bg-dark-background font-sans text-text dark:text-dark-text antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X4HPMSP"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -25,74 +47,96 @@
 
         <button id="lang-switcher"
             title="Switch Language"
-            class="fixed top-12 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-sm font-medium text-gray-600 transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
+            class="fixed top-12 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991-2.696a4.125 4.125 0 0 1-5.832 0c-1.553-1.553-1.553-4.075 0-5.832 1.553-1.553 4.075-1.553 5.832 0 1.553 1.553 1.553 4.075 0 5.832Z"></path>
             </svg>
-            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher">切換為英文</span>
+            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher">換英文</span>
+        </button>
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle"
+            title="Toggle Theme"
+            class="fixed top-28 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
+            <!-- Sun icon (visible in dark mode) -->
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+            </svg>
+            <!-- Moon icon (visible in light mode) -->
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0 hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+            </svg>
+            <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle">換深色</span>
         </button>
         
         <nav class="flex justify-between items-center mb-10">
-            <a href="../index.html" class="text-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <a href="../index.html" class="text-primary dark:text-dark-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
         </nav>
 
         <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-text mb-2" data-t="growth_mainTitle">成長的覺醒</h1>
-            <p class="text-lg text-secondary-text" data-t="growth_author">樊登</p>
+            <h1 class="text-4xl font-bold text-text dark:text-dark-text mb-2" data-t="growth_mainTitle">成長的覺醒</h1>
+            <p class="text-lg text-secondary-text dark:text-dark-secondary-text" data-t="growth_author">樊登</p>
         </header>
 
         <main>
             <section class="core-concept">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_challenge">本書挑戰</h2>
-                <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
-                    <h3 class="text-3xl font-bold m-0 text-primary" data-t="growth_coreConcept_title">冪次法則與大腦健康</h3>
-                    <p class="text-lg font-medium my-1 text-text" data-t="growth_coreConcept_subtitle">(Power Law & Brain Health)</p>
-                    <span class="text-base text-secondary-text" data-t="growth_coreConcept_desc">孩子的轉變符合「冪次法則」，是長期壓力累積的結果。家長唯有透過自我成長，為家庭注入愛、尊重與歡笑，才能滋養孩子大腦，培養其自驅力。</span>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="growth_section_challenge">本書挑戰</h2>
+                <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-8 text-center">
+                    <h3 class="text-3xl font-bold m-0 text-primary dark:text-dark-primary" data-t="growth_coreConcept_title">冪次法則與大腦健康</h3>
+                    <p class="text-lg font-medium my-1 text-text dark:text-dark-text" data-t="growth_coreConcept_subtitle">(Power Law & Brain Health)</p>
+                    <span class="text-base text-secondary-text dark:text-dark-secondary-text" data-t="growth_coreConcept_desc">孩子的轉變符合「冪次法則」，是長期壓力累積的結果。家長唯有透過自我成長，為家庭注入愛、尊重與歡笑，才能滋養孩子大腦，培養其自驅力。</span>
                 </div>
             </section>
 
             <section class="mindmap">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_mindmap">心智圖</h2>
-                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[550px]">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="growth_section_mindmap">心智圖</h2>
+                <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl h-[550px] relative">
+                  <!-- Reset button for mindmap -->
+                  <button id="mindmap-reset" 
+                          title="重置心智圖位置"
+                          class="absolute bottom-4 left-4 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[2px_2px_5px_#b8b8b8,-2px_-2px_5px_#ffffff] dark:shadow-[2px_2px_5px_#1a1a1a,-2px_-2px_5px_#2a2a2a] hover:shadow-[1px_1px_3px_#b8b8b8,-1px_-1px_3px_#ffffff] dark:hover:shadow-[1px_1px_3px_#1a1a1a,-1px_-1px_3px_#2a2a2a] focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                    </svg>
+                  </button>
                   <svg id="markmap-container" class="w-full h-full"></svg>
                 </div>
             </section>
 
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_part1">第一部分：為何孩子的轉變是「斷崖式」的？</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="growth_section_part1">第一部分：為何孩子的轉變是「斷崖式」的？</h2>
                 <div class="flex flex-col gap-4">
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
                         <h3 class="text-xl font-medium mb-2" data-t="growth_part1_item1_title">冪次法則效應</h3>
-                        <p class="text-secondary-text" data-t="growth_part1_item1_desc">孩子的厭學、叛逆等問題看似突然，實則是長期壓力累積後突破「閾值」的結果，如同金屬的「疲勞斷裂」。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_part1_item1_desc">孩子的厭學、叛逆等問題看似突然，實則是長期壓力累積後突破「閾值」的結果，如同金屬的「疲勞斷裂」。</p>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
                         <h3 class="text-xl font-medium mb-2" data-t="growth_part1_item2_title">家長常見的歸因謬誤</h3>
-                        <p class="text-secondary-text" data-t="growth_part1_item2_desc">誤將孩子被打罵後的和好視為「皮實」，或將成績的「回歸均值」現象歸功於「棍棒教育」，都是常見的錯覺。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_part1_item2_desc">誤將孩子被打罵後的和好視為「皮實」，或將成績的「回歸均值」現象歸功於「棍棒教育」，都是常見的錯覺。</p>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_part2">第二部分：給父母的腦科學課</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="growth_section_part2">第二部分：給父母的腦科學課</h2>
                 <div class="flex flex-col gap-4">
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
                         <h3 class="text-xl font-medium mb-2" data-t="growth_part2_item1_title">壓力如何摧毀學習能力</h3>
-                        <p class="text-secondary-text" data-t="growth_part2_item1_desc">長期壓力分泌的皮質醇會抑制負責理性的「前額葉皮質」，同時過度激活負責原始生存反應（打、逃、僵）的「杏仁核」，使大腦無法進行複雜學習。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_part2_item1_desc">長期壓力分泌的皮質醇會抑制負責理性的「前額葉皮質」，同時過度激活負責原始生存反應（打、逃、僵）的「杏仁核」，使大腦無法進行複雜學習。</p>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl p-5">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
                         <h3 class="text-xl font-medium mb-2" data-t="growth_part2_item2_title">創造滋養大腦的化學環境</h3>
-                        <p class="text-secondary-text" data-t="growth_part2_item2_desc">透過成就感（多巴胺）、享受感（內啡肽）與愛（催產素），可以為孩子的大腦發展提供健康的化學基礎。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_part2_item2_desc">透過成就感（多巴胺）、享受感（內啡肽）與愛（催產素），可以為孩子的大腦發展提供健康的化學基礎。</p>
                     </div>
                 </div>
             </section>
             
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_part3">第三部分：家長應對的實用工具</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="growth_section_part3">第三部分：家長應對的實用工具</h2>
                 <div data-accordion="collapse" class="flex flex-col gap-4">
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-1">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
-                                <span class="text-lg font-medium text-text" data-t="growth_accordion1_title">情感引導：情緒降溫的鑰匙</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="growth_accordion1_title">情感引導：情緒降溫的鑰匙</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -102,10 +146,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-2">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
-                                <span class="text-lg font-medium text-text" data-t="growth_accordion2_title">輔導而非告知：培養自驅力</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="growth_accordion2_title">輔導而非告知：培養自驅力</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -115,10 +159,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-3">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
-                                <span class="text-lg font-medium text-text" data-t="growth_accordion3_title">塑造行為的正確時機</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="growth_accordion3_title">塑造行為的正確時機</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -135,43 +179,43 @@
             </section>
             
             <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_part4">第四部分：家庭教育的三大支柱</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="growth_section_part4">第四部分：家庭教育的三大支柱</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h4 class="text-2xl font-bold mb-2 text-primary" data-t="growth_pillar1_title">愛</h4>
-                        <p class="text-secondary-text" data-t="growth_pillar1_desc">付出無條件的愛，沒有交換與威脅，讓孩子知道無論如何父母的愛都在。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_pillar1_desc">付出無條件的愛，沒有交換與威脅，讓孩子知道無論如何父母的愛都在。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
                         <h4 class="text-2xl font-bold mb-2 text-primary" data-t="growth_pillar2_title">尊重</h4>
-                        <p class="text-secondary-text" data-t="growth_pillar2_desc">允許孩子做決定，鼓勵他為家庭負責，培養他的「價值感」。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_pillar2_desc">允許孩子做決定，鼓勵他為家庭負責，培養他的「價值感」。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
                         <h4 class="text-2xl font-bold mb-2 text-primary" data-t="growth_pillar3_title">歡笑</h4>
-                        <p class="text-secondary-text" data-t="growth_pillar3_desc">家中充滿歡笑，能拿失敗開玩笑，塑造孩子的「終身成長」心態。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_pillar3_desc">家中充滿歡笑，能拿失敗開玩笑，塑造孩子的「終身成長」心態。</p>
                     </div>
                 </div>
             </section>
 
             <section class="scenarios">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_scenarios">觀點實戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="growth_section_scenarios">觀點實戰</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h4 class="text-lg font-medium mb-2" data-t="growth_scenario1_title">練習情感引導</h4>
-                        <p class="text-secondary-text" data-t="growth_scenario1_desc">孩子鬧情緒時，先共情：「我知道你現在很生氣...」。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_scenario1_desc">孩子鬧情緒時，先共情：「我知道你現在很生氣...」。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
                         <h4 class="text-lg font-medium mb-2" data-t="growth_scenario2_title">下放決策權</h4>
-                        <p class="text-secondary-text" data-t="growth_scenario2_desc">將週末午餐地點等決定完全交給孩子。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_scenario2_desc">將週末午餐地點等決定完全交給孩子。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
                         <h4 class="text-lg font-medium mb-2" data-t="growth_scenario3_title">建立「失敗分享會」</h4>
-                        <p class="text-secondary-text" data-t="growth_scenario3_desc">晚餐時家人分享搞砸的小事並一笑置之。</p>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="growth_scenario3_desc">晚餐時家人分享搞砸的小事並一笑置之。</p>
                     </div>
                 </div>
             </section>
 
             <section class="resources">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="growth_section_resources">提及書目與情境</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="growth_section_resources">提及書目與情境</h2>
                 <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text">
                     <li class="mb-2.5" data-t="growth_resource1"><strong>《自驅型成長》</strong>: 解釋壓力對大腦的影響。</li>
                     <li class="mb-2.5" data-t="growth_resource2"><strong>《煤氣燈效應》</strong>: 說明長期批評的精神虐待後果。</li>
@@ -184,7 +228,9 @@
 
         </main>
 
-        <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
+        <footer class="text-center mt-16 text-gray-500 dark:text-dark-secondary-text">
+            <p data-t="footer_builtBy1">Mike</p>
+            <p data-t="footer_builtBy2">一位喜愛閱讀與終身學習的產品經理</p>
             <p data-t="footer_copyright">&copy; 2025 FengMi Knowledge Base</p>
         </footer>
     </div>
@@ -220,7 +266,14 @@
 
         const { root, features } = transformer.transform(markdown);
         
-        Markmap.create('#markmap-container', { autoFit: true }, root);
+        const markmapInstance = Markmap.create('#markmap-container', { autoFit: true }, root);
+        
+        // Add reset functionality
+        document.getElementById('mindmap-reset')?.addEventListener('click', () => {
+          if (markmapInstance) {
+            markmapInstance.fit();
+          }
+        });
       })();
     </script>
 </body>

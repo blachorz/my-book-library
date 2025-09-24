@@ -1,7 +1,7 @@
 {
-    "bookTitle_naval": "The Almanack of Naval Ravikant",
-    "author_naval": "Naval Ravikant",
-    "summary_naval": "Create wealth by 'productizing yourself', and learn to treat happiness as a skill by living in the present and taking full responsibility for your life.",
+  "bookTitle_naval": "The Almanack of Naval Ravikant",
+  "author_naval": "Naval Ravikant",
+  "summary_naval": "Create wealth by 'productizing yourself', and learn to treat happiness as a skill by living in the present and taking full responsibility for your life.",
   "bookTitle_aq": "Adversity Quotient: Turning Obstacles into Opportunities",
   "author_aq": "Paul G. Stoltz",
   "bookTitle_brainScience": "Brain Science of Studying",
@@ -61,6 +61,8 @@
   "author_peak": "Anders Ericsson, Robert Pool",
   "summary_peak": "Expert-level skill is not a result of innate talent but is achieved through <strong>'deliberate practice.'</strong> The key is to build high-quality <strong>'mental representations,'</strong> internalizing complex skills into intuitive responses.",
   "welcomeMessage": "Sharing books that inspired me, hope they inspire you too.",
+  "themeToggle": "Dark",
   "footer_builtBy1": "Mike",
-  "footer_builtBy2": "A product manager who loves reading and lifelong learning"
+  "footer_builtBy2": "A product manager who loves reading and lifelong learning",
+  "footer_copyright": "&copy; 2025 FengMi Knowledge Base"
 }

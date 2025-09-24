@@ -15,8 +15,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/style.css">
+    <!-- Prevent FOUC for Dark Mode -->
+    <script id="prevent-fouc-script">
+        (function() {
+            // Get theme from localStorage or system preference
+            const getInitialTheme = () => {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                    return storedTheme;
+                }
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return 'dark';
+                }
+                return 'light';
+            };
+            
+            // Apply theme immediately to prevent FOUC
+            const theme = getInitialTheme();
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
-<body data-book-id="adversityQuotient" class="bg-background font-sans text-text antialiased">
+<body data-book-id="adversityQuotient" class="bg-background dark:bg-dark-background font-sans text-text dark:text-dark-text antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X4HPMSP"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -25,47 +47,69 @@
 
         <button id="lang-switcher"
             title="Switch Language"
-            class="fixed top-12 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-sm font-medium text-gray-600 transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
+            class="fixed top-12 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991-2.696a4.125 4.125 0 0 1-5.832 0c-1.553-1.553-1.553-4.075 0-5.832 1.553-1.553 4.075-1.553 5.832 0 1.553 1.553 1.553 4.075 0 5.832Z"></path>
             </svg>
-            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher">切換為英文</span>
+            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher">換英文</span>
+        </button>
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle"
+            title="Toggle Theme"
+            class="fixed top-28 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
+            <!-- Sun icon (visible in dark mode) -->
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+            </svg>
+            <!-- Moon icon (visible in light mode) -->
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0 hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+            </svg>
+            <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle">換深色</span>
         </button>
         
         <nav class="flex justify-between items-center mb-10">
-            <a href="../index.html" class="text-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <a href="../index.html" class="text-primary dark:text-dark-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
         </nav>
 
         <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-text mb-2" data-t="aq_mainTitle">逆商：如何將逆境轉化為機會</h1>
-            <p class="text-lg text-secondary-text" data-t="author_aq">保羅·史托茲 (Paul G. Stoltz)</p>
+            <h1 class="text-4xl font-bold text-text dark:text-dark-text mb-2" data-t="aq_mainTitle">逆商：如何將逆境轉化為機會</h1>
+            <p class="text-lg text-secondary-text dark:text-dark-secondary-text" data-t="author_aq">保羅·史托茲 (Paul G. Stoltz)</p>
         </header>
 
         <main>
             <section class="core-concept">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="aq_coreConceptTitle">核心觀點</h2>
-                <div class="fade-in-on-scroll bg-card-bg rounded-xl p-8 text-center">
-                    <h3 class="text-3xl font-bold m-0 text-primary" data-t="aq_coreConceptHeading">掌控逆境，轉化機會</h3>
-                    <p class="text-lg font-medium my-1 text-text" data-t="aq_coreConceptEnglish">(Adversity Quotient)</p>
-                    <span class="text-base text-secondary-text" data-t="aq_coreConceptSummary">本書闡述了為何逆商（AQ）比智商或情商更能決定一個人的成就，它透過CORE四維度來衡量人們面對逆境的能力，並提供LEAD工具等實用方法，幫助讀者從認知和行為上重塑應對挑戰的模式，將逆境轉化為成長的契機。</span>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="aq_coreConceptTitle">核心觀點</h2>
+                <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-8 text-center">
+                    <h3 class="text-3xl font-bold m-0 text-primary dark:text-dark-primary" data-t="aq_coreConceptHeading">掌控逆境，轉化機會</h3>
+                    <p class="text-lg font-medium my-1 text-text dark:text-dark-text" data-t="aq_coreConceptEnglish">(Adversity Quotient)</p>
+                    <span class="text-base text-secondary-text dark:text-dark-secondary-text" data-t="aq_coreConceptSummary">本書闡述了為何逆商（AQ）比智商或情商更能決定一個人的成就，它透過CORE四維度來衡量人們面對逆境的能力，並提供LEAD工具等實用方法，幫助讀者從認知和行為上重塑應對挑戰的模式，將逆境轉化為成長的契機。</span>
                 </div>
             </section>
 
             <section class="mindmap">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="aq_mindmapTitle">心智圖</h2>
-                <div class="fade-in-on-scroll bg-card-bg rounded-xl h-[600px]">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="aq_mindmapTitle">心智圖</h2>
+                <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl h-[600px] relative">
+                  <!-- Reset button for mindmap -->
+                  <button id="mindmap-reset" 
+                          title="重置心智圖位置"
+                          class="absolute bottom-4 left-4 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[2px_2px_5px_#b8b8b8,-2px_-2px_5px_#ffffff] dark:shadow-[2px_2px_5px_#1a1a1a,-2px_-2px_5px_#2a2a2a] hover:shadow-[1px_1px_3px_#b8b8b8,-1px_-1px_3px_#ffffff] dark:hover:shadow-[1px_1px_3px_#1a1a1a,-1px_-1px_3px_#2a2a2a] focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                    </svg>
+                  </button>
                   <svg id="markmap-container" class="w-full h-full"></svg>
                 </div>
             </section>
             
             <section class="lectures">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="aq_theoryTitle">核心理論與方法</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="aq_theoryTitle">核心理論與方法</h2>
                  <div data-accordion="collapse" class="grid grid-cols-1 gap-4">
                     <!-- Section 1: 什麼是逆商？ -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-1">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
-                                <span class="text-lg font-medium text-text" data-t="aq_accordion1Title">什麼是逆商？</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="aq_accordion1Title">什麼是逆商？</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -81,10 +125,10 @@
                         </div>
                     </div>
                     <!-- Section 2: 逆境的核心 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-2">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
-                                <span class="text-lg font-medium text-text" data-t="aq_accordion2Title">逆境的核心</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="aq_accordion2Title">逆境的核心</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -95,10 +139,10 @@
                         </div>
                     </div>
                     <!-- Section 3: 逆商的科學基礎 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-3">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
-                                <span class="text-lg font-medium text-text" data-t="aq_accordion3Title">逆商的科學基礎</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="aq_accordion3Title">逆商的科學基礎</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -111,10 +155,10 @@
                         </div>
                     </div>
                     <!-- Section 4: 如何衡量與提升逆商 -->
-                    <div class="fade-in-on-scroll bg-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h2 id="accordion-heading-4">
                             <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-4" aria-expanded="false" aria-controls="accordion-body-4">
-                                <span class="text-lg font-medium text-text" data-t="aq_accordion4Title">如何衡量與提升逆商</span>
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="aq_accordion4Title">如何衡量與提升逆商</span>
                                 <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
                             </button>
                         </h2>
@@ -141,21 +185,21 @@
             </section>
 
             <section class="scenarios">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="aq_scenariosTitle">觀點實戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="aq_scenariosTitle">觀點實戰</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="aq_scenario1Title">覺察逆境信號</h3>
                         <p class="m-0 text-secondary-text" data-t="aq_scenario1_p1">當感覺到壓力時，用一個滑稽的詞（如 "Bingo!"）大聲喊出來，將潛意識的反應提升到意識層面。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
                         <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="aq_scenario2Title">使用 CORE 提問</h3>
                         <p class="m-0 text-secondary-text" data-t="aq_scenario2_p1">立即用掌控感、擔當力、影響度、持續性四個維度問自己，客觀評估現況。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
                         <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="aq_scenario3Title">執行 LEAD 流程</h3>
                         <p class="m-0 text-secondary-text" data-t="aq_scenario3_p1">傾聽反應、探究擔當、分析證據，並列出一個可以立即執行的小步驟來展開行動。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 300ms;">
+                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 300ms;">
                         <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="aq_scenario4Title">中斷災難化迴圈</h3>
                         <p class="m-0 text-secondary-text" data-t="aq_scenario4_p1">使用分心法（如彈手環）或重塑法（如「渺小化」技巧）來打斷負面思維，重獲掌控感。</p>
                     </div>
@@ -163,7 +207,7 @@
             </section>
 
             <section class="resources">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border" data-t="aq_resourcesTitle">提及書目與情境</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="aq_resourcesTitle">提及書目與情境</h2>
                 <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text">
                     <li class="mb-2.5" data-t="aq_resource1"><strong>《瓦爾登湖》:</strong> 引用梭羅的話，強調「真正活過」的意義，以對比不同人生狀態。</li>
                     <li class="mb-2.5" data-t="aq_resource2"><strong>《思考，快與慢》:</strong> 作為認知心理學代表，說明改變「看法」是改變心態的關鍵。</li>
@@ -173,8 +217,10 @@
 
         </main>
 
-        <footer class="text-center mt-20 pt-5 border-t border-border text-sm text-secondary-text">
-            <p>&copy; 2025 FengMi Knowledge Base</p>
+        <footer class="text-center mt-16 text-gray-500 dark:text-dark-secondary-text">
+            <p data-t="footer_builtBy1">Mike</p>
+            <p data-t="footer_builtBy2">一位喜愛閱讀與終身學習的產品經理</p>
+            <p data-t="footer_copyright">&copy; 2025 FengMi Knowledge Base</p>
         </footer>
     </div>
     <script type="module" src="/src/ts/main.ts"></script>
@@ -220,7 +266,14 @@
 
         const { root, features } = transformer.transform(markdown);
         
-        Markmap.create('#markmap-container', { autoFit: true }, root);
+        const markmapInstance = Markmap.create('#markmap-container', { autoFit: true }, root);
+        
+        // Add reset functionality
+        document.getElementById('mindmap-reset')?.addEventListener('click', () => {
+          if (markmapInstance) {
+            markmapInstance.fit();
+          }
+        });
       })();
     </script>
 </body>

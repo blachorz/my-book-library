@@ -1,6 +1,6 @@
 # Readpiration (Read + Inspiration)
 
-這是一個基於 Vite + TypeScript + Tailwind CSS 打造的個人線上書庫，用於展示我的讀書筆記。網站透過 GitHub Actions 實現 CI/CD，能自動部署到 GitHub Pages。
+全站以 Vite、TypeScript、Tailwind CSS 為基礎，結合中英雙語切換、互動式心智圖，並透過 GitHub Actions 實現 CI/CD，打造簡單有趣的閱讀與靈感分享體驗。
 
 **線上預覽:** [https://blachorz.github.io/my-book-library/](https://blachorz.github.io/my-book-library/)
 
@@ -10,6 +10,7 @@
 
 *   **多頁面架構**: 每本讀書筆記都是一個獨立的頁面，方便分享與管理。
 *   **多國語言支援 (i18n)**: 全站支援中英雙語切換，所有 UI 文字與筆記內容皆可動態翻譯。
+*   **高效能載入 (High-Performance Loading)**: 經過深度效能優化，採用依需載入 (On-demand Loading) 策略處理翻譯資源，並確保 CSS 渲染流程順暢，在行動裝置與桌面環境皆提供極速的載入體驗。
 *   **模板化**: 所有筆記頁面共用統一的樣式與互動腳本，確保視覺一致性。
 *   **響應式設計**: 使用 Tailwind CSS 打造，在桌面與行動裝置上都有良好的閱讀體驗。
 *   **互動式心智圖**: 整合 [Markmap.js](https://markmap.js.org/)，將書本的核心概念視覺化為可互動的心智圖，提升理解效率。
@@ -23,7 +24,7 @@
 *   **樣式框架**: [Tailwind CSS](https://tailwindcss.com/)
 *   **國際化 (i18n)**:  
     *   **資料結構**：所有翻譯內容集中於 `src/data/locales/`，分為英文（en）與繁中（zh），並以 `common`/`index`/`[book-id]`做模組化管理。
-    *   **動態切換**：結合 `[data-book-id]`、`[data-t]` 屬性與 TypeScript + Vite `import.meta.glob`，實現全站即時語言切換。
+    *   **動態切換**：結合 `[data-book-id]`、`[data-t]` 屬性與 TypeScript + Vite `import.meta.glob`，實現**依需動態載入**的即時語言切換，大幅提升初始載入效能。
 *   **資料視覺化**: [Markmap.js](https://markmap.js.org/)
 *   **UI 元件庫**: [Flowbite](https://flowbite.com/)
 *   **自動化**: [GitHub Actions](https://github.com/features/actions)
@@ -52,7 +53,7 @@
 
 1.  **複製模板與設定 ID**:
     *   在 `bookshelf/` 目錄下，複製一份現有的 `book-*.html` 檔案，並將其重新命名為新書的檔案名 (e.g., `book-atomic-habits.html`)。
-    *   打開新檔案，找到 `<body>` 標籤，為其新增 `data-book-id="[book-id]"` 屬性。`[book-id]` 是一個**自訂的簡短英文代碼** (e.g., `atomicHabits`)，將作為後續翻譯檔案的檔名。
+    *   打開新檔案，找到 `<body>` 標籤，為其新增 `data-book-id="[book-id]"` 屬性。`[book-id]` 是一個**自訂的簡短英文代碼** (e.g., `atomicHabits`)，**此 ID 必須與後續建立的翻譯檔檔名完全一致**，是確保翻譯功能正常的關鍵。
 
 2.  **建立筆記頁面翻譯檔**:
     *   在 `src/data/locales/en/` 目錄下，建立一個 `[book-id].json` 檔案 (e.g., `atomicHabits.json`)。
