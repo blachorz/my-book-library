@@ -14,44 +14,35 @@ let translations: TranslationData = {
  * Use Vite's import.meta.glob to statically import all translation files.
  * This allows Vite to handle path resolution and bundling, avoiding runtime path issues.
  */
-const loadAllTranslations = async () => {
-    const zhModules = import.meta.glob('/src/data/locales/zh/*.json');
-    const enModules = import.meta.glob('/src/data/locales/en/*.json');
+const loadTranslationsForPage = async (lang: Language, pageId: string) => {
+    const modules = import.meta.glob('/src/data/locales/**/*.json');
+    let loadedTranslations: Record<string, string> = {};
 
-    const loadLangFiles = async (modules: Record<string, () => Promise<unknown>>): Promise<Record<string, string>> => {
-        let loadedTranslations: Record<string, string> = {};
-        for (const path in modules) {
+    // Define which files are needed for which page
+    const requiredFiles = ['common', pageId];
+
+    for (const path in modules) {
+        const fileName = path.split('/').pop()?.replace('.json', '');
+        const fileLang = path.includes('/zh/') ? 'zh' : 'en';
+
+        if (fileLang === lang && fileName && requiredFiles.includes(fileName)) {
             const module = await modules[path]();
-            const fileName = path.split('/').pop()?.replace('.json', '');
-            if (fileName && typeof module === 'object' && module !== null && 'default' in module) {
+            if (typeof module === 'object' && module !== null && 'default' in module) {
                 const content = (module as { default: Record<string, string> }).default;
-                if (fileName === 'common' || fileName === 'index') {
-                    loadedTranslations = { ...loadedTranslations, ...content };
-                } else {
-                    // For book-specific files, merge them directly
-                    loadedTranslations = { ...loadedTranslations, ...content };
-                }
+                loadedTranslations = { ...loadedTranslations, ...content };
             }
         }
-        return loadedTranslations;
-    };
-    
-    // Preload all translations into the translations object
-    translations.zh = await loadLangFiles(zhModules);
-    translations.en = await loadLangFiles(enModules);
+    }
+    return loadedTranslations;
 };
-
 
 /**
  * Applies the loaded translations to all elements with a `data-t` attribute.
  * @param lang - The language to apply.
  */
 const applyTranslations = (lang: Language) => {
-    const bookId = document.body.dataset.bookId || 'index';
-    
     document.querySelectorAll<HTMLElement>('[data-t]').forEach(el => {
         const key = el.dataset.t;
-        // Determine which translation set to use
         const translationSet = translations[lang];
 
         if (key && translationSet && translationSet[key]) {
@@ -61,11 +52,16 @@ const applyTranslations = (lang: Language) => {
 };
 
 /**
- * Sets the application language. It applies the pre-loaded translations
- * to the DOM and saves the preference.
+ * Sets the application language. It dynamically loads the required translations,
+ * applies them to the DOM, and saves the preference.
  * @param lang - The language to set.
  */
-const setLanguage = (lang: Language) => {
+const setLanguage = async (lang: Language) => {
+    const pageId = document.body.dataset.bookId || 'index';
+    
+    // Load only the necessary translations for the current page and language
+    translations[lang] = await loadTranslationsForPage(lang, pageId);
+    
     applyTranslations(lang);
 
     // Update the lang attribute for SEO and accessibility
@@ -76,8 +72,11 @@ const setLanguage = (lang: Language) => {
 
     // Specifically update the language switcher text
     const langSwitcherSpan = document.querySelector('#lang-switcher span');
-    if (langSwitcherSpan && translations[lang] && translations[lang]['langSwitcher']) {
-        langSwitcherSpan.textContent = translations[lang]['langSwitcher'];
+    if (langSwitcherSpan) {
+        const key = langSwitcherSpan.dataset.t;
+        if (key && translations[lang] && translations[lang][key]) {
+            langSwitcherSpan.textContent = translations[lang][key];
+        }
     }
 };
 
@@ -87,20 +86,17 @@ const setLanguage = (lang: Language) => {
 // Main execution block after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', async () => {
     
-    // Pre-load all translation files at startup
-    await loadAllTranslations();
-
     const langSwitcher = document.getElementById('lang-switcher');
     
     // Determine and set the initial language
     const initialLang: Language = localStorage.getItem('language') as Language || 'zh';
-    setLanguage(initialLang);
+    await setLanguage(initialLang);
 
     // Add click event listener for the language switcher
-    langSwitcher?.addEventListener('click', () => {
+    langSwitcher?.addEventListener('click', async () => {
         const currentLang = localStorage.getItem('language') as Language || 'zh';
         const newLang: Language = currentLang === 'zh' ? 'en' : 'zh';
-        setLanguage(newLang);
+        await setLanguage(newLang);
     });
 
     // --- Existing scroll fade-in functionality ---
