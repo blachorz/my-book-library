@@ -1,4 +1,7 @@
 {
+    "bookTitle_naval": "The Almanack of Naval Ravikant",
+    "author_naval": "Naval Ravikant",
+    "summary_naval": "Create wealth by 'productizing yourself', and learn to treat happiness as a skill by living in the present and taking full responsibility for your life.",
   "bookTitle_aq": "Adversity Quotient: Turning Obstacles into Opportunities",
   "author_aq": "Paul G. Stoltz",
   "bookTitle_brainScience": "Brain Science of Studying",
@@ -53,5 +56,8 @@
   "summary_speech": "This book breaks down the underlying logic of effective public speaking, explaining how to overcome nervousness with a 'gift-giving' mindset and providing a practical structured framework including 'Ramp, Discovery, and Dessert'.",
   "bookTitle_facts": "Speak with Facts",
   "author_facts": "Mark Murphy",
-  "summary_facts": "This book aims to solve communication difficulties caused by people's resistance to truth, guiding readers to conduct constructive dialogues through tools like the FIRE model."
+  "summary_facts": "This book aims to solve communication difficulties caused by people's resistance to truth, guiding readers to conduct constructive dialogues through tools like the FIRE model.",
+  "bookTitle_peak": "Peak",
+  "author_peak": "Anders Ericsson, Robert Pool",
+  "summary_peak": "Expert-level skill is not a result of innate talent but is achieved through 'deliberate practice.' The key is to build high-quality 'mental representations,' internalizing complex skills into intuitive responses."
 }

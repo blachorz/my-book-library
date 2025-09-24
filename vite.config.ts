@@ -13,6 +13,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        'book-almanack-of-naval': resolve(__dirname, 'bookshelf/book-almanack-of-naval.html'),
         'book-how-to-raise-social-child': resolve(__dirname, 'bookshelf/book-how-to-raise-social-child.html'),
         'book-unconscious-obedience-and-awareness': resolve(__dirname, 'bookshelf/book-unconscious-obedience-and-awareness.html'),
         'book-you-are-your-childs-best-toy': resolve(__dirname, 'bookshelf/book-you-are-your-childs-best-toy.html'),
@@ -31,6 +32,7 @@ export default defineConfig({
         'book-resilience': resolve(__dirname, 'bookshelf/book-resilience.html'),
         'book-effective-speech': resolve(__dirname, 'bookshelf/book-effective-speech.html'),
         'book-speak-with-facts': resolve(__dirname, 'bookshelf/book-speak-with-facts.html'),
+        'book-peak': resolve(__dirname, 'bookshelf/book-peak.html'),
       }
     }
   }

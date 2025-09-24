@@ -1,4 +1,7 @@
 {
+    "bookTitle_naval": "納瓦爾寶典",
+    "author_naval": "Naval Ravikant",
+    "summary_naval": "透過「把自己產品化」來創造財富，並學習將幸福視為一種技能，活在當下，為自己的人生負起全部責任。",
   "bookTitle_aq": "逆商：如何將逆境轉化為機會",
   "author_aq": "保羅·史托茲 (Paul G. Stoltz)",
   "bookTitle_brainScience": "考試腦科學",
@@ -53,5 +56,8 @@
   "summary_speech": "本書拆解了高效演講的底層邏輯，說明如何透過「送禮物」的心態克服緊張，並提供一套包含「坡道、發現、甜點」的實用結構化框架。",
   "bookTitle_facts": "用事實說話",
   "author_facts": "Mark Murphy (馬克·墨菲)",
-  "summary_facts": "本書旨在解決因人們抗拒真相而導致的溝通困境，透過FIRE模型等工具，引導讀者進行有建設性的對話。"
+  "summary_facts": "本書旨在解決因人們抗拒真相而導致的溝通困境，透過FIRE模型等工具，引導讀者進行有建設性的對話。",
+  "bookTitle_peak": "刻意練習",
+  "author_peak": "安德斯‧艾瑞克森, 羅伯特‧普爾",
+  "summary_peak": "專家級技能並非源於天賦，而是透過「刻意練習」達成，其關鍵在於建立高品質的「心理表徵」，將複雜技能內化為直覺反應。"
 }
