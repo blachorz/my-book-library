@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import sitemap from 'vite-plugin-sitemap'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -9,6 +10,11 @@ const __dirname = dirname(__filename);
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/my-book-library/',
+  plugins: [
+    sitemap({
+      hostname: 'https://blachorz.github.io/my-book-library',
+    }),
+  ],
   build: {
     rollupOptions: {
       input: {

@@ -39,5 +39,10 @@
   "resilience_scenario3_desc": "在「卷」與「躺平」間，先思考長遠目標，並以「行動興奮」代替空想，在實踐中探索。",
   "resilience_section_resources": "提及書目與情境",
   "resilience_resource1": "<strong>《說文解字》:</strong> 用於解釋「韌」字的本義——「柔而固也」。",
-  "resilience_resource2": "<strong>《古文觀止》:</strong> 作為「持續小贏」策略的一個具體範例。"
+  "resilience_resource2": "<strong>《古文觀止》:</strong> 作為「持續小贏」策略的一個具體範例。",
+  "resilience_summaryAuthorNote": "本文摘要自張曉萌所著之《韌性：不確定時代的精進法則》。",
+  "resilience_mindmapCaption": "《韌性》核心概念心智圖，視覺化呈現韌性飛輪的三大支柱及其驅動力",
+  "resilience_flywheel1_prompt": "你是否常常感覺被情緒淹沒，分不清哪些是事實，哪些只是自己的擔憂？",
+  "resilience_flywheel2_prompt": "在日常的忙碌中，你是否曾停下來思考，這些行為與你真正的人生目標有何關聯？",
+  "resilience_flywheel3_prompt": "你是否覺得孤單，渴望與他人建立更深層、更有意義的連結？"
 }

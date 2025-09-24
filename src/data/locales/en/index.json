@@ -59,5 +59,8 @@
   "summary_facts": "This book aims to solve communication difficulties caused by people's resistance to truth, guiding readers to conduct constructive dialogues through tools like the FIRE model.",
   "bookTitle_peak": "Peak",
   "author_peak": "Anders Ericsson, Robert Pool",
-  "summary_peak": "Expert-level skill is not a result of innate talent but is achieved through 'deliberate practice.' The key is to build high-quality 'mental representations,' internalizing complex skills into intuitive responses."
+  "summary_peak": "Expert-level skill is not a result of innate talent but is achieved through <strong>'deliberate practice.'</strong> The key is to build high-quality <strong>'mental representations,'</strong> internalizing complex skills into intuitive responses.",
+  "welcomeMessage": "Sharing books that inspired me, hope they inspire you too.",
+  "footer_builtBy1": "Mike",
+  "footer_builtBy2": "A product manager who loves reading and lifelong learning"
 }

@@ -39,5 +39,10 @@
   "resilience_scenario3_desc": "Between 'hustling' and 'lying flat,' first think about long-term goals and replace daydreaming with 'action-driven excitement,' exploring through practice.",
   "resilience_section_resources": "Mentioned Books & Contexts",
   "resilience_resource1": "<strong>'Shuowen Jiezi':</strong> Used to explain the original meaning of the character '韌' (rèn) - 'flexible yet firm.'",
-  "resilience_resource2": "<strong>'Guwen Guanzhi':</strong> Used as a concrete example of the 'continuous small wins' strategy."
+  "resilience_resource2": "<strong>'Guwen Guanzhi':</strong> Used as a concrete example of the 'continuous small wins' strategy.",
+  "resilience_summaryAuthorNote": "This summary of 'Resilience' by Zhang Xiaomeng.",
+  "resilience_mindmapCaption": "A mind map of the core concepts of 'Resilience,' visualizing the three pillars of the resilience flywheel and its driving force.",
+  "resilience_flywheel1_prompt": "Do you often feel overwhelmed by emotions, unable to distinguish between facts and your own worries?",
+  "resilience_flywheel2_prompt": "In the midst of your busy daily life, have you ever stopped to think about how your actions connect to your true life goals?",
+  "resilience_flywheel3_prompt": "Do you feel lonely and long for deeper, more meaningful connections with others?"
 }
