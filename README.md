@@ -21,9 +21,9 @@
 *   **建置工具**: [Vite](https://vitejs.dev/)
 *   **程式語言**: [TypeScript](https://www.typescriptlang.org/)
 *   **樣式框架**: [Tailwind CSS](https://tailwindcss.com/)
-*   **國際化 (i18n)**:
-    *   **資料庫**: 翻譯內容被模組化存放於 `src/data/locales/` 目錄下，包含 `en` (英文) 與 `zh` (繁體中文) 兩個語系。每個語系中又分為 `common.json` (共用文字)、`index.json` (首頁專用) 以及各本書籍獨立的 `[book-id].json` 檔案。
-    *   **動態渲染**: 透過 `[data-book-id]` (用於 `<body>` 標籤) 和 `[data-t]` (用於內文元素) 屬性，並利用 TypeScript 腳本與 Vite 的 `import.meta.glob` 功能實現高效的內容切換。
+*   **國際化 (i18n)**:  
+    *   **資料結構**：所有翻譯內容集中於 `src/data/locales/`，分為英文（en）與繁中（zh），並以 `common`/`index`/`[book-id]`做模組化管理。
+    *   **動態切換**：結合 `[data-book-id]`、`[data-t]` 屬性與 TypeScript + Vite `import.meta.glob`，實現全站即時語言切換。
 *   **資料視覺化**: [Markmap.js](https://markmap.js.org/)
 *   **UI 元件庫**: [Flowbite](https://flowbite.com/)
 *   **自動化**: [GitHub Actions](https://github.com/features/actions)
