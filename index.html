@@ -91,32 +91,33 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X4HPMSP"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <!-- Language Switcher Button -->
+    <button id="lang-switcher"
+        title="Switch Language"
+        class="fixed top-12 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991-2.696a4.125 4.125 0 0 1-5.832 0c-1.553-1.553-1.553-4.075 0-5.832 1.553-1.553 4.075-1.553 5.832 0 1.553 1.553 1.553 4.075 0 5.832Z" />
+        </svg>
+        <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher"></span>
+    </button>
+    
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle"
+        title="Toggle Theme"
+        class="fixed top-28 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
+        <!-- Sun icon (visible in dark mode) -->
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+        </svg>
+        <!-- Moon icon (visible in light mode) -->
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0 hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </svg>
+        <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle"></span>
+    </button>
+
     <div class="container mx-auto px-4 py-12">
         <header class="relative text-center mb-12">
-            <!-- Language Switcher Button -->
-            <button id="lang-switcher"
-                title="Switch Language"
-                class="fixed top-12 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991-2.696a4.125 4.125 0 0 1-5.832 0c-1.553-1.553-1.553-4.075 0-5.832 1.553-1.553 4.075-1.553 5.832 0 1.553 1.553 1.553 4.075 0 5.832Z" />
-                </svg>
-                <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher"></span>
-            </button>
-            
-            <!-- Theme Toggle Button -->
-            <button id="theme-toggle"
-                title="Toggle Theme"
-                class="fixed top-28 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
-                <!-- Sun icon (visible in dark mode) -->
-                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-                </svg>
-                <!-- Moon icon (visible in light mode) -->
-                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0 hidden">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-                </svg>
-                <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle"></span>
-            </button>
             <h1 class="text-5xl font-bold text-gray-900 dark:text-dark-text" data-t="pageTitle">Readpiration</h1>
             <p class="mt-4 text-xl text-primary dark:text-dark-primary" data-t="pageSubtitle">從閱讀到靈感，只需一個筆記</p>
             <p class="mt-8 text-sm italic text-gray-400 dark:text-dark-secondary-text max-w-2xl mx-auto border-b border-dotted border-gray-300 dark:border-dark-border pb-8" data-t="welcomeMessage">分享這些改變我思維的好書，希望也能為你帶來啟發</p>
@@ -562,6 +563,9 @@
     </script>
     <!-- Load script loader first -->
     <script src="/src/js/script-loader.js"></script>
+    
+    <!-- Load main.ts for button functionality -->
+    <script type="module" src="/src/ts/main.ts"></script>
     
     <!-- Initialize non-blocking script loading -->
     <script>
