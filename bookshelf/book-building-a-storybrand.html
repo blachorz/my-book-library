@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/style.css">
-    <!-- Prevent FOUC for Dark Mode -->
+    <!-- Prevent FOUC for Dark Mode and Button Text -->
     <script id="prevent-fouc-script">
         (function() {
             // Get theme from localStorage or system preference
@@ -30,10 +30,33 @@
                 return 'light';
             };
             
+            // Get language from localStorage
+            const getInitialLanguage = () => {
+                return localStorage.getItem('language') || 'zh';
+            };
+            
             // Apply theme immediately to prevent FOUC
             const theme = getInitialTheme();
+            const language = getInitialLanguage();
+            
             if (theme === 'dark') {
                 document.documentElement.classList.add('dark');
+            }
+            
+            // Set correct button text immediately to prevent flash
+            const langSwitcherSpan = document.querySelector('#lang-switcher span');
+            const themeToggleSpan = document.querySelector('#theme-toggle span');
+            
+            if (langSwitcherSpan) {
+                langSwitcherSpan.textContent = language === 'zh' ? '英文' : 'Chinese';
+            }
+            
+            if (themeToggleSpan) {
+                if (theme === 'dark') {
+                    themeToggleSpan.textContent = language === 'zh' ? '淺色' : 'Light';
+                } else {
+                    themeToggleSpan.textContent = language === 'zh' ? '深色' : 'Dark';
+                }
             }
         })();
     </script>
@@ -51,7 +74,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991-2.696a4.125 4.125 0 0 1-5.832 0c-1.553-1.553-1.553-4.075 0-5.832 1.553-1.553 4.075-1.553 5.832 0 1.553 1.553 1.553 4.075 0 5.832Z"></path>
             </svg>
-            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher">換英文</span>
+            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher"></span>
         </button>
         <!-- Theme Toggle Button -->
         <button id="theme-toggle"
@@ -65,11 +88,11 @@
             <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0 hidden">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
             </svg>
-            <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle">換深色</span>
+            <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle"></span>
         </button>
 
         <nav class="flex justify-between items-center mb-10">
-            <a href="../index.html" class="text-primary dark:text-dark-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <a href="../index.html" class="text-primary dark:text-dark-primary hover:underline" data-t="backToIndex"></a>
         </nav>
 
         <header class="mb-12 text-center">
@@ -89,7 +112,7 @@
 
             <section class="mindmap">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="storybrand_section_mindmap">心智圖</h2>
-                <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl h-[500px] relative">
+                <div class="fade-in-on-scroll mindmap-container rounded-xl h-[300px] sm:h-[400px] md:h-[500px] relative">
                   <!-- Reset button for mindmap -->
                   <button id="mindmap-reset" 
                           title="重置心智圖位置"
@@ -163,19 +186,19 @@
                 <div class="mb-4 border-b border-border dark:border-dark-border dark:border-dark-border">
                     <ul class="flex flex-wrap -mb-px text-base font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                         <li class="me-2" role="presentation">
-                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="website-tab" data-tabs-target="#website-content" type="button" role="tab" aria-controls="website-content" aria-selected="true" data-t="storybrand_tab_website">改造你的網站</button>
+                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text dark:text-dark-secondary-text hover:text-gray-600 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600 aria-selected:text-primary dark:aria-selected:text-dark-primary aria-selected:border-primary dark:aria-selected:border-dark-primary" id="website-tab" data-tabs-target="#website-content" type="button" role="tab" aria-controls="website-content" aria-selected="true" data-t="storybrand_tab_website">改造你的網站</button>
                         </li>
                         <li class="me-2" role="presentation">
-                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text hover:text-gray-600 hover:border-gray-300 aria-selected:text-primary aria-selected:border-primary" id="marketing-tab" data-tabs-target="#marketing-content" type="button" role="tab" aria-controls="marketing-content" aria-selected="false" data-t="storybrand_tab_marketing">五個免費的行銷行動</button>
+                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg text-secondary-text dark:text-dark-secondary-text hover:text-gray-600 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600 aria-selected:text-primary dark:aria-selected:text-dark-primary aria-selected:border-primary dark:aria-selected:border-dark-primary" id="marketing-tab" data-tabs-target="#marketing-content" type="button" role="tab" aria-controls="marketing-content" aria-selected="false" data-t="storybrand_tab_marketing">五個免費的行銷行動</button>
                         </li>
                     </ul>
                 </div>
 
                 <div id="myTabContent">
                     <div class="hidden" id="website-content" role="tabpanel" aria-labelledby="website-tab">
-                        <div class="bg-card-bg rounded-xl p-6">
-                            <h3 class="text-xl font-medium mb-4 text-text" data-t="storybrand_website_title">第一屏五要素</h3>
-                            <ul class="flex flex-col gap-3 list-decimal list-inside text-secondary-text">
+                        <div class="bg-card-bg dark:bg-dark-card-bg rounded-xl p-6">
+                            <h3 class="text-xl font-medium mb-4 text-text dark:text-dark-text" data-t="storybrand_website_title">第一屏五要素</h3>
+                            <ul class="flex flex-col gap-3 list-decimal list-inside text-secondary-text dark:text-dark-secondary-text">
                                 <li data-t="storybrand_website_li1"><strong>承諾的人格轉變：</strong>明確告知你將幫助顧客成為什麼樣的人。</li>
                                 <li data-t="storybrand_website_li2"><strong>承諾解決的問題：</strong>用一句簡潔的廣告語說明你能解決什麼痛點。</li>
                                 <li data-t="storybrand_website_li3"><strong>成功的圖像：</strong>展示顧客使用你的產品或服務後，開心、成功的模樣。</li>

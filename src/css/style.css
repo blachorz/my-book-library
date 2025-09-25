@@ -7,6 +7,18 @@
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Floating button scroll opacity transition */
+#lang-switcher, #theme-toggle {
+  transition: opacity 0.3s ease;
+}
+
+/* Mindmap container - fixed light gray background, independent of theme */
+.mindmap-container {
+  background-color: #f5f5f7 !important; /* Light gray background, always */
+  border: 1px solid #e5e5e7; /* Light border */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
 @layer components {
   /* Reusable fade-in animation */
   .fade-in-on-scroll {

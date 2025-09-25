@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/style.css">
-    <!-- Prevent FOUC for Dark Mode -->
+    <!-- Prevent FOUC for Dark Mode and Button Text -->
     <script id="prevent-fouc-script">
         (function() {
             // Get theme from localStorage or system preference
@@ -30,10 +30,33 @@
                 return 'light';
             };
             
+            // Get language from localStorage
+            const getInitialLanguage = () => {
+                return localStorage.getItem('language') || 'zh';
+            };
+            
             // Apply theme immediately to prevent FOUC
             const theme = getInitialTheme();
+            const language = getInitialLanguage();
+            
             if (theme === 'dark') {
                 document.documentElement.classList.add('dark');
+            }
+            
+            // Set correct button text immediately to prevent flash
+            const langSwitcherSpan = document.querySelector('#lang-switcher span');
+            const themeToggleSpan = document.querySelector('#theme-toggle span');
+            
+            if (langSwitcherSpan) {
+                langSwitcherSpan.textContent = language === 'zh' ? '英文' : 'Chinese';
+            }
+            
+            if (themeToggleSpan) {
+                if (theme === 'dark') {
+                    themeToggleSpan.textContent = language === 'zh' ? '淺色' : 'Light';
+                } else {
+                    themeToggleSpan.textContent = language === 'zh' ? '深色' : 'Dark';
+                }
             }
         })();
     </script>
@@ -52,7 +75,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991-2.696a4.125 4.125 0 0 1-5.832 0c-1.553-1.553-1.553-4.075 0-5.832 1.553-1.553 4.075-1.553 5.832 0 1.553 1.553 1.553 4.075 0 5.832Z"></path>
             </svg>
-            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher">換英文</span>
+            <span class="hidden sm:ml-2 sm:inline" data-t="langSwitcher"></span>
         </button>
         
         <!-- Theme Toggle Button -->
@@ -67,11 +90,11 @@
             <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0 hidden">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
             </svg>
-            <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle">換深色</span>
+            <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle"></span>
         </button>
         
         <nav class="flex justify-between items-center mb-10">
-            <a href="../index.html" class="text-primary dark:text-dark-primary hover:underline" data-t="backToIndex">&larr; 返回書庫首頁</a>
+            <a href="../index.html" class="text-primary dark:text-dark-primary hover:underline" data-t="backToIndex"></a>
         </nav>
 
         <header class="mb-12 text-center">
@@ -91,7 +114,7 @@
 
             <section class="mindmap">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="cc_section_mindmap">心智圖</h2>
-                <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl h-[600px] relative">
+                <div class="fade-in-on-scroll mindmap-container rounded-xl h-[300px] sm:h-[400px] md:h-[500px] relative">
                   <!-- Reset button for mindmap -->
                   <button id="mindmap-reset" 
                           title="重置心智圖位置"

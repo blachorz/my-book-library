@@ -188,4 +188,42 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const elements = document.querySelectorAll('.fade-in-on-scroll');
     elements.forEach(el => observer.observe(el));
+
+    // --- Floating Button Scroll Opacity Control ---
+    let scrollTimeout: number | null = null;
+
+    const updateFloatingButtonsOpacity = (isScrolling: boolean) => {
+        const langSwitcher = document.getElementById('lang-switcher');
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        if (langSwitcher && themeToggle) {
+            if (isScrolling) {
+                // Any scrolling - make buttons transparent
+                langSwitcher.style.opacity = '0.3';
+                themeToggle.style.opacity = '0.3';
+            } else {
+                // Not scrolling - make buttons fully visible
+                langSwitcher.style.opacity = '1';
+                themeToggle.style.opacity = '1';
+            }
+        }
+    };
+
+    const handleScroll = () => {
+        // Make buttons transparent while scrolling
+        updateFloatingButtonsOpacity(true);
+        
+        // Clear existing timeout
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+        
+        // Set timeout to reset opacity when scrolling stops
+        scrollTimeout = window.setTimeout(() => {
+            updateFloatingButtonsOpacity(false);
+        }, 150);
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
 });
