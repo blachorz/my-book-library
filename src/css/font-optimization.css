@@ -1,0 +1,76 @@
+/* 字體優化策略 - 減少載入時間 */
+
+/* 1. 使用系統字體作為主要字體，減少外部字體依賴 */
+:root {
+  --font-primary: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+  --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* 2. 字體載入優化 */
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/notosanstc/v38/-nF7OG829....110.woff2') format('woff2');
+  unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+F900-FAFF, U+2F800-2FA1F;
+}
+
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/notosanstc/v38/-nF7OG829....111.woff2') format('woff2');
+  unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+F900-FAFF, U+2F800-2FA1F;
+}
+
+/* 3. 漸進式字體載入 */
+body {
+  font-family: var(--font-fallback);
+  font-display: swap;
+}
+
+/* 當 Noto Sans TC 載入完成後，切換到主要字體 */
+.fonts-loaded body {
+  font-family: var(--font-primary);
+}
+
+/* 4. 關鍵文字的字體預載入 */
+h1, h2, h3, .book-title, .author-name {
+  font-family: var(--font-primary);
+  font-display: swap;
+}
+
+/* 5. 減少字體權重使用 */
+.text-light { font-weight: 400; }
+.text-normal { font-weight: 400; }
+.text-bold { font-weight: 700; }
+
+/* 6. 字體載入狀態指示器 */
+.font-loading {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.fonts-loaded .font-loading {
+  opacity: 1;
+}
+
+/* 7. 針對不同裝置的字體優化 */
+@media (max-width: 768px) {
+  body {
+    font-family: var(--font-fallback);
+  }
+  
+  .fonts-loaded body {
+    font-family: var(--font-primary);
+  }
+}
+
+/* 8. 字體載入失敗時的降級策略 */
+@supports not (font-display: swap) {
+  body {
+    font-family: var(--font-fallback);
+  }
+}

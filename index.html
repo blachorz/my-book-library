@@ -17,10 +17,29 @@
     <meta property="og:description" content="探索 Readpiration 個人書庫，匯集了關於個人成長、育兒技巧與商業智慧的精選好書筆記與摘要。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://blachorz.github.io/my-book-library/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Advanced font loading optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/style.css">
+    
+    <!-- Preload only the most critical font weights -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/notosanstc/v38/-nF7OG829....110.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Load fonts with font-display: swap and reduced weights -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap&text=Readpiration從閱讀到靈感只需一個筆記">
+    
+    <!-- Fallback font stack -->
+    <style>
+      body {
+        font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+      }
+    </style>
+    <!-- Critical CSS inlined for faster rendering -->
+    <link rel="stylesheet" href="/src/css/critical.css">
+    <!-- Font optimization CSS -->
+    <link rel="stylesheet" href="/src/css/font-optimization.css">
+    <!-- Load non-critical CSS asynchronously -->
+    <link rel="preload" href="/src/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/css/style.css"></noscript>
     <!-- Prevent FOUC for Dark Mode and Button Text -->
     <script id="prevent-fouc-script">
         (function() {
@@ -541,6 +560,24 @@
       }]
     }
     </script>
-    <script type="module" src="/src/ts/main.ts"></script>
+    <!-- Load script loader first -->
+    <script src="/src/js/script-loader.js"></script>
+    
+    <!-- Initialize non-blocking script loading -->
+    <script>
+      // 使用進階腳本載入器
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.scriptLoader) {
+          // 預載入關鍵腳本
+          window.scriptLoader.preloadScript('/src/js/performance.js');
+          window.scriptLoader.preloadScript('/src/js/advanced-performance.js');
+          
+          // 監聽腳本載入完成事件
+          document.addEventListener('scriptsLoaded', function(event) {
+            console.log('所有腳本載入完成:', event.detail);
+          });
+        }
+      });
+    </script>
 </body>
 </html>
