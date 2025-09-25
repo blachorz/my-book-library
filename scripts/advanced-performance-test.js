@@ -150,11 +150,9 @@ class AdvancedPerformanceTester {
         const indexPath = path.join(__dirname, '../index.html');
         const indexContent = fs.readFileSync(indexPath, 'utf8');
         
-        // 檢查是否使用腳本載入器
-        return indexContent.includes('script-loader.js') &&
-               indexContent.includes('preloadScript') &&
-               indexContent.includes('addEventListener') &&
-               indexContent.includes('DOMContentLoaded');
+        return indexContent.includes('advanced-performance.js') &&
+               !indexContent.includes('async') && // 應該使用 defer 或正常載入
+               indexContent.includes('performance.js');
     }
 
     // 檢查 Service Worker 快取

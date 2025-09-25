@@ -6,13 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "test:performance": "node scripts/test-performance.js",
-    "test:advanced": "node scripts/advanced-performance-test.js",
-    "test:all": "npm run test:performance && npm run test:advanced",
-    "cleanup:test": "node scripts/cleanup-test-files.js cleanup",
-    "restore:test": "node scripts/cleanup-test-files.js restore",
-    "build:prod": "npm run cleanup:test && npm run build"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

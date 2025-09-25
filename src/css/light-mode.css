@@ -1,0 +1,212 @@
+/* Light Mode 專用樣式 - 根據圖片設計優化 */
+
+/* 1. 整體背景和容器 */
+.light-mode {
+  background-color: #ffffff;
+  color: #1d1d1f;
+}
+
+.light-mode .container {
+  background-color: #ffffff;
+}
+
+/* 2. 標題區域樣式 */
+.light-mode header {
+  background-color: #ffffff;
+}
+
+.light-mode h1 {
+  color: #1d1d1f;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.light-mode .page-subtitle {
+  color: #007AFF;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+
+.light-mode .welcome-message {
+  color: #6e6e73;
+  font-size: 0.875rem;
+  font-style: italic;
+  border-bottom: 1px dotted #d2d2d7;
+  padding-bottom: 2rem;
+}
+
+/* 3. 卡片樣式 - 純白背景，清晰陰影 */
+.light-mode .book-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e7;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.light-mode .book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: #d2d2d7;
+}
+
+/* 4. 卡片內容樣式 */
+.light-mode .book-card h2 {
+  color: #1d1d1f;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.light-mode .book-card .author {
+  color: #6e6e73;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.light-mode .book-card .summary {
+  color: #1d1d1f;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* 5. 按鈕樣式 - 鮮明的藍色 */
+.light-mode .book-card .read-button {
+  background-color: #007AFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.light-mode .book-card .read-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+.light-mode .book-card .read-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 122, 255, 0.2);
+}
+
+/* 6. 懸浮按鈕樣式 */
+.light-mode .floating-button {
+  background-color: #f8f9fa;
+  color: #6e6e73;
+  border: 1px solid #e5e5e7;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.light-mode .floating-button:hover {
+  background-color: #ffffff;
+  color: #1d1d1f;
+  border-color: #d2d2d7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+/* 7. 語言切換按鈕 */
+.light-mode #lang-switcher {
+  background-color: #f8f9fa;
+  color: #6e6e73;
+  border: 1px solid #e5e5e7;
+}
+
+.light-mode #lang-switcher:hover {
+  background-color: #ffffff;
+  color: #1d1d1f;
+  border-color: #d2d2d7;
+}
+
+/* 8. 主題切換按鈕 */
+.light-mode #theme-toggle {
+  background-color: #f8f9fa;
+  color: #6e6e73;
+  border: 1px solid #e5e5e7;
+}
+
+.light-mode #theme-toggle:hover {
+  background-color: #ffffff;
+  color: #1d1d1f;
+  border-color: #d2d2d7;
+}
+
+/* 9. 分隔線樣式 */
+.light-mode .divider {
+  border-bottom: 1px dotted #d2d2d7;
+  margin: 2rem 0;
+}
+
+/* 10. 響應式設計 */
+@media (max-width: 768px) {
+  .light-mode .book-card {
+    margin-bottom: 1rem;
+  }
+  
+  .light-mode .floating-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .light-mode h1 {
+    font-size: 2.5rem;
+  }
+  
+  .light-mode .page-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+/* 11. 載入動畫 */
+.light-mode .book-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 12. 焦點狀態 */
+.light-mode .book-card .read-button:focus {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+}
+
+.light-mode .floating-button:focus {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+}
+
+/* 13. 工具提示樣式 */
+.light-mode .tooltip {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
