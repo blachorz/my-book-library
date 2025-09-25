@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fix dark mode styles - ensure they only apply with .dark class */
+.dark .dark\:bg-dark-background {
+  background-color: #0a0a0a;
+}
+
+.dark .dark\:text-dark-text {
+  color: #f5f5f7;
+}
+
+.dark .dark\:bg-dark-card-bg {
+  background-color: #1c1c1e;
+}
+
+.dark .dark\:text-dark-primary {
+  color: #0a84ff;
+}
+
+.dark .dark\:text-dark-secondary-text {
+  color: #8e8e93;
+}
+
+.dark .dark\:border-dark-border {
+  border-color: #3a3a3c;
+}
+
 /* Dark mode transition */
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;

@@ -68,9 +68,11 @@
                 document.documentElement.classList.add('dark');
             }
             
-            // Set correct button text immediately to prevent flash
+            // Set correct button text and icons immediately to prevent flash
             const langSwitcherSpan = document.querySelector('#lang-switcher span');
             const themeToggleSpan = document.querySelector('#theme-toggle span');
+            const sunIcon = document.getElementById('sun-icon');
+            const moonIcon = document.getElementById('moon-icon');
             
             if (langSwitcherSpan) {
                 langSwitcherSpan.textContent = language === 'zh' ? '英文' : 'Chinese';
@@ -79,8 +81,14 @@
             if (themeToggleSpan) {
                 if (theme === 'dark') {
                     themeToggleSpan.textContent = language === 'zh' ? '淺色' : 'Light';
+                    // Dark mode: show sun icon, hide moon icon
+                    if (sunIcon) sunIcon.classList.remove('hidden');
+                    if (moonIcon) moonIcon.classList.add('hidden');
                 } else {
                     themeToggleSpan.textContent = language === 'zh' ? '深色' : 'Dark';
+                    // Light mode: hide sun icon, show moon icon
+                    if (sunIcon) sunIcon.classList.add('hidden');
+                    if (moonIcon) moonIcon.classList.remove('hidden');
                 }
             }
         })();
@@ -108,11 +116,11 @@
                 title="Toggle Theme"
                 class="fixed top-28 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-dark-card-bg text-gray-600 dark:text-dark-text transition-all duration-300 shadow-[5px_5px_10px_#b8b8b8,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2a2a2a] hover:shadow-[1px_1px_5px_#b8b8b8,-1px_-1px_5px_#ffffff] dark:hover:shadow-[1px_1px_5px_#1a1a1a,-1px_-1px_5px_#2a2a2a] focus:outline-none sm:w-auto sm:rounded-lg sm:px-4 sm:py-2">
                 <!-- Sun icon (visible in dark mode) -->
-                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
+                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0 hidden">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
                 </svg>
                 <!-- Moon icon (visible in light mode) -->
-                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0 hidden">
+                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-shrink-0">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                 </svg>
                 <span class="hidden sm:ml-2 sm:inline" data-t="themeToggle"></span>
@@ -562,6 +570,9 @@
     </script>
     <!-- Load script loader first -->
     <script src="/src/js/script-loader.js"></script>
+    
+    <!-- Main application script -->
+    <script type="module" src="/src/ts/main.ts"></script>
     
     <!-- Initialize non-blocking script loading -->
     <script>
