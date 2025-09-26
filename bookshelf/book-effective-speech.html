@@ -11,10 +11,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高效演講 | Readpiration</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Advanced font loading optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/style.css">
+    
+    <!-- Preload only the most critical font weights -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/notosanstc/v38/-nF7OG829....110.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Load fonts asynchronously to prevent render blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"></noscript>
+    
+    <!-- Fallback font stack -->
+    <style>
+      body {
+        font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+      }
+    </style>
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="/src/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/css/style.css"></noscript>
     <!-- Prevent FOUC for Dark Mode and Button Text -->
     <script id="prevent-fouc-script">
         (function() {
@@ -187,20 +203,20 @@
             
             <section class="scenarios">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="speech_section_scenarios">觀點實戰</h2>
-                <p class="fade-in-on-scroll mt-5 text-secondary-text" data-t="speech_scenario_overview_desc">「坡道-發現-甜點」框架不僅適用於正式演講，也能靈活運用於日常溝通、會議簡報、家庭對話等多元場景。核心是先釐清「四個關鍵思考」，再依此安排內容，能大幅提升表達的清晰度與影響力。</p>
-                <div class="fade-in-on-scroll mt-5 p-6 bg-card-bg border-l-4 border-primary rounded-r-lg" style="transition-delay: 100ms;">
+                <p class="fade-in-on-scroll mt-5 text-secondary-text dark:text-dark-secondary-text" data-t="speech_scenario_overview_desc">「坡道-發現-甜點」框架不僅適用於正式演講，也能靈活運用於日常溝通、會議簡報、家庭對話等多元場景。核心是先釐清「四個關鍵思考」，再依此安排內容，能大幅提升表達的清晰度與影響力。</p>
+                <div class="fade-in-on-scroll mt-5 p-6 bg-card-bg dark:bg-dark-card-bg border-l-4 border-primary rounded-r-lg" style="transition-delay: 100ms;">
                     <div class="flex flex-col md:flex-row md:gap-8">
                         <div class="flex-1 mb-6 md:mb-0">
-                            <h4 class="text-lg font-medium mb-2" data-t="speech_scenario_wedding_title">案例：婚禮致詞</h4>
-                            <ul class="list-disc pl-5 text-secondary-text space-y-2">
+                            <h4 class="text-lg font-medium mb-2 text-text dark:text-dark-text" data-t="speech_scenario_wedding_title">案例：婚禮致詞</h4>
+                            <ul class="list-disc pl-5 text-secondary-text dark:text-dark-secondary-text space-y-2">
                                 <li data-t="speech_scenario_wedding_li1"><strong>坡道</strong>：設計一個有趣的爆料或故事，吸引新人與賓客的注意力，讓大家產生共鳴。</li>
                                 <li data-t="speech_scenario_wedding_li2"><strong>發現</strong>：挑選三個與新人有關的溫馨故事或特質，作為主要內容。</li>
                                 <li data-t="speech_scenario_wedding_li3"><strong>甜點</strong>：最後送上真誠的祝福，讓情感昇華，留下深刻印象。</li>
                             </ul>
                         </div>
                         <div class="flex-1">
-                            <h4 class="text-lg font-medium mb-2" data-t="speech_scenario_family_title">案例：家庭溝通（說服孩子少打遊戲）</h4>
-                            <ul class="list-disc pl-5 text-secondary-text space-y-2">
+                            <h4 class="text-lg font-medium mb-2 text-text dark:text-dark-text" data-t="speech_scenario_family_title">案例：家庭溝通（說服孩子少打遊戲）</h4>
+                            <ul class="list-disc pl-5 text-secondary-text dark:text-dark-secondary-text space-y-2">
                                 <li data-t="speech_scenario_family_li1"><strong>坡道</strong>：以孩子的興趣或現實困擾切入，讓孩子覺得這件事與自己有關。</li>
                                 <li data-t="speech_scenario_family_li2"><strong>發現</strong>：明確提出三個關鍵理由或事實，說明為何需要調整遊戲時間。</li>
                                 <li data-t="speech_scenario_family_li3"><strong>甜點</strong>：給予鼓勵或承諾，讓孩子感受到被理解與支持。</li>
@@ -212,7 +228,7 @@
 
             <section class="resources">
                 <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="speech_section_resources">提及書目與情境</h2>
-                <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text">
+                <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text dark:text-dark-secondary-text">
                     <li class="mb-2.5" data-t="speech_resource1"><strong>《動物精神》:</strong> 用於解釋人類在公眾演講時感到緊張的原始本能根源。</li>
                     <li class="mb-2.5" data-t="speech_resource2"><strong>《金字塔原理》:</strong> 強調在準備演講內容（發現）時，應將所有資訊歸納為三個核心要點，因為這是人類最容易記住的數量。</li>
                     <li class="mb-2.5" data-t="speech_resource3"><strong>《批判性思維》:</strong> 建議讀者閱讀此書，以提升選擇核心論點和組織論證過程的能力。</li>
