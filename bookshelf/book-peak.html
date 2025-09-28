@@ -10,7 +10,36 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="深度讀書筆記與心得分享">
+    <meta name="robots" content="index, follow">
     <title>刻意練習 | Readpiration</title>
+
+    <!-- Critical CSS inline for fastest rendering -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      * { box-sizing: border-box; }
+      body { 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+        margin: 0; padding: 0; line-height: 1.6;
+        -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+      .bg-background { background-color: #ffffff; }
+      .dark .dark\:bg-dark-background { background-color: #0a0a0a; }
+      .text-text { color: #1f2937; }
+      .dark .dark\:text-dark-text { color: #f5f5f7; }
+      .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+      .font-bold { font-weight: 700; }
+      .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+      .mb-12 { margin-bottom: 3rem; }
+      .text-center { text-align: center; }
+      .mb-2 { margin-bottom: 0.5rem; }
+      .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+      .text-secondary-text { color: #6b7280; }
+      .dark .dark\:text-dark-secondary-text { color: #9ca3af; }
+    </style>
     <meta name="description" content="深入解析《刻意練習》核心觀點，學習如何透過建立高品質心理表徵與 3F 原則（專注、回饋、修正）來突破技能瓶頸。無論是工作或生活，都能應用刻意練習成為專家。">
     <link rel="canonical" href="https://blachorz.github.io/my-book-library/bookshelf/book-peak.html" />
 
@@ -46,6 +75,10 @@
     <!-- Preload critical CSS -->
     <link rel="preload" href="/src/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/src/css/style.css"></noscript>
+
+    <!-- Preload next likely page -->
+    <link rel="prefetch" href="/bookshelf/book-peak.html">
+    <link rel="prefetch" href="/bookshelf/book-effective-speech.html">
 
     <script type="application/ld+json">
     {
@@ -120,6 +153,31 @@
             }
         })();
     </script>
+
+    <!-- Performance optimization -->
+    <script>
+      // 字體載入優化
+      if ('fonts' in document) {
+        document.fonts.ready.then(() => {
+          document.documentElement.classList.add('fonts-loaded');
+        });
+      }
+      
+      // 預載入關鍵資源
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.href = '/src/css/style.css';
+      preloadLink.as = 'style';
+      document.head.appendChild(preloadLink);
+    </script>
+
+    <!-- 輕量級手機優化腳本 -->
+    <script src="/src/js/mobile-optimization.js" defer></script>
+
+    <!-- DNS 預解析 -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 </head>
 <body data-book-id="peak" class="bg-background dark:bg-dark-background font-sans text-text dark:text-dark-text antialiased">
     <!-- Google Tag Manager (noscript) -->

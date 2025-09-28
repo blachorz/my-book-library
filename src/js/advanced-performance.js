@@ -259,11 +259,24 @@
     }
   }
 
-  // 初始化所有優化器
+  // 初始化所有優化器 - 優化手機性能
   document.addEventListener('DOMContentLoaded', function() {
+    // 延遲初始化非關鍵優化器，優先處理關鍵渲染路徑
     new FontOptimizer();
-    new ResourceOptimizer();
-    new PerformanceMonitor();
+    
+    // 使用 requestIdleCallback 延遲非關鍵優化
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        new ResourceOptimizer();
+        new PerformanceMonitor();
+      });
+    } else {
+      // 降級到 setTimeout
+      setTimeout(() => {
+        new ResourceOptimizer();
+        new PerformanceMonitor();
+      }, 100);
+    }
   });
 
 })();

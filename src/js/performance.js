@@ -37,19 +37,42 @@
     });
   }
 
-  // Initialize performance optimizations
+  // Initialize performance optimizations - 手機優化版本
   function init() {
-    // Load non-critical CSS after page load
+    // 優先處理關鍵渲染路徑
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', function() {
+        // 立即載入關鍵 CSS
         loadCSS('/src/css/style.css');
-        preloadCriticalResources();
-        optimizeImages();
+        
+        // 延遲非關鍵優化
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(() => {
+            preloadCriticalResources();
+            optimizeImages();
+          });
+        } else {
+          setTimeout(() => {
+            preloadCriticalResources();
+            optimizeImages();
+          }, 50);
+        }
       });
     } else {
       loadCSS('/src/css/style.css');
-      preloadCriticalResources();
-      optimizeImages();
+      
+      // 延遲非關鍵優化
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          preloadCriticalResources();
+          optimizeImages();
+        });
+      } else {
+        setTimeout(() => {
+          preloadCriticalResources();
+          optimizeImages();
+        }, 50);
+      }
     }
   }
 
