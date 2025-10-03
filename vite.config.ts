@@ -39,6 +39,7 @@ export default defineConfig({
         'book-effective-speech': resolve(__dirname, 'bookshelf/book-effective-speech.html'),
         'book-speak-with-facts': resolve(__dirname, 'bookshelf/book-speak-with-facts.html'),
         'book-peak': resolve(__dirname, 'bookshelf/book-peak.html'),
+        'book-replicable-leadership': resolve(__dirname, 'bookshelf/book-replicable-leadership.html'),
       }
     }
   }

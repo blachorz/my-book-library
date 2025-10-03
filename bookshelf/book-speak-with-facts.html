@@ -189,16 +189,16 @@
 
         <main>
             <section class="core-concept">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="facts_section_coreConcept">核心理念</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border" data-t="facts_section_coreConcept">核心理念</h2>
                 <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-8 text-center">
-                    <h3 class="text-3xl font-bold m-0 text-primary dark:text-dark-primary" data-t="facts_coreConcept_title">FIRE 模型</h3>
-                    <p class="text-lg font-medium my-1 text-text dark:text-dark-text" data-t="facts_coreConcept_subtitle">客觀溝通的框架</p>
+                    <h3 class="text-3xl font-bold m-0 text-primary dark:text-dark-primary" data-t="facts_coreConcept_title">透明化溝通，化解衝突</h3>
+                    <p class="text-lg font-medium my-1 text-text dark:text-dark-text" data-t="facts_coreConcept_subtitle">結構化工具，回歸客觀基礎</p>
                     <span class="text-base text-secondary-text dark:text-dark-secondary-text" data-t="facts_coreConcept_desc">本書旨在解決因人們抗拒真相而導致的溝通困境，透過FIRE模型、文字畫面等八個結構化工具，引導讀者如何進行透明且有建設性的對話，將潛在的衝突轉化為共識與改進的契機，而其中的關鍵技巧在於學會冷靜地剝離事實、解讀與情緒，讓溝通回歸客觀基礎。</span>
                 </div>
             </section>
 
             <section class="mindmap">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="facts_section_mindmap">心智圖</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border" data-t="facts_section_mindmap">心智圖</h2>
                 <div class="fade-in-on-scroll mindmap-container rounded-xl h-[300px] sm:h-[400px] md:h-[500px] relative">
                   <!-- Reset button for mindmap -->
                   <button id="mindmap-reset" 
@@ -212,85 +212,177 @@
                 </div>
             </section>
 
-            <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="facts_section_killers">問題：為何人們抗拒真相？</h2>
+            <section class="truth-killers">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border" data-t="facts_section_killers">問題：為何人們抗拒真相？</h2>
+                <p class="fade-in-on-scroll text-secondary-text dark:text-dark-secondary-text mb-6" data-t="facts_killers_intro">在溝通中，我們常發現對方並非不講理，而是被四種潛在的「真相殺手」所困擾，導致他們本能地排斥客觀事實。</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
-                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <h4 class="text-lg font-medium mb-2" data-t="facts_killer1_title">無知自信</h4>
-                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_killer1_desc">源於鄧寧-克魯格效應，指越是無知的人越無法意識到自己的無知。</p>
+                    <div class="fade-in-on-scroll bg-red-50 dark:bg-red-950/30 border-l-4 border-red-500 p-5 rounded-lg">
+                        <h4 class="text-lg font-bold text-red-700 dark:text-red-300 mb-2" data-t="facts_killer1_title">無知自信</h4>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_killer1_desc">源於鄧寧-克魯格效應，指越是無知的人越無法意識到自己的無知，因而對錯誤的認知抱持著過度的自信。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 100ms;">
-                        <h4 class="text-lg font-medium mb-2" data-t="facts_killer2_title">感知差異</h4>
-                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_killer2_desc">基於過往經驗、立場等因素，不同人對同一事件會產生完全不同的解讀。</p>
+                    <div class="fade-in-on-scroll bg-yellow-50 dark:bg-yellow-950/30 border-l-4 border-yellow-500 p-5 rounded-lg" style="transition-delay: 100ms;">
+                        <h4 class="text-lg font-bold text-yellow-700 dark:text-yellow-300 mb-2" data-t="facts_killer2_title">感知差異</h4>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_killer2_desc">基於過往經驗、立場等因素，不同人對同一事件會產生完全不同的解讀，雙方都認為自己看到的是「事實」。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 200ms;">
-                        <h4 class="text-lg font-medium mb-2" data-t="facts_killer3_title">心理抵觸</h4>
-                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_killer3_desc">為了避免認知失調帶來的痛苦，人們會下意識地拒絕與自身信念衝突的真相。</p>
+                    <div class="fade-in-on-scroll bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 p-5 rounded-lg" style="transition-delay: 200ms;">
+                        <h4 class="text-lg font-bold text-blue-700 dark:text-blue-300 mb-2" data-t="facts_killer3_title">心理抵觸</h4>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_killer3_desc">為了避免認知失調帶來的痛苦，人們會下意識地拒絕與自身信念衝突的真相，以維護內心的和諧。</p>
                     </div>
-                    <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style="transition-delay: 300ms;">
-                        <h4 class="text-lg font-medium mb-2" data-t="facts_killer4_title">利益抵觸</h4>
-                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_killer4_desc">當真相威脅到個人或團體的既得利益時，會遭到強力抗拒。</p>
+                    <div class="fade-in-on-scroll bg-purple-50 dark:bg-purple-950/30 border-l-4 border-purple-500 p-5 rounded-lg" style="transition-delay: 300ms;">
+                        <h4 class="text-lg font-bold text-purple-700 dark:text-purple-300 mb-2" data-t="facts_killer4_title">利益抵觸</h4>
+                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_killer4_desc">當真相威脅到個人或團體的既得利益（金錢、權力、地位）時，會遭到最為強力且直接的抗拒。</p>
                     </div>
                 </div>
             </section>
 
-            <section>
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="facts_section_tools">解決方案：透明化溝通的八大工具</h2>
-                <div class="flex flex-col gap-4">
-                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2" data-t="facts_tool1_title">1. 聚焦事實 (FIRE 模型)</h3>
-                        <p class="text-secondary-text mb-4" data-t="facts_tool1_desc">談話內容可拆解為四個層面，溝通時應專注於事實，避免混淆。</p>
-                        <ul class="list-disc pl-5 text-secondary-text space-y-2">
-                            <li data-t="facts_tool1_f"><strong>F (Facts):</strong> 客觀事實，具體、公正、不帶感情色彩且及時。</li>
-                            <li data-t="facts_tool1_i"><strong>I (Interpretations):</strong> 基於事實的主觀解讀或聯想。</li>
-                            <li data-t="facts_tool1_r"><strong>R (Reactions):</strong> 由解讀引發的情緒反應。</li>
-                            <li data-t="facts_tool1_e"><strong>E (Ends):</strong> 基於情緒反應所期望的結果。</li>
-                        </ul>
+            <section class="communication-tools">
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border" data-t="facts_section_tools">解決方案：透明化溝通的八大工具</h2>
+                <p class="fade-in-on-scroll text-secondary-text dark:text-dark-secondary-text mb-6" data-t="facts_tools_intro">本書提供了一套結構化的工具箱，幫助我們一步步拆解溝通困境，引導對方共同面對事實。</p>
+                <div data-accordion="collapse" class="grid grid-cols-1 gap-4">
+                    
+                    <!-- Tool 1: FIRE 模型 -->
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-1">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-1" aria-expanded="false" aria-controls="accordion-body-1">
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="facts_tool1_title">1. 聚焦事實 (FIRE 模型)</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
+                            <div class="px-5 pb-5 text-secondary-text dark:text-dark-secondary-text space-y-4">
+                                <p data-t="facts_tool1_desc">將混亂的對話拆解為四個層面，溝通時應專注於客觀事實，避免將事實、解讀、情緒和期望混為一談。</p>
+                                <ul class="list-none space-y-3">
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-primary dark:text-dark-primary" data-t="facts_tool1_f_label">F (Facts):</strong> <span data-t="facts_tool1_f">客觀事實。具體、公正、客觀、不帶感情色彩且及時。</span></li>
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-primary dark:text-dark-primary" data-t="facts_tool1_i_label">I (Interpretations):</strong> <span data-t="facts_tool1_i">基於事實的主觀解讀或聯想。</span></li>
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-primary dark:text-dark-primary" data-t="facts_tool1_r_label">R (Reactions):</strong> <span data-t="facts_tool1_r">由解讀引發的情緒反應。</span></li>
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-primary dark:text-dark-primary" data-t="facts_tool1_e_label">E (Ends):</strong> <span data-t="facts_tool1_e">基於情緒反應所期望的結果。</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2" data-t="facts_tool2_title">2. 換位思考</h3>
-                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_tool2_desc">透過認知活動理解對方的視角與感覺，而非情緒苟同，以降低其防禦心。</p>
+
+                    <!-- Tool 2: 換位思考 -->
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-2">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="facts_tool2_title">2. 換位思考</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
+                            <div class="px-5 pb-5 text-secondary-text dark:text-dark-secondary-text space-y-4">
+                                <p data-t="facts_tool2_desc">這是一種認知活動，旨在理性地理解對方的感覺與視角，而非情緒上的苟同。它能有效降低對方的防禦心，建立信任，為後續溝通鋪平道路。</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2" data-t="facts_tool3_title">3. 設定有效目標</h3>
-                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_tool3_desc">使用「六個月後原則」設定長遠且有建設性的目標，避免追求道歉或證明對方錯誤等短期情緒目標。</p>
+                    
+                    <!-- Tool 3: 設定有效目標 -->
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-3">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="facts_tool3_title">3. 設定有效目標</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
+                            <div class="px-5 pb-5 text-secondary-text dark:text-dark-secondary-text space-y-4">
+                                <p data-t="facts_tool3_desc">使用「六個月後原則」來設定長遠、有建設性的談話目標。避免追求道歉、證明對方錯誤等無效的情緒目標，而是思考「六個月後，我希望我們是什麼關係？」</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2" data-t="facts_tool4_title">4. 對話而非對抗 (IDEAS 模型)</h3>
-                        <p class="text-secondary-text mb-4" data-t="facts_tool4_desc">一個30秒的開場白，邀請對方進入合作氛圍。</p>
-                        <ul class="list-disc pl-5 text-secondary-text space-y-2">
-                            <li data-t="facts_tool4_i"><strong>I (Invite):</strong> 邀請對方參與對話。</li>
-                            <li data-t="facts_tool4_d"><strong>D (Disarm):</strong> 解除對方的防備心，表明目的在於討論而非指責。</li>
-                            <li data-t="facts_tool4_e"><strong>E (Eliminate Blame):</strong> 強調若有不同看法，可共同討論。</li>
-                            <li data-t="facts_tool4_a"><strong>A (Acknowledge their Rights):</strong> 承認對方有表達不同意見的權利。</li>
-                            <li data-t="facts_tool4_s"><strong>S (Set a Time):</strong> 設定一個雙方都同意的具體談話時間。</li>
-                        </ul>
+
+                    <!-- Tool 4: IDEAS 模型 -->
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-4">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-4" aria-expanded="false" aria-controls="accordion-body-4">
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="facts_tool4_title">4. 對話而非對抗 (IDEAS 模型)</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-4" class="hidden" aria-labelledby="accordion-heading-4">
+                            <div class="px-5 pb-5 text-secondary-text dark:text-dark-secondary-text space-y-4">
+                                <p data-t="facts_tool4_desc">一個30秒的開場白，快速建立合作氛圍，邀請對方進入一場安全的對話，而非劍拔弩張的對抗。</p>
+                                <ul class="list-none space-y-3">
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-primary dark:text-dark-primary" data-t="facts_tool4_i_label">I (Invite):</strong> <span data-t="facts_tool4_i">邀請對方參與對話。</span></li>
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-primary dark:text-dark-primary" data-t="facts_tool4_d_label">D (Disarm):</strong> <span data-t="facts_tool4_d">解除對方的防備心，表明目的在於討論而非指責。</span></li>
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-primary dark:text-dark-primary" data-t="facts_tool4_e_label">E (Eliminate Blame):</strong> <span data-t="facts_tool4_e">消除責備，強調若有不同看法，可共同討論。</span></li>
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-primary dark:text-dark-primary" data-t="facts_tool4_a_label">A (Acknowledge their Rights):</strong> <span data-t="facts_tool4_a">承認對方有表達不同意見的權利。</span></li>
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-primary dark:text-dark-primary" data-t="facts_tool4_s_label">S (Set a Time):</strong> <span data-t="facts_tool4_s">設定一個雙方都同意的具體談話時間。</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2" data-t="facts_tool5_title">5. 創造文字畫面</h3>
-                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_tool5_desc">共同定義「差」、「好」與「優秀」的具體行為標準，建立共識，避免模糊形容詞引發的爭議。</p>
+
+                    <!-- Tool 5: 創造文字畫面 -->
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-5">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-5" aria-expanded="false" aria-controls="accordion-body-5">
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="facts_tool5_title">5. 創造文字畫面</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-5" class="hidden" aria-labelledby="accordion-heading-5">
+                            <div class="px-5 pb-5 text-secondary-text dark:text-dark-secondary-text space-y-4">
+                                <p class="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 p-3 rounded-lg" data-t="facts_tool5_highlight">這是本書最重要的工具。</p>
+                                <p data-t="facts_tool5_desc">透過具體的文字描述，共同定義「差」、「好」與「優秀」的行為標準，建立一個客觀的參照系。這能有效避免因「不夠努力」、「態度不好」等模糊形容詞引發的爭議，讓討論聚焦於具體行為。</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2" data-t="facts_tool6_title">6. 結構化傾聽</h3>
-                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_tool6_desc">在傾聽後，使用 FIRE 模型向對方覆述你的理解，確認雙方認知一致。</p>
+
+                    <!-- Tool 6: 結構化傾聽 -->
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-6">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-6" aria-expanded="false" aria-controls="accordion-body-6">
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="facts_tool6_title">6. 結構化傾聽</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-6" class="hidden" aria-labelledby="accordion-heading-6">
+                            <div class="px-5 pb-5 text-secondary-text dark:text-dark-secondary-text space-y-4">
+                                <p data-t="facts_tool6_desc">在傾聽後，使用 FIRE 模型向對方覆述你的理解，確認雙方在事實、解讀、情緒和期望四個層面上的認知是否一致。例如：「關於事實，我聽到的是...；你的解讀似乎是...；這讓你感覺...；所以你考慮...。我的理解對嗎？」</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2" data-t="facts_tool7_title">7. 說出事實，創造「糾正式跳躍」</h3>
-                        <p class="text-secondary-text dark:text-dark-secondary-text" data-t="facts_tool7_desc">將對方的具體行為（事實）與先前建立的「文字畫面」進行對照，引發其自我修正的頓悟。</p>
+                    
+                    <!-- Tool 7: 創造「糾正式跳躍」 -->
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-7">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-7" aria-expanded="false" aria-controls="accordion-body-7">
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="facts_tool7_title">7. 說出事實，創造「糾正式跳躍」</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-7" class="hidden" aria-labelledby="accordion-heading-7">
+                            <div class="px-5 pb-5 text-secondary-text dark:text-dark-secondary-text space-y-4">
+                                <p data-t="facts_tool7_desc">將對方的具體行為（客觀事實）與先前共同建立的「文字畫面」進行對照，幫助對方客觀地看到行為與標準之間的差距，從而引發自我修正的頓悟（糾正式跳躍），讓改變由內而外發生。</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-5">
-                        <h3 class="text-xl font-medium mb-2" data-t="facts_tool8_title">8. 避免談話陷阱</h3>
-                        <p class="text-secondary-text mb-4" data-t="facts_tool8_desc">警惕談話冗長、偏離主題（軟化問題）或壓制對話空間（硬化問題）的跡象。</p>
-                        <ul class="list-disc pl-5 text-secondary-text space-y-2">
-                            <li data-t="facts_tool8_soft"><strong>軟化問題：</strong>談話冗長、偏離主題、問題重複發生，代表溝通太軟弱，未能觸及核心。</li>
-                            <li data-t="facts_tool8_hard"><strong>硬化問題：</strong>當你出現時眾人沉默、下屬一言不發，代表溝通風格太強硬，壓制了對話空間。</li>
-                        </ul>
+
+                    <!-- Tool 8: 避免談話陷阱 -->
+                    <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <h2 id="accordion-heading-8">
+                            <button type="button" class="flex justify-between items-center w-full p-5 text-left group" data-accordion-target="#accordion-body-8" aria-expanded="false" aria-controls="accordion-body-8">
+                                <span class="text-lg font-medium text-text dark:text-dark-text" data-t="facts_tool8_title">8. 避免談話陷阱</span>
+                                <span class="text-2xl font-light text-primary transition-transform duration-300 ease-in-out group-aria-expanded:rotate-45">+</span>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-8" class="hidden" aria-labelledby="accordion-heading-8">
+                            <div class="px-5 pb-5 text-secondary-text dark:text-dark-secondary-text space-y-4">
+                                <p data-t="facts_tool8_desc">警惕兩種常見的溝通失效信號，並及時調整自己的溝通風格。</p>
+                                <ul class="list-none space-y-3">
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-orange-600 dark:text-orange-400" data-t="facts_tool8_soft_label">軟化問題：</strong> <span data-t="facts_tool8_soft">談話冗長、偏離主題、問題重複發生，代表溝通太軟弱，未能觸及核心。</span></li>
+                                    <li class="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"><strong class="text-red-600 dark:text-red-400" data-t="facts_tool8_hard_label">硬化問題：</strong> <span data-t="facts_tool8_hard">當你出現時眾人沉默、下屬一言不發，代表溝通風格太強硬，壓制了對話空間。</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </section>
             
             <section class="scenarios">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="facts_section_scenarios">觀點實戰</h2>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border" data-t="facts_section_scenarios">觀點實戰</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                     <div class="fade-in-on-scroll border border-border dark:border-dark-border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <h3 class="m-0 mb-2.5 text-lg font-medium" data-t="facts_scenario1_title">績效回饋溝通</h3>
@@ -308,12 +400,14 @@
             </section>
 
             <section class="resources">
-                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border dark:border-dark-border" data-t="facts_section_resources">提及書目與情境</h2>
-                <ul class="fade-in-on-scroll list-disc pl-5 text-secondary-text">
-                    <li class="mb-2.5" data-t="facts_resource1"><strong>《知識大遷移》:</strong> 內容中提到的「達克效應」出自此書，即鄧寧-克魯格效應，用以解釋「無知自信」。</li>
-                    <li class="mb-2.5" data-t="facts_resource2"><strong>《關鍵對話》:</strong> 書中用來解除對方防備的「對比說明」技巧，與《關鍵對話》中的概念相似。</li>
-                    <li class="mb-2.5" data-t="facts_resource3"><strong>《教父》 (電影):</strong> 以電影角色為例，說明換位思考是一種理性的理解，不代表軟弱或需要放棄原則。</li>
-                </ul>
+                <h2 class="fade-in-on-scroll text-3xl font-medium mt-16 mb-5 pb-2.5 border-b border-border dark:border-dark-border" data-t="facts_section_resources">提及書目與情境</h2>
+                <div class="fade-in-on-scroll bg-card-bg dark:bg-dark-card-bg rounded-xl p-6">
+                    <ul class="list-disc pl-5 text-secondary-text dark:text-dark-secondary-text space-y-4">
+                        <li><strong class="text-text dark:text-dark-text" data-t="facts_resource1_title">《知識大遷移》:</strong> <span data-t="facts_resource1_desc">書中提到的「達克效應」（即鄧寧-克魯格效應），被用來解釋「無知自信」這種真相殺手。</span></li>
+                        <li><strong class="text-text dark:text-dark-text" data-t="facts_resource2_title">《關鍵對話》:</strong> <span data-t="facts_resource2_desc">書中用來解除對方防備的「對比說明」技巧，與《關鍵對話》中的核心概念相似，皆在創造安全的對話環境。</span></li>
+                        <li><strong class="text-text dark:text-dark-text" data-t="facts_resource3_title">《教父》 (電影):</strong> <span data-t="facts_resource3_desc">以電影角色為例，說明「換位思考」是一種理性的理解，不代表軟弱或需要放棄原則，即使是強勢人物也能從中獲益。</span></li>
+                    </ul>
+                </div>
             </section>
 
         </main>
@@ -344,16 +438,18 @@
   - 心理抵觸
   - 利益抵觸
 - 解決方案：八大工具
-  - 聚焦事實 (FIRE)
-  - 換位思考
-  - 設定有效目標
-  - 對話而非對抗 (IDEAS)
-  - 創造文字畫面
-  - 結構化傾聽
-  - 創造「糾正式跳躍」
-  - 避免談話陷阱
+  - 1. 聚焦事實 (FIRE)
+  - 2. 換位思考
+  - 3. 設定有效目標
+  - 4. 對話而非對抗 (IDEAS)
+  - 5. 創造文字畫面
+  - 6. 結構化傾聽
+  - 7. 創造「糾正式跳躍」
+  - 8. 避免談話陷阱
 - 觀點實戰
-  - 建立共同標準 (文字畫面)
+  - 績效回饋
+  - 親子溝通
+  - 團隊衝突
 - 提及書目
   - 《知識大遷移》
   - 《關鍵對話》
