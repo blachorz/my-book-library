@@ -40,6 +40,7 @@ export default defineConfig({
         'book-speak-with-facts': resolve(__dirname, 'bookshelf/book-speak-with-facts.html'),
         'book-peak': resolve(__dirname, 'bookshelf/book-peak.html'),
         'book-replicable-leadership': resolve(__dirname, 'bookshelf/book-replicable-leadership.html'),
+        'book-strengthen-your-vagus-nerve': resolve(__dirname, 'bookshelf/book-strengthen-your-vagus-nerve.html'),
       }
     }
   }

@@ -62,10 +62,15 @@
   "summary_peak": "專家級技能並非源於天賦，而是透過<strong>「刻意練習」</strong>達成，其關鍵在於建立高品質的<strong>「心理表徵」</strong>，將複雜技能內化為直覺反應。",
   "bookTitle_leadership": "可複製的領導力",
   "author_leadership": "樊登",
-  "summary_leadership": "本書將領導力這門看似抽象的藝術，拆解為人人可學的<strong>具體工具與流程</strong>，幫助管理者建立高效且可複製的團隊。",
-  "welcomeMessage": "分享這些改變我思維的好書，希望也能為你帶來啟發",
-  "themeToggle": "深色",
-  "footer_builtBy1": "Mike",
-  "footer_builtBy2": "一位喜愛閱讀與終身學習的產品經理",
-  "footer_copyright": "&copy; 2025 FengMi Knowledge Base"
+  "summary_leadership": "本書將領導力這門看似抽象的藝術，拆解為人人可學的具體工具與流程，幫助管理者建立高效且可複製的團隊。",
+
+  "bookTitle_vagus": "加強你的迷走神經",
+  "author_vagus": "盧克·斯溫嫩 (Luc Swinnen)",
+  "summary_vagus": "本書揭示我們的幸福感與健康，深受獨立於大腦的「迷走神經系統」影響，並提供一系列從身體入手的實用技巧，來重新訓練並強化此系統，讓我們重獲內在的平靜與安全感。",
+
+  "brain_science_of_studying_title": "考試腦科學",
+  "brain_science_of_studying_author": "池谷裕二",
+  "brain_science_of_studying_summary": "從腦科學角度解釋記憶原理，說明如何透過「欺騙」大腦將短期記憶轉化為長期記憶，並提出重複複習、激發好奇心與情緒等具體方法。",
+
+  "placeholder_nextBook": "下一本好書..."
 }

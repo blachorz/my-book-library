@@ -62,10 +62,15 @@
   "summary_peak": "Expert-level skill is not a result of innate talent but is achieved through <strong>'deliberate practice.'</strong> The key is to build high-quality <strong>'mental representations,'</strong> internalizing complex skills into intuitive responses.",
   "bookTitle_leadership": "Replicable Leadership",
   "author_leadership": "Fan Deng",
-  "summary_leadership": "This book breaks down the seemingly abstract art of leadership into <strong>concrete tools and processes</strong> that anyone can learn, helping managers build efficient and replicable teams.",
-  "welcomeMessage": "Sharing books that inspired me, hope they inspire you too.",
-  "themeToggle": "Dark",
-  "footer_builtBy1": "Mike",
-  "footer_builtBy2": "A product manager who loves reading and lifelong learning",
-  "footer_copyright": "&copy; 2025 FengMi Knowledge Base"
+  "summary_leadership": "This book breaks down the seemingly abstract art of leadership into concrete tools and processes that anyone can learn, helping managers build efficient and replicable teams.",
+
+  "bookTitle_vagus": "Strengthen Your Vagus Nerve",
+  "author_vagus": "Luc Swinnen",
+  "summary_vagus": "This book reveals how our well-being is influenced by the 'vagus nerve system' and offers practical, body-based techniques to retrain and strengthen it, helping us regain inner peace and safety.",
+
+  "brain_science_of_studying_title": "The Brain Science of Studying",
+  "brain_science_of_studying_author": "Yuji Iketani",
+  "brain_science_of_studying_summary": "Explains the principles of memory from a neuroscientific perspective, showing how to 'trick' the brain into converting short-term memory into long-term memory through methods like repeated review and stimulating curiosity.",
+
+  "placeholder_nextBook": "Next good book..."
 }
