@@ -65,12 +65,16 @@
   "summary_leadership": "本書將領導力這門看似抽象的藝術，拆解為人人可學的具體工具與流程，幫助管理者建立高效且可複製的團隊。",
 
   "bookTitle_vagus": "加強你的迷走神經",
-  "author_vagus": "盧克·斯溫嫩 (Luc Swinnen)",
+  "author_vagus": "盧克·斯維寧 (Luc Swinnen)",
   "summary_vagus": "本書揭示我們的幸福感與健康，深受獨立於大腦的「迷走神經系統」影響，並提供一系列從身體入手的實用技巧，來重新訓練並強化此系統，讓我們重獲內在的平靜與安全感。",
 
   "brain_science_of_studying_title": "考試腦科學",
   "brain_science_of_studying_author": "池谷裕二",
   "brain_science_of_studying_summary": "從腦科學角度解釋記憶原理，說明如何透過「欺騙」大腦將短期記憶轉化為長期記憶，並提出重複複習、激發好奇心與情緒等具體方法。",
+
+  "bookTitle_evolution": "企業進化論",
+  "author_evolution": "薄连明",
+  "summary_evolution": "企業的成功始於<strong>精準的頂層設計</strong>，本書提供一套系統性方法，將企業從憑感覺的隨機性成長，轉變為可複製的有機成長。",
 
   "placeholder_nextBook": "下一本好書..."
 }
