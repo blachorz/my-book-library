@@ -42,6 +42,7 @@ export default defineConfig({
         'book-replicable-leadership': resolve(__dirname, 'bookshelf/book-replicable-leadership.html'),
         'book-strengthen-your-vagus-nerve': resolve(__dirname, 'bookshelf/book-strengthen-your-vagus-nerve.html'),
         'book-enterprise-evolution-theory': resolve(__dirname, 'bookshelf/book-enterprise-evolution-theory.html'),
+        'book-the-lost-art-of-listening': resolve(__dirname, 'bookshelf/book-the-lost-art-of-listening.html'),
       }
     }
   }
